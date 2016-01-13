@@ -1,0 +1,128 @@
+<html>
+
+<head>
+	<title>Emprise JavaScript Charts - Chart Generation/Render Test</title>
+	<script type="text/javascript" src="../../EJSChart.min.js"></script>
+
+	<style type="text/css">
+		* { font-family: Verdana; font-size: 11px; }
+		fieldset { margin: 0px; border: 0px; }
+		label { font-weight: bold; display: block; float: left; width: 130px; margin: 2px; }
+		input, select { margin: 2px; }
+		
+		#charts { border: 1px inset #ccc; } 
+		.chart { width: 300px; height: 200px; float: left; }
+	</style>
+	
+	<script type="text/javascript">
+
+		var charts_div = null;	
+		var dt, rdt, cdt, tdt, data_start, data_end;
+		var render_count, chart_count, series_count, series_type;
+		
+		function removeCharts() {
+
+			if (charts_div == null) { return; }
+			
+			var count = charts_div.childNodes.length;
+			for (var i = 0; i < count; i++) {
+				charts_div.childNodes[i].__chart.remove();
+			}
+			document.body.removeChild(charts_div);
+			charts_div = null;
+
+		}
+
+		function createSeries(chart) {
+
+			var points = document.getElementById("point_count").value;
+			
+			var data = [];
+			data_start = new Date();
+			for (var i = 0; i < points; i++) {
+				data.push([i, Math.random(100)*100]);
+			}
+			data_end += ((new Date()) - data_start);
+			var options = { delayLoad: false };
+			if (series_type == "ScatterSeries") { options.pointStyle = "box"; }
+			var series = new EJSC[series_type](new EJSC.ArrayDataHandler(data), options);
+			chart.addSeries(series, false);
+		
+		}
+	
+		function createChart(index) {
+
+			var div = document.createElement("div");
+			div.id = "chart" + index;
+			div.className = "chart";
+			charts_div.appendChild(div);
+
+			var chart = new EJSC.Chart("chart" + index, {
+				show_legend: false,
+				show_mouse_position: false,
+				allow_mouse_wheel_zoom: false,
+				onAfterDraw: function(chart) {
+					render_count++;
+					if (render_count == chart_count) {
+						tdt = new Date();
+						alert(
+							"Remove Time: " + ((rdt - dt) / 1000) + " seconds\n" +
+							"Chart Creation: " + ((tdt - rdt - data_end) / 1000) + " seconds\n" +
+							"Data Generation: " + ((data_end) / 1000) + " seconds\n\n" + 
+							"Total Time: " + ((tdt - dt) / 1000) + " seconds"
+						);
+					}						
+				}
+			});
+			for (var i = 0; i < series_count; i++) {
+				createSeries(chart);
+			} 
+			window.setTimeout(function() { document.getElementById("chart" + index).__chart.redraw(); },0);
+
+		}
+		
+		function generateCharts() {
+				
+			dt = new Date();		
+			data_end = 0;
+			removeCharts();
+			render_count = 0;
+			rdt = new Date();
+
+			charts_div = document.createElement("div");
+			charts_div.id = "charts";
+			document.body.appendChild(charts_div);
+			
+			chart_count = document.getElementById("chart_count").value;
+			series_count = document.getElementById("series_count").value;
+			series_type = document.getElementById("series_type").value;
+			for (var i = 0; i < chart_count; i++) {
+				createChart(i);			
+			}
+			
+			cdt = new Date();
+				
+			return false;
+
+		}
+	
+	</script>
+	
+</head>
+
+<body>
+	<h2><a href="http://www.ejschart.com">Emprise JavaScript Charts</a> - Chart Generation / Render Test</h2>
+	<form>
+		<fieldset>
+			<label>Number Of Charts:</label> <input type="text" id="chart_count" value="25"/><br/>
+			<label>Series Per Chart:</label> <input type="text" id="series_count" value="2"/><br/>
+			<label>Series Type:</label> <select id="series_type"><option value="LineSeries" selected="selected">Line Series</option><option value="AreaSeries">Area Series</option><option value="ScatterSeries">Scatter Series</option><option value="BarSeries">Bar Series</option></select><br/>
+			<label>Points Per Series:</label> <input type="text" id="point_count" value="100"/>
+		</fieldset>
+	</form>
+	<button onClick="generateCharts();">Generate</button>
+	
+	<cite>Copyright &copy; 2006-2008 <a href="http://www.emprisecorporation.com/">Emprise Corporation</a>. All Rights Reserved.</cite>
+</body>
+
+</html>

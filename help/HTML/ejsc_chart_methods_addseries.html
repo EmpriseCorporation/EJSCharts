@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?ejsc_chart_methods_addseries.html"; }
+else { parent.quicksync('a5.2.2.2'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>addSeries</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="http://www.ejschart.com/includes/help.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<div class="topicHeader">
+     <div class="navigation">
+          <a href="gsg_overview.html">Top</a>&nbsp;
+          <a href="ejsc_chart_methods_acquireseries.html">Previous</a>&nbsp;
+               <a href="ejsc_chart_methods_addxaxisbin.html">Next</a>
+     </div>
+     <div class="topic">
+          <p class="p_Heading1"><span class="f_Heading1">EJSC.Chart.addSeries</span></p>
+<p class="p_Heading1"><span class="f_Heading1" style="font-size: 13px;">See Also</span></p>
+
+     </div>
+</div>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Definition</span></p>
+<p>&nbsp;</p>
+<p><a href="ejsc_series.html">EJSC.Series</a> <span style="font-weight: bold; color: #0000ff;">addSeries</span>( <a href="ejsc_series.html">EJSC.Series</a> series, boolean redraw )</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Description</span></p>
+<p>&nbsp;</p>
+<p>Adds a new series to the chart and returns the newly added series (this is useful when creating series inline as shown in the example below). &nbsp;The series must descend from <a href="ejsc_series.html">EJSC.Series</a>.</p>
+<p>&nbsp;</p>
+<p>If redraw is false, drawing will not occur immediately but will not be entirely prevented. &nbsp;Certain actions such as adding an additional series with redraw = true, or chart dimensions changing may still trigger the series to draw. &nbsp;The default, if redraw is omitted is <span style="font-weight: bold;">true</span>.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Note:</span> If the series has not defined a title (i.e. Series.title = "") at the time addSeries is called, a default title of "Series &lt;index&gt;" will be assigned (where &lt;index&gt; is the current series index in internal series storage).</p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;">Types:</p>
+<p style="margin: 0px 0px 0px 24px;"><a href="ejsc_analoggaugeseries.html">EJSC.AnalogGaugeSeries</a></p>
+<p style="margin: 0px 0px 0px 24px;"><a href="ejsc_areaseries.html">EJSC.AreaSeries</a></p>
+<p style="margin: 0px 0px 0px 24px;"><a href="ejsc_barseries.html">EJSC.BarSeries</a></p>
+<p style="margin: 0px 0px 0px 24px;"><a href="ejsc_functionseries.html">EJSC.FunctionSeries</a></p>
+<p style="margin: 0px 0px 0px 24px;"><a href="ejsc_lineseries.html">EJSC.LineSeries</a></p>
+<p style="margin: 0px 0px 0px 24px;"><a href="ejsc_pieseries.html">EJSC.PieSeries</a></p>
+<p style="margin: 0px 0px 0px 24px;"><a href="ejsc_scatterseries.html">EJSC.ScatterSeries</a></p>
+<p style="margin: 0px 0px 0px 24px;"><a href="ejsc_trendseries.html">EJSC.TrendSeries</a></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p><span style="font-weight: bold;">Example</span></p>
+<p>&nbsp;</p>
+<p><span style="font-style: italic;">&gt;&gt; Add a line series to the chart.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">var</span> myChart = <span style="font-weight: bold;">new</span> EJSC.Chart("chart");</p>
+<p><span style="font-weight: bold;">var</span> mySeries = myChart.addSeries(new EJSC.LineSeries(...));</p>
+
+</td></tr></table>
+
+</body>
+</html>

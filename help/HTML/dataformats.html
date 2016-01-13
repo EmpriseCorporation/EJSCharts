@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?dataformats.html"; }
+else { parent.quicksync('a4'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Data Formats</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="http://www.ejschart.com/includes/help.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<div class="topicHeader">
+     <div class="navigation">
+          <a href="gsg_overview.html">Top</a>&nbsp;
+          <a href="changes_in_version_1_0.html">Previous</a>&nbsp;
+               <a href="dataformats_xmlfull.html">Next</a>
+     </div>
+     <div class="topic">
+          <p class="p_Heading1"><span class="f_Heading1">Data Formats</span></p>
+
+     </div>
+</div>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>The following is a brief summary of the data formats supported by Emprise JavaScript Charts.&nbsp; For additional information please see the individual class help files and example code available at <a href="http://www.ejschart.com/help/" target="_blank" class="weblink">http://www.ejschart.com/help/</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px; font-weight: bold;">XML</span></p>
+<p><span style="font-weight: bold;">&nbsp;</span></p>
+<p>The <a href="ejsc_xmldatahandler.html">EJSC.XMLDataHandler</a> class will load an XML file containing chart data using AJAX.&nbsp; The following XML formats are supported:</p>
+<p>&nbsp;</p>
+<p><a href="dataformats_xmlfull.html">Full</a>: </p>
+<p>&nbsp;</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&lt;graph&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;plot&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;point&nbsp;x=&quot;&quot;&nbsp;y=&quot;&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/plot&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&lt;/graph&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span></p>
+<p><a href="dataformats_xmlshort.html">Short</a>: </p>
+<p>&nbsp;</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&lt;G&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;L&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;P&nbsp;x=&quot;&quot;&nbsp;y=&quot;&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/L&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&lt;/G&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span></p>
+<p><a href="dataformats_xmlcompact.html">Compact</a>:</p>
+<p>&nbsp;</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&lt;G&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;L&nbsp;values=&quot;X|Y,X|Y,X|Y&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&lt;/G&gt;</span></p>
+<p><span style="font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 16px; font-weight: bold;">Array</span></p>
+<p>&nbsp;</p>
+<p>The <a href="ejsc_arraydatahandler.html">EJSC.ArrayDataHandler</a> class will load chart data from a JavaScript array.&nbsp; The basic format of the array is as follows:</p>
+<p>&nbsp;</p>
+<p>[</p>
+<p>  [X Value, Y Value],</p>
+<p>  [X Value, Y Value]</p>
+<p>]</p>
+<p><span style="font-size: 16px; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 16px; font-weight: bold;">CSV (Comma Separated Values)</span></p>
+<p>&nbsp;</p>
+<p>The <a href="ejsc_csvfiledatahandler.html">EJSC.CSVFileDataHandler</a> and <a href="ejsc_csvstringdatahandler.html">EJSC.CSVStringDataHandler</a> classes support a comma separated list of data points.&nbsp; <a href="ejsc_csvfiledatahandler.html">EJSC.CSVFileDataHandler</a> will load the data points list from a file on the server using AJAX.&nbsp; <a href="ejsc_csvstringdatahandler.html">EJSC.CSVStringDataHandler</a> takes a string in its constructor specifying the CSV text.&nbsp; The data is supported as x y value pairs (where x and y are separated by a pipe | symbol) as shown below:</p>
+<p>&nbsp;</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">X|Y,X|Y,X|Y</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

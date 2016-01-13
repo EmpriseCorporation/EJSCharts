@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="EJSC.Chart.events.onDblClickPoint" modified="2007-05-20T11:39:32.774Z" target="Main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <header>
+      <para styleclass="Heading1"><text styleclass="Heading1" translate="true">EJSC.Chart.onDblClickPoint</text></para>
+      <para styleclass="Heading1"><text styleclass="Heading1" style="font-size:10pt;" translate="true">See Also</text></para>
+    </header>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Definition</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">boolean </text><text style="font-family:Arial; font-size:10pt; font-weight:bold; color:#0000ff;" translate="true">onDblClickPoint</text><text styleclass="Normal" translate="true">( </text><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.Point" styleclass="Normal" translate="true">EJSC.Point</link><text styleclass="Normal" translate="true"> point )</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Description</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">Called when a point is double clicked or the ENTER key is pressed and a point is selected. If return is false, cancels zoom-out (if axis are shown).</text></para>
+  </body>
+</topic>

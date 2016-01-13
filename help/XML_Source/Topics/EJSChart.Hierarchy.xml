@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="EJSChart.Hierarchy" modified="2007-05-19T22:06:20.854Z" target="Popup" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.Inheritable" styleclass="Normal" translate="true">EJSC.Inheritable</link><text styleclass="Normal" translate="true"> &gt;&gt; EJSC.Chart</text></para>
+  </body>
+</topic>

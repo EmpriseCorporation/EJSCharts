@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="EJSC.Series.properties.visible" modified="2007-05-20T14:33:52.478Z" target="Main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <header>
+      <para styleclass="Heading1"><text styleclass="Heading1" translate="true">EJSC.Series.visible</text></para>
+      <para styleclass="Heading1"><text styleclass="Heading1" style="font-size:9pt;" translate="true">See Also</text></para>
+    </header>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Definition</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">boolean </text><text style="font-family:Arial; font-size:10pt; font-weight:bold; color:#0000ff;" translate="true">visible</text><text styleclass="Normal" translate="true"> = true</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Description</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">Defines whether the series is visible and can draw on the chart</text></para>
+  </body>
+</topic>

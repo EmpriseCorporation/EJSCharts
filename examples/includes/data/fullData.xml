@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<graph>
+	<plot>
+		<point x="2" y="8" />
+		<point x="4" y="2" />
+		<point x="6" y="6" />
+		<point x="8" y="4" />
+		<point x="10" y="7" />
+		<point x="12" y="5" />
+		<point x="14" y="4" />
+		<point x="16" y="2" />
+	</plot>
+</graph>

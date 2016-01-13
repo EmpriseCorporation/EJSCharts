@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="EJSC.AreaSeries" modified="2007-05-20T18:21:53.112Z" target="Main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <header>
+      <para styleclass="Heading1"><text styleclass="Heading1" translate="true">EJSC.AreaSeries</text></para>
+      <para styleclass="Heading1"><tab /></para>
+      <para styleclass="Heading1"><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.AreaSeries.Hierarchy" styleclass="Heading1" style="font-size:9pt;" translate="true">Hierarchy</link><tab /><tab /><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.AreaSeries.Properties" styleclass="Heading1" style="font-size:9pt;" translate="true">Properties</link><tab /><tab /><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.AreaSeries.Methods" styleclass="Heading1" style="font-size:9pt;" translate="true">Methods</link><tab /><tab /><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.AreaSeries.Events" styleclass="Heading1" style="font-size:9pt;" translate="true">Events</link></para>
+    </header>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">AreaSeries is rendered by drawing a line from point to point and then filling the area defined.</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">The constructor expects an instantiated </text><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.DataHandler" styleclass="Normal" translate="true">EJSC.DataHandler</link><text styleclass="Normal" translate="true"> descendant and an optional set of object properties.</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Constructor</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><tab /><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true">EJSC.AreaSeries( </text><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.DataHandler" style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true">EJSC.DataHandler</link><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true"> dataHandler [, object options] )</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Example</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">var</text><text styleclass="Normal" style="font-weight:normal;" translate="true"> mySeries = </text><text styleclass="Normal" style="font-weight:bold;" translate="true">new</text><text styleclass="Normal" style="font-weight:normal;" translate="true"> EJSC.AreaSeries(</text></para>
+    <para styleclass="Normal"><tab /><text styleclass="Normal" style="font-weight:bold;" translate="true">new</text><text styleclass="Normal" style="font-weight:normal;" translate="true">&#32;</text><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.ArrayDataHandler" styleclass="Normal" style="font-weight:normal;" translate="true">EJSC.ArrayDataHandler</link><text styleclass="Normal" style="font-weight:normal;" translate="true">([[1,1],[2,2],[3,3],[4,3],[5,2],[6,4]]),</text></para>
+    <para styleclass="Normal"><tab /><text styleclass="Normal" style="font-weight:normal;" translate="true">{ title: &quot;New Area Series&quot; }</text></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:normal;" translate="true">);</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Defining Properties and Events</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">AreaSeries properties may be set individually after the series has been created or in batch using the options parameter during instantiation.</text></para>
+    <para styleclass="Normal"></para>
+    <para style="margin-left:13px;"><text styleclass="Normal" style="font-weight:bold;" translate="true">Setting properties individually</text></para>
+    <para style="margin-left:13px;"></para>
+    <para style="margin-left:13px;"><tab /><text style="font-family:&apos;Courier New&apos;; font-size:8pt; font-weight:bold; color:#000000;" translate="true">var</text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true"> mySeries = </text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; font-weight:bold; color:#000000;" translate="true">new</text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true"> EJSC.AreaSeries(</text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; font-weight:bold; color:#000000;" translate="true">new</text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true"> EJSC.ArrayDataHandler([[1,1],[2,2],[3,3],[4,3],[5,2],[6,4]]));</text></para>
+    <para style="margin-left:13px;"><tab /><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true">mySeries.lineWidth = 1;</text></para>
+    <para style="margin-left:13px;"><tab /><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true">mySeries.title = &quot;New Area Series&quot;;</text></para>
+    <para style="margin-left:13px;"></para>
+    <para style="margin-left:13px;"><text styleclass="Normal" style="font-weight:bold;" translate="true">Setting properties in batch</text></para>
+    <para style="margin-left:13px;"></para>
+    <para style="margin-left:13px;"><tab /><text style="font-family:&apos;Courier New&apos;; font-size:8pt; font-weight:bold; color:#000000;" translate="true">var</text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true"> mySeries = </text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; font-weight:bold; color:#000000;" translate="true">new</text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true"> EJSC.AreaSeries(</text></para>
+    <para style="margin-left:13px;"><tab /><tab /><text style="font-family:&apos;Courier New&apos;; font-size:8pt; font-weight:bold; color:#000000;" translate="true">new</text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true"> EJSC.ArrayDataHandler([[1,1],[2,2],[3,3],[4,3],[5,2],[6,4]]),</text></para>
+    <para style="margin-left:13px;"><tab /><tab /><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true">{ lineWidth: 1, title: &quot;New Area Series&quot; }</text></para>
+    <para style="margin-left:13px;"><tab /><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true">);</text></para>
+    <para style="margin-left:13px;"></para>
+  </body>
+</topic>

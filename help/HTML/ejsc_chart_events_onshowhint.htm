@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?ejsc_chart_events_onshowhint.htm"; }
+else { parent.quicksync('a2.2.3.12'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>onShowHint</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<div class="topicHeader">
+     <div class="navigation">
+          <a href="welcometopic.htm">Top</a>&nbsp;
+          <a href="ejsc_chart_events_onshowcrosshairs.htm">Previous</a>&nbsp;
+               <a href="ejsc_chart_events_onshowmessage.htm">Next</a>
+     </div>
+     <div class="topic">
+          <p class="p_Heading1"><span class="f_Heading1">EJSC.Chart.onHint</span></p>
+<p class="p_Heading1"><span class="f_Heading1" style="font-size: 10pt;">See Also</span></p>
+
+     </div>
+</div>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Definition</span></p>
+<p>&nbsp;</p>
+<p>string <span style="font-weight: bold; color: #0000ff;">onShowHint</span>( <a href="ejsc_point.htm">EJSC.Point</a> point, <a href="ejsc_series.htm">EJSC.Series</a> series, <a href="ejsc_chart.htm">EJSC.Chart</a> chart, DOMObject hint_element, string HoverOrSelect )</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Description</span></p>
+<p>&nbsp;</p>
+<p>Called after a point has been selected due to mouse over (hover) or physical selection (click, keyboard).</p>
+<p>&nbsp;</p>
+<p>A custom string may be returned in order to specify the contents of the hint window.&nbsp; See <a href="text_replacement_options.htm">Text Replacement Options</a> for more details.</p>
+<p>&nbsp;</p>
+<p>Sends:</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;point - The point object selected.</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;series - The series object in which the point exists.</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;chart - The chart object which triggered the event (owns the series/point).</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;hint_element - The DOM object which contains the hint text/markup</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;HoverOrSelect - String &quot;hover&quot; or &quot;select&quot; to indicate what triggered the event.</p>
+
+</td></tr></table>
+
+</body>
+</html>

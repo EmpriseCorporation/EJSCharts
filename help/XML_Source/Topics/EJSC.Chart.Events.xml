@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="EJSC.Chart.Events" modified="2007-05-20T12:35:14.690Z" target="Popup" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:10pt; color:#000000;" translate="true">onBeforeDraw</text></para>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:10pt; color:#000000;" translate="true">onAfterDraw</text></para>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:10pt; color:#000000;" translate="true">onDblClickPoint</text></para>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:10pt; color:#000000;" translate="true">onBeforeSelectPoint</text></para>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:10pt; color:#000000;" translate="true">onAfterSelectPoint</text></para>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:10pt; color:#000000;" translate="true">onBeforeUnselectPoint</text></para>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:10pt; color:#000000;" translate="true">onAfterUnselectPoint</text></para>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:10pt; color:#000000;" translate="true">onAfterZoom</text></para>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:10pt; color:#000000;" translate="true">onAfterMove</text></para>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:10pt; color:#000000;" translate="true">onShowMessage</text></para>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:10pt; color:#000000;" translate="true">onShowCrosshairs</text></para>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:10pt; color:#000000;" translate="true">onBeforeDblClick</text></para>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:10pt; color:#000000;" translate="true">onShowHint</text></para>
+  </body>
+</topic>

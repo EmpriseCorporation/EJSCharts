@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="EJSC.Chart.methods.acquireSeries" modified="2007-05-20T12:17:51.602Z" target="Main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <header>
+      <para styleclass="Heading1"><text styleclass="Heading1" translate="true">EJSC.Chart.acquireSeries</text></para>
+      <para styleclass="Heading1"><text styleclass="Heading1" style="font-size:10pt;" translate="true">See Also</text></para>
+    </header>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Definition</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:normal;" translate="true">void </text><text styleclass="Normal" style="font-weight:bold; color:#0000ff;" translate="true">acquireSeries</text><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">( </text><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.Series" styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">EJSC.Series</link><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true"> series, boolean redraw</text><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true"> )</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold; color:#000000;" translate="true">Description</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">Moves a series from one chart to another. &#160;This method will remove the series from the chart which currently owns it and add it to the chart making the acquireSeries call.</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">Sends:</text></para>
+    <para styleclass="Normal" style="margin-left:0px;"><tab /><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">series - The series to be moved</text></para>
+    <para styleclass="Normal" style="margin-left:0px;"><tab /><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">redraw - Boolean flag telling the old and new charts if they should redraw immediately. &#160;Specifying </text><text styleclass="Normal" style="font-weight:bold; color:#000000;" translate="true">false</text><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true"> here will require that both charts </text><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.Chart.methods.redraw" styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">redraw()</link><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true"> methods are called in order to display the results of the acquisition.</text></para>
+  </body>
+</topic>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="EJSC.Series" modified="2007-05-20T18:17:39.347Z" target="Main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <header>
+      <para styleclass="Heading1"><text styleclass="Heading1" translate="true">EJSC.Series</text></para>
+      <para styleclass="Heading1"><tab /></para>
+      <para styleclass="Heading1"><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.Series.Hierarchy" styleclass="Heading1" style="font-size:9pt;" translate="true">Hierarchy</link><tab /><tab /><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.Series.Properties" styleclass="Heading1" style="font-size:9pt;" translate="true">Properties</link><tab /><tab /><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.Series.Methods" styleclass="Heading1" style="font-size:9pt;" translate="true">Methods</link><tab /><tab /><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.Series.Events" styleclass="Heading1" style="font-size:9pt;" translate="true">Events</link></para>
+    </header>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">Base series class that holds all the generic information for each series that is being created. &#160; All series should descend from this class or one of its descendants in order to function properly with the </text><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.Chart" styleclass="Normal" translate="true">EJSC.Chart</link><text styleclass="Normal" translate="true"> class.</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Constructor</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><tab /><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true">none</text></para>
+  </body>
+</topic>

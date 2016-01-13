@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?ejsc_chart_methods_exportsvglegend.html"; }
+else { parent.quicksync('a5.2.2.9'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>exportSVGLegend</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="http://www.ejschart.com/includes/help.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<div class="topicHeader">
+     <div class="navigation">
+          <a href="gsg_overview.html">Top</a>&nbsp;
+          <a href="ejsc_chart_methods_exportsvg.html">Previous</a>&nbsp;
+               <a href="ejsc_chart_methods_findclosestpointinseries.html">Next</a>
+     </div>
+     <div class="topic">
+          <p class="p_Heading1"><span class="f_Heading1">EJSC.Chart.exportSVGLegend</span></p>
+<p class="p_Heading1"><span class="f_Heading1" style="font-size: 13px;">See Also</span></p>
+
+     </div>
+</div>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Definition</span></p>
+<p>&nbsp;</p>
+<p>string <span style="font-weight: bold; color: #0000ff;">exportSVGLegend</span>( object Options )</p>
+<p>&nbsp;</p>
+<p style="margin: 7px 0px 7px 0px;"><span style="font-weight: bold; color: #000000;">Options Described (parameter {default value})</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline"><td style="width:24px"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold; color: #000000;">orientation {&quot;horizontal&quot;}</span></td></tr></table></div><p style="margin: 7px 0px 7px 48px;"><span style="color: #000000;">The orientation property defines how the legend dimensions will be calculated. Valid options are &quot;horizontal&quot; and &quot;vertical&quot;. When using horizontal, the legend's width will match the chart's width and the legend items will be displayed left to right, top to bottom. The height will expand as needed to accomidate all legend items. Specifying vertical for orientation will cause the legend to match the charts height and display the legend items top to bottom, left to right, expanding the width of the legend as necessary.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline"><td style="width:24px"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold; color: #000000;">includeHeader {true}</span></td></tr></table></div><p style="margin: 7px 0px 7px 48px;"><span style="color: #000000;">The includeHeader property defines whether the result should include the xml declaration (&lt;?xml version=&quot;1.0&quot;?&gt;) and the SVG doctype tags.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline"><td style="width:24px"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold; color: #000000;">height {chart height in pixels}</span></td></tr></table></div><p style="margin: 7px 0px 7px 48px;"><span style="color: #000000;">The height property defines the height attribute of the viewbox attribute in the output svg tag (see </span><span style="color: #0000ff; text-decoration: underline;">viewbox</span><span style="color: #000000;">). By default this is the pixel height of the chart but may be set to an arbitrary number or percentage such as &quot;100%&quot;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline"><td style="width:24px"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold; color: #000000;">width {chart width in pixels}</span></td></tr></table></div><p style="margin: 7px 0px 7px 48px;"><span style="color: #000000;">The width property defines the width attribute of the viewbox attribute in the output svg tag (see </span><span style="color: #0000ff; text-decoration: underline;">viewbox</span><span style="color: #000000;">). By default this is the pixel width of the chart but may be set to an arbitrary number or percentage such as &quot;100%&quot;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline"><td style="width:24px"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold; color: #000000;">namespace {none}</span></td></tr></table></div><p style="margin: 7px 0px 7px 48px;"><span style="color: #000000;">The namespace property defines the prefix namespace to use for the svg tags. This is useful when used with includeHeader=false if including the resulting svg inside another document type. By default, this left undefined and the resulting svg will look something like &lt;svg ... &gt;...&lt;/svg&gt;. If defined, for example as namespace = mysvg, the resulting svg will look like &lt;mysvg:svg ...&gt;...&lt;/mysvg:svg&gt;.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline"><td style="width:24px"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold; color: #000000;">border {}</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 72px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline"><td style="width:24px"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold; color: #000000;">show {true}</span></td></tr></table></div><p style="margin: 7px 0px 7px 96px;"><span style="color: #000000;">The show property determines whether or not to draw a border around the entire legend area.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 72px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline"><td style="width:24px"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold; color: #000000;">color {&quot;#000&quot;}</span></td></tr></table></div><p style="margin: 7px 0px 7px 96px;"><span style="color: #000000;">The color property specifies the color of the border, only applicable if show is true.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 72px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline"><td style="width:24px"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold; color: #000000;">size {1}</span></td></tr></table></div><p style="margin: 7px 0px 7px 96px;"><span style="color: #000000;">The size specifies the size (thickness) of the border drawn, only applicable if show is true.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline"><td style="width:24px"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold; color: #000000;">show_title {true}</span></td></tr></table></div><p style="margin: 7px 0px 7px 48px;"><span style="color: #000000;">The show_title property determines whether to draw the title area of the legend. If false or if the chart's title property is blank, the legend title area will not be drawn.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Description</span></p>
+<p>&nbsp;</p>
+<p>This method will export the chart legend as it relates to the currently rendered chart.&nbsp; The legend is exported in a more print friendly manner and may be customized using the options described above.&nbsp; The exported SVG string can be returned to the server for processing into many different forms such as png or pdf.&nbsp; The server-side processing of this data is beyond the scope of this help document.</p>
+<p>&nbsp;</p>
+<p style="margin: 7px 0px 7px 0px;"><span style="font-weight: bold; color: #000000;">Example:</span></p>
+<p><span style="color: #000000;">&lt;script type=&quot;text/javascript&quot;&gt;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">var chart = new EJSC.Chart(&quot;myChart&quot;, {});</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">var series = new EJSC.LineSeries(</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">new EJSC.ArrayDataHandler([[1,1],[2,2],[3,3],[4,2],[5,1]]),</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">{}</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">);</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">chart.addSeries(series);</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">function buttonClick() {</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">alert(chart.exportSVG({</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">height: &quot;50%&quot;,</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">width: &quot;50%&quot;,</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">border: {</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">show: true,</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">color: &quot;#F00&quot;,</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">size: 4</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">},</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">show_title: false</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">}));</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&lt;/script&gt;</span></p>
+<p><span style="color: #000000;">&lt;button onclick=&quot;buttonClick();&quot;&gt;Export SVG&lt;/button&gt;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

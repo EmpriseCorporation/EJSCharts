@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="Changesinversion0.5.3Beta" modified="2007-05-20T12:27:53.446Z" target="Main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <header>
+      <para styleclass="Heading1"><text styleclass="Heading1" translate="true">Changes in version 0.5.3 Beta</text></para>
+    </header>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-size:12pt; font-weight:bold;" translate="true">Additions</text></para>
+    <para styleclass="Normal"></para>
+    <list id="1" type="ul" listtype="bullet" formatstring="·" format-charset="SYMBOL_CHARSET" levelreset="true" legalstyle="false" startfrom="1" styleclass="Normal" style="font-family:Symbol; font-size:10pt; color:#000000;">
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added the ability to cancel point selection via onBeforeSelectPoint event handler</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added onBeforeDblClick handler</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added handler to mouseout for crosshairs</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added function to show crosshairs instead of mousemove doing it</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added handler to mousemove for crosshairs</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added saving X and Y cursor position for use in handler for crosshairs</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added call to crosshairs handler</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added allow_zoom variable</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added proximity_snap to allow for more/less snapping to find points</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added reload function to all applicable series</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added setYExtremes/setXExtremes to force extreme values</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added a way to programatically find the closest point to a given coordinate</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added support for static labels to the ArrayDataHandler</text></li>
+    </list>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-size:12pt; font-weight:bold;" translate="true">Changes</text></para>
+    <para styleclass="Normal"></para>
+    <list id="2" type="ul" listtype="bullet" formatstring="·" format-charset="SYMBOL_CHARSET" levelreset="true" legalstyle="false" startfrom="1" styleclass="Normal" style="font-family:Symbol; font-size:10pt; color:#000000;">
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Updated all __selectNextPoint and __selectPreviousPoint series functions to call chart’s __selectPoint function</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Updated select point to ensure previous/next series is visible</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Updated __findPointInRange to select true closest point</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Updated line, area, and scatter series to allow hints to show text values</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Updated bar series to allow hints to show text values</text></li>
+    </list>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-size:12pt; font-weight:bold;" translate="true">Bug Fixes</text></para>
+    <para styleclass="Normal"></para>
+    <list id="3" type="ul" listtype="bullet" formatstring="·" format-charset="SYMBOL_CHARSET" levelreset="true" legalstyle="false" startfrom="1" styleclass="Normal" style="font-family:Symbol; font-size:10pt; color:#000000;">
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Resize doesn’t fire unless the actual width or height changes</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Changed load of excanvas.js to ensure load before drawing in IE.</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Fixed acquireSeries to delete only the requested series from old chart’s array</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Updated mousemove function to call showCrosshairs function</text></li>
+    </list>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+  </body>
+</topic>

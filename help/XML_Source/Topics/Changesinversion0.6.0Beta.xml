@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="Changesinversion0.6.0Beta" modified="2007-05-20T12:29:19.216Z" target="Main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <header>
+      <para styleclass="Heading1"><text styleclass="Heading1" translate="true">Changes in version 0.6.0 Beta</text></para>
+    </header>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-size:12pt; font-weight:bold;" translate="true">Additions</text></para>
+    <para styleclass="Normal"></para>
+    <list id="0" type="ul" listtype="bullet" formatstring="·" format-charset="SYMBOL_CHARSET" levelreset="true" legalstyle="false" startfrom="1" styleclass="Normal" style="font-family:Symbol; font-size:10pt; color:#000000;">
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added setDataHandler to series in order to allow easy modification of the data handler after series creation</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added hiding hint (if not sticky) to zooming</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added base onAfterDataAvailable to series classes</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added variables for cursor position caption text</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added variables for hint value caption text (X Value:, Y Value:)</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added onShowHint event with the ability to specify the contents of the hint window</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added special text check/replacement for hint data ([chart_title],[series_title],[xaxis],[yaxis],[x],[y])</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added option to force tick marks at chart edges (expanding scale as required)</text></li>
+    </list>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-size:12pt; font-weight:bold;" translate="true">Changes</text></para>
+    <para styleclass="Normal"></para>
+    <list id="1" type="ul" listtype="bullet" formatstring="·" format-charset="SYMBOL_CHARSET" levelreset="true" legalstyle="false" startfrom="1" styleclass="Normal" style="font-family:Symbol; font-size:10pt; color:#000000;">
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Updated date formatter to forget about timezone and use UTC instead</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Changed NumberFormatter to default to no decimal place limitation</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Updated onBeforeSelectPoint onAfterSelectPoint to send point, series, chart, hint element, and select/hover</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Hide cursor position labels and data fields if cursor position captions are undefined or blank</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added resizing data area to write and resize functions</text></li>
+    </list>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-size:12pt; font-weight:bold;" translate="true">Bug Fixes</text></para>
+    <para styleclass="Normal"></para>
+    <list id="2" type="ul" listtype="bullet" formatstring="·" format-charset="SYMBOL_CHARSET" levelreset="true" legalstyle="false" startfrom="1" styleclass="Normal" style="font-family:Symbol; font-size:10pt; color:#000000;">
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Updated color arrays to be copied instead of references, this fixes issues with running out of colors</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Fixed issue with removing/reloading series so that the extremes are recalculated to account for the new data taking a smaller or difference range</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Fixed issue in bar and line/scatter/area series where the first point was lost if x == 0</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Fixed __doDrawAxis to disregard timezone</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Added check to NumberFormatter to check if first digit is thousand_seperator</text></li>
+      <li styleclass="Normal"><text styleclass="Normal" translate="true">Fixed extreme value recalc on series data reload</text></li>
+    </list>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+  </body>
+</topic>

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="EJSChart_popup_html.js"></script><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?ejsc_xmlstringdatahandler.html"; }
+else { parent.quicksync('a5.4.2'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>EJSC.XMLStringDataHandler</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="http://www.ejschart.com/includes/help.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<div class="topicHeader">
+     <div class="navigation">
+          <a href="gsg_overview.html">Top</a>&nbsp;
+          <a href="ejsc_ajaxdatahandler_events_onneedsdata.html">Previous</a>&nbsp;
+               <a href="ejsc_xmlstringdatahandler_methods_getxml.html">Next</a>
+     </div>
+     <div class="topic">
+          <p class="p_Heading1"><span class="f_Heading1">EJSC.XMLStringDataHandler</span></p>
+<p class="p_Heading1"> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Heading1"><span class="f_Heading1" style="font-size: 12px;"><a href="javascript:void(0);" onclick="return hmshowPopup(event, popid_463473376X, true);" class="popuplink">Hierarchy</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="javascript:void(0);" onclick="return hmshowPopup(event, popid_2056527357, true);" class="popuplink">Methods</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="javascript:void(0);" onclick="return hmshowPopup(event, popid_327058454, true);" class="popuplink">Events</a></span></p>
+
+     </div>
+</div>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>&nbsp;</p>
+<p>XMLStringDataHandler processes the provided xml-formatted string, determines the format (Full, Short or Compact) and extracts the data points into a format that the Series classes can manipulate.</p>
+<p>&nbsp;</p>
+<p>The constructor expects a properly formatted string containing XML data and an optional set of object properties.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Constructor</span></p>
+<p>&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11px; font-family: 'Courier New';">EJSC.XMLStringDataHandler( string xml [, object options] )</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Example</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">var</span> myDataHandler = <span style="font-weight: bold;">new</span> EJSC.XMLStringDataHandler(</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;'&lt;?xml version=&quot;1.0&quot;?&gt;<span class="f_CodeExample" style="color: #000000;">&lt;graph&gt;&lt;plot&gt;&lt;point x=&quot;</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample" style="color: #000000;">&quot; y=&quot;</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample" style="color: #000000;">&quot; /&gt;&lt;point x=&quot;</span><span class="f_CodeExample" style="color: #000080;">2</span><span class="f_CodeExample" style="color: #000000;">&quot; y=&quot;</span><span class="f_CodeExample" style="color: #000080;">2</span><span class="f_CodeExample" style="color: #000000;">&quot; /&gt;&lt;point x=&quot;</span><span class="f_CodeExample" style="color: #000080;">3</span><span class="f_CodeExample" style="color: #000000;">&quot; y=&quot;</span><span class="f_CodeExample" style="color: #000080;">3</span><span class="f_CodeExample" style="color: #000000;">&quot; /&gt;&lt;/plot&gt;&lt;/graph&gt;'</span></p>
+<p>);</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Formats:</span></p>
+<p><span style="font-weight: bold;">&nbsp;</span></p>
+<p>The XMLStringDataHandler supports three formats:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline"><td style="width:13px"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><a href="dataformats_xmlfull.html">Full</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline"><td style="width:13px"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><a href="dataformats_xmlshort.html">Short</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline"><td style="width:13px"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><a href="dataformats_xmlcompact.html">Compact</a></td></tr></table></div>
+</td></tr></table>
+
+</body>
+</html>

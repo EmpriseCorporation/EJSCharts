@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?ejsc_chart_events_onyaxisneedsticks.html"; }
+else { parent.quicksync('a5.2.3.18'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>onYAxisNeedsTicks</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="http://www.ejschart.com/includes/help.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<div class="topicHeader">
+     <div class="navigation">
+          <a href="gsg_overview.html">Top</a>&nbsp;
+          <a href="ejsc_chart_events_onxaxisneedsticks.html">Previous</a>&nbsp;
+               <a href="ejsc_areaseries.html">Next</a>
+     </div>
+     <div class="topic">
+          <p class="p_Heading1"><span class="f_Heading1">EJSC.Chart.onYAxisNeedsTicks</span></p>
+
+     </div>
+</div>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Definition</span></p>
+<p>&nbsp;</p>
+<p>array <span style="font-weight: bold; color: #0000ff;">onYAxisNeedsTicks</span>( float y_min, float y_max, <a href="ejsc_chart.html">EJSC.Chart</a> chart)</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Description</span></p>
+<p>&nbsp;</p>
+<p>This event is triggered whenever the axis ticks need to be redrawn / recalculated.&nbsp; It expects an array of [ float y, string label ] to be returned which defines exactly where to put the tick marks and labels.&nbsp; In addition, null may be returned in order to skip custom ticks for the current draw and use the chart's build in tick controls.</p>
+<p>&nbsp;</p>
+<p>Sends:</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;y_min - The current minimum y value visible on the chart.</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;y_max - The current maximum y value visible on the chart.</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;chart - The chart that triggered the event.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Notes</span></p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline"><td style="width:13px"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>To use the label formatter already assigned to the chart, set label to null (i.e. [y_min, null])</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline"><td style="width:13px"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>To use on a chart with bins (text instead of numbers), simply send in the bin (i.e. [&quot;First Bin&quot;, null])</td></tr></table></div><p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Example</span> </p>
+<p>&nbsp;</p>
+<p>A typical event handler may look like the following:</p>
+<p>&nbsp;</p>
+<p>function doYAxisNeedsTicks(y_min, y_max, chart) {</p>
+<p>&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;// Display 3 tick marks, one at y_min, one at y_max and one directly in between</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;var result = new Array();</p>
+<p>&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;result.push( [y_min, null] );</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;result.push( [y_min + ((y_max - y_min) / 2), null] );</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;result.push( [y_max, null] );</p>
+<p>&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;// Given a chart with a min and max of 0 and 100, the resulting array looks like:</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;//&nbsp; [</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;//&nbsp;&nbsp;&nbsp; [0, null],</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;//&nbsp;&nbsp;&nbsp; [50, null],</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;//&nbsp;&nbsp;&nbsp; [100, null]</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;//&nbsp; ]</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;return result;</p>
+<p>}</p>
+
+</td></tr></table>
+
+</body>
+</html>

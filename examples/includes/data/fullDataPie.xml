@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<graph>
+	<plot>
+		<point x="3" label="Widgets" />
+		<point x="7" label="Doodads" />
+		<point x="4" label="Thingamagigs" />
+		<point x="10" label="Whatchamacallits" />
+		<point x="2" label="Gizmos" />
+		<point x="5" label="Thingies" />
+	</plot>
+</graph>

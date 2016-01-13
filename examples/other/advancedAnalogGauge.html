@@ -1,0 +1,843 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Emprise JavaScript Charts - Advanced Analog Gauge Sample</title>
+	<link rel="stylesheet" href="../includes/template.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="../../EJSChart.min.js"></script>
+	<script type="text/javascript" src="../includes/code.js"></script>
+	
+	<style type="text/css">
+		#gauges { height: 500px; width: 790px; position: absolute; top: 420px; left: 50%; 
+			margin-left: -395px; background-color: #000; }
+		#tachometer { height: 300px; width: 300px; position: absolute; top: 50px; left: 100px; }
+		#speedometer { height: 300px; width: 300px; position: absolute; top: 50px; right: 100px; }
+		#speedkometer { height: 280px; width: 280px; position: absolute; top: 64px; right: 110px; }
+		#fuel { height: 140px; width: 140px; position: absolute; top: 10px; right: 10px; }
+		#oil { height: 140px; width: 140px; position: absolute; top: 310px; right: 10px; }
+		#heat { height: 140px; width: 140px; position: absolute; top: 310px; left: 10px; }
+		#battery { height: 140px; width: 140px; position: absolute; top: 10px; left: 10px; }
+		.label { color: #cccccc; font-weight: bold; font-size: 14px; }
+		.labelk { color: #aaaaaa; font-weight: bold; font-size: 11px; position: relative; top: 20px; }
+		.fuel_label { color: #cccccc; font-weight: bold; font-size: 10px; position: relative; top: 6px; }
+		.tach_marker { color: #ffffff; font-size: 14px; padding: 0px 4px; }
+		.speed_marker { color: #ffffff; font-size: 14px; padding: 0px 1px; }
+		.speedk_marker { color: #cccccc; font-size: 10px; padding: 1px; }
+		.fuel_marker { color: #cccccc; font-size: 10px; padding: 1px; }
+		.graph_container .noborder { border-left: 0px !important; border-bottom: 0px !important; }
+		.key_grabber { border: 0px; background-color: transparent; }
+		#gear { position: relative; top: 15px; font-size: 16px; font-weight: bold; }
+		#deadReason { text-align: center; font-size: 24px; font-weight: bold; color: #ff0000; }
+		#road { position: relative; top: 0px; left: 0px; height: 100%; width: 100%; }
+		#getGas { font-family: Verdana; text-align: center; font-size: 11px; font-weight: bold; color: #ffffff; text-decoration: none; }
+		#getGas a { font-size: 11px; font-weight: bold; color: #ffffff; text-decoration: none; }
+		#getGas a:hover { font-size: 11px; font-weight: bold; color: #ffffff; text-decoration: underline; }
+		#reset { font-family: Verdana; text-align: center; font-size: 11px; font-weight: bold; color: #ffffff; text-decoration: none; display: none; }
+		#reset a { font-size: 11px; font-weight: bold; color: #ffffff; text-decoration: none; }
+		#reset a:hover { font-size: 11px; font-weight: bold; color: #ffffff; text-decoration: underline; }
+	</style>	
+	
+</head>
+
+<body onload="document.getElementById('keyInp').focus();">
+<div id="wrap">
+
+		<div id="header">
+		
+			<h1 id="logo-text"><a href="http://www.ejschart.com/"><span class="gray">Emprise JavaScript Charts</span></a></h1>			
+					
+			<div id="header-tabs">
+				<ul>
+					<li><a href="http://www.ejschart.com/index.php"><span>Home</span></a></li>
+					<li><a href="http://www.ejschart.com/pricing.php"><span>Pricing</span></a></li>
+					<li><a href="http://www.ejschart.com/forums/"><span>Forums</span></a></li>
+					<li><a href="http://www.ejschart.com/support.php"><span>Support</span></a></li>
+				</ul>
+
+			</div>				
+			
+		</div>
+	  
+	  <!-- content-wrap starts here -->
+	  <div id="content-wrap">
+	  
+	  		<div id="main">
+				<h1 id="label">Advanced Analog Gauge Sample</h1>
+
+				<div class="breadcrumbs">Return to: <a href="../index.html" class="crumb">Examples</a> &raquo; <a href="../index.html#other" class="crumb">Other</a></div> 
+
+				<div class="onecolumn">
+					<div class="default">
+						<h2 class="properties">Properties and Methods Demonstrated</h2>
+						<ul class="properties" style="height: 60px">
+							<li>Multiple Analog Gauge Charts</li>
+							<li>Dynamically updating gauge values, HTML label values, ranges, tick styling</li>
+						</ul>
+						<h2 class="result">Instructions:</h2>
+						<p class="result" style="height: 45px;">
+							Use the up and down arrow keys to accelerate/decelerate and the shift/ctrl keys to shift gears.
+						</p>
+						<div id="myChart1a" class="chart" style="height: 500px;" onclick="document.getElementById('keyInp').focus();">
+							<div id="gauges">
+								<div id="tachometer"></div>
+								<div id="speedometer"></div>
+								<div id="speedkometer"></div>
+								<div id="fuel"></div>
+								<div id="oil"></div>
+								<div id="heat"></div>
+								<div id="battery"></div>
+								<div id="deadReason">&nbsp;</div>
+								<div id="getGas">[ <a href="javascript:;" onclick="curGas=100;">Get Gas</a> ]</div>
+								<div id="reset">[ <a href="javascript:;" onclick="curGas=100;dead=0;curTemp=150;s=0;curGear=1;document.getElementById('deadReason').innerHTML='&nbsp;';this.parentNode.style.display='none';">Reset</a> ]</div>
+							</div>
+							<input id="keyInp" style="position: absolute;left:-2000px;" onkeydown="getKeyDown(event);" onkeyup="getKeyUp(event);" onblur="this.focus();" />
+							<script> document.getElementById('keyInp').focus(); </script>
+						</div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code1a"><span>Rendering Source Code...</span></ol>
+					</div>
+				</div>				
+<script type="text/javascript" id="script1a">
+  var s = 0; 
+  var acc = -1; 
+  var curGear = 1; 
+  var curTemp = 150; 
+  var curGas = 100; 
+  var dead = 0; 
+  var vol = 0; 
+  var gears = [ 
+    [], 
+    [0,20] , 
+    [10,50] , 
+    [35,70] , 
+    [60,100] , 
+    [85,140] , 
+    [120,170] 
+  ]; 
+  function shiftUp() { 
+    if( curGear < 6 ) curGear++; 
+    document.getElementById('gear').innerHTML = curGear; 
+  } 
+  function shiftDown() { 
+    if( curGear > 1 ) curGear--; 
+    document.getElementById('gear').innerHTML = curGear; 
+  } 
+  function goSpeedUp() { 
+    acc = 1; 
+  } 
+  function endSpeedUp() { 
+    acc = -1; 
+  } 
+  function goSpeedDown() { 
+    acc = -5; 
+  } 
+  function endSpeedDown() { 
+    acc = -1; 
+  } 
+  function doAccelerate() { 
+     
+    if( curGas == 0 ) { 
+      dead = 1; 
+      document.getElementById('deadReason').innerHTML = 'Ran Out of Gas'; 
+      document.getElementById('reset').style.display = 'block'; 
+    } 
+    if( curTemp > 250 ) { 
+      dead = 1; 
+      document.getElementById('deadReason').innerHTML = 'Engine Blown'; 
+      document.getElementById('reset').style.display = 'block'; 
+    } 
+    if( dead == 1 ) acc = -1; 
+   
+    if( curGas <= 0 ) { 
+      curGas = 0; 
+      acc = -2; 
+    } 
+    s = s + acc; 
+    if( s < 0 ) s = 0; 
+     
+    var t = 2 + ( ( ( s - gears[curGear][0] ) / ( ( gears[curGear][1] - gears[curGear][0] ) / 6 ) - 1 ) ); 
+     
+    if( s > 0 ) curGas = curGas - ( .01 * t ); 
+    if( curGas <= 0 ) { 
+      curGas = 0; 
+    } 
+     
+    if( t > 8.3 ) t = 8.3; 
+     
+    if( dead == 1 ) { 
+      vol = vol - 10; 
+      if( vol < 0 ) vol = 0; 
+      vrate = 1; 
+    } else { 
+      vol = (10 + t*5) * 2; 
+      vrate = Math.floor(t); 
+      if( vrate < 1 ) vrate = 1; 
+    } 
+     
+    if( t > 7 ) curTemp = curTemp + 5; 
+    else curTemp = curTemp - 1; 
+    if( curTemp < 150 ) curTemp = 150; 
+    if( curTemp > 260 ) curTemp = 260; 
+     
+    speed_gauge.__points[0].x = s; 
+    speed_chart.__doDraw();
+    speedk_chart.__doDraw(); 
+     
+    tach_gauge.__points[0].x = t; 
+    tach_gauge.__points[0].label = 'RPM (x1000)<br/><span id="gear">' + curGear + '</span>'; 
+    tach_chart.__doDraw(); 
+     
+    heat_gauge.__points[0].x = curTemp; 
+    heat_chart.__doDraw(); 
+    oil_chart.__doDraw();
+     
+    fuel_gauge.__points[0].x = curGas; 
+    fuel_chart.__doDraw(); 
+    battery_chart.__doDraw();
+     
+  } 
+  setInterval( 'doAccelerate()' , 150 ); 
+  function getKeyDown(e) { 
+    if( !e ) var e = window.event; 
+    if( e.keyCode ) var k = e.keyCode; 
+    else var k = e.which; 
+    if( k == 38 ) goSpeedUp(); 
+    else if( k == 40 ) goSpeedDown(); 
+    else if( k == 16 ) shiftUp(); 
+    else if( k == 17 ) shiftDown(); 
+  } 
+  function getKeyUp(e) { 
+    if( !e ) var e = window.event; 
+    if( e.keyCode ) var k = e.keyCode; 
+    else var k = e.which; 
+    if( k == 38 ) endSpeedUp(); 
+    else if( k == 40 ) endSpeedDown(); 
+  } 
+var tach_ranges = [ [ 7 , 8 , 'rgb(255,0,0)' ] ]; 
+var tach_data = [ [ 0 , 'RPM (x1000)<br/><span id="gear">1</span>' ] ]; 
+var tach_chart     = new EJSC.Chart( 
+            'tachometer' , 
+            { 
+              show_titlebar: false , 
+              show_x_axis: false , 
+              show_y_axis: false , 
+              show_legend: false, 
+              show_messages: false 
+            } 
+           ); 
+var tach_gauge    = new EJSC.AnalogGaugeSeries( 
+            new EJSC.ArrayDataHandler(tach_data) , 
+            { 
+              start_degree    : 240 , 
+              range_degrees    : 240 , 
+              min          : 0 , 
+              max          : 8 , 
+              ranges        : tach_ranges , 
+              tickCount      : 9 , 
+              anchor : { 
+                color        : 'rgb(30,30,40)' , 
+                opacity        : 100 , 
+                size        : 20 
+              } , 
+              needle: { 
+                color          : 'rgb(255,0,0)' , 
+                opacity          : 100 , 
+                borderColor        : 'rgb(255,0,0)' , 
+                borderOpacity      : 100 , 
+                borderWidth        : 1 , 
+                size          : 6 
+              } , 
+              range: { 
+                borderColor        : undefined, 
+                borderWidth        : 1 , 
+                offset          : 0 , 
+                opacity          : 100 , 
+                style          : 'doughnut' , 
+                thickness        : -15 
+              } , 
+              axis: { 
+                color          : 'rgb(255,255,255)' , 
+                innerBorderColor    : 'rgb(0,0,0)' , 
+                innerBorderOpacity    : 100 , 
+                innerBorderWidth    : 1 , 
+                innerBorderVisible    : false , 
+                opacity          : 0 , 
+                outerBorderColor    : 'rgb(255,255,255)' , 
+                outerBorderOpacity    : 100 , 
+                outerBorderWidth    : 1 , 
+                outerBorderVisible    : false , 
+                thickness        : 15 
+              } , 
+              tick: { 
+                className        : 'tach_marker' , 
+                color          : 'rgb(255,255,255)' , 
+                offset          : 0 , 
+                opacity          : 100 , 
+                size          : 3 , 
+                thickness        : undefined 
+              } , 
+              label: { 
+                className        : 'label' , 
+                textAlign        : 'center' , 
+                position        : 'bottom' , 
+                lines          : 2 
+              } , 
+              lock: { 
+                color          : 'rgb(200,200,200)' , 
+                offset          : 5 , 
+                opacity          : 100 , 
+                size          : 6  , 
+                visible          : true 
+              } 
+            } 
+           ); 
+tach_chart.addSeries(tach_gauge); 
+ 
+var speed_data = [ [ 0 , 'MPH' ] ]; 
+var speed_chart   = new EJSC.Chart( 
+            'speedometer' , 
+            { 
+              show_titlebar: false , 
+              show_legend: false, 
+              show_x_axis: false , 
+              show_y_axis: false , 
+              show_messages: false 
+            } 
+           ); 
+var speed_gauge    = new EJSC.AnalogGaugeSeries( 
+            new EJSC.ArrayDataHandler(speed_data) , 
+            { 
+              start_degree    : 240 , 
+              range_degrees    : 240 , 
+              max          : 180 , 
+              tickCount      : 19 , 
+              anchor : { 
+                color        : 'rgb(30,30,40)' , 
+                size        : 20 
+              } , 
+              needle: { 
+                size          : 6 
+              } , 
+              range: { 
+                thickness        : -15 
+              } , 
+              axis: { 
+                innerBorderVisible    : false , 
+                outerBorderColor    : 'rgb(255,255,255)' , 
+                outerBorderVisible    : true  
+              } , 
+              tick: { 
+                className        : 'speed_marker' , 
+                color          : 'rgb(255,255,255)' , 
+                size          : 3 
+              } , 
+              label: { 
+                className        : 'label' , 
+                position        : 'bottom' 
+              } , 
+              lock: { 
+                color          : 'rgb(200,200,200)' , 
+                offset          : 5 , 
+                opacity          : 100 , 
+                size          : 6  , 
+                visible          : true 
+              } , 
+              minorTick: { 
+                color          : 'rgb(150,150,150)' , 
+                count          : 1 , 
+                offset          : 0 , 
+                opacity          : 100 , 
+                size          : 1 , 
+                thickness        : undefined 
+              } 
+            } 
+           ); 
+var SpeedFormatter = function() { 
+  EJSC.Formatter.__extendTo(this); 
+}; 
+var __speedFormatter = SpeedFormatter.prototype; 
+__speedFormatter.format = function(value) { 
+  if (value % 20 == 0) { return value; } 
+  else { return ""; } 
+}; 
+speed_chart.x_axis_formatter = new SpeedFormatter(); 
+speed_chart.addSeries(speed_gauge); 
+ 
+var speedk_data = [ [ 0 , 'KPH' ] ]; 
+var speedk_chart   = new EJSC.Chart( 
+            'speedkometer' , 
+            { 
+              show_titlebar: false , 
+              show_legend: false, 
+              show_x_axis: false , 
+              show_y_axis: false , 
+              show_messages: false 
+            } 
+           ); 
+var speedk_gauge  = new EJSC.AnalogGaugeSeries( 
+            new EJSC.ArrayDataHandler(speedk_data) , 
+            { 
+              start_degree    : 240 , 
+              range_degrees    : 240 , 
+              min          : 0 , 
+              max          : 300 , 
+              tickCount      : 11 , 
+              anchor : { 
+                color        : 'rgb(30,30,40)' , 
+                opacity        : 0 , 
+                size        : 20 
+              } , 
+              needle: { 
+                color          : 'rgb(255,0,0)' , 
+                opacity          : 0 , 
+                borderColor        : 'rgb(255,0,0)' , 
+                borderOpacity      : 0 , 
+                borderWidth        : 1 , 
+                size          : 6 
+              } , 
+              range: { 
+                borderColor        : undefined, 
+                borderWidth        : 1 , 
+                offset          : 0 , 
+                opacity          : 0 , 
+                style          : 'doughnut' , 
+                thickness        : -15 
+              } , 
+              axis: { 
+                color          : 'rgb(255,255,255)' , 
+                innerBorderColor    : 'rgb(0,0,0)' , 
+                innerBorderOpacity    : 0 , 
+                innerBorderWidth    : 1 , 
+                innerBorderVisible    : false , 
+                opacity          : 0 , 
+                outerBorderColor    : 'rgb(255,255,255)' , 
+                outerBorderOpacity    : 0 , 
+                outerBorderWidth    : 1 , 
+                outerBorderVisible    : false , 
+                thickness        : 15 
+              } , 
+              tick: { 
+                className        : 'speedk_marker' , 
+                color          : 'rgb(255,255,255)' , 
+                offset          : 0 , 
+                opacity          : 100 , 
+                size          : 3 , 
+                thickness        : 3 
+              } , 
+              minorTick: { 
+                color          : 'rgb(150,150,150)' , 
+                count          : 1 , 
+                offset          : 0 , 
+                opacity          : 0 , 
+                size          : 1 , 
+                thickness        : undefined 
+              } , 
+              label: { 
+                className        : 'labelk' , 
+                textAlign        : 'center' , 
+                position        : 'bottom' , 
+                lines          : 1 
+              } , 
+              marker_position: 'inner' 
+            } 
+           ); 
+speedk_chart.addSeries(speedk_gauge); 
+ 
+var fuel_data = [ [ 90 , '<img style="height:24px;width:24px;" src="../includes/fuel.gif" />' ] ]; 
+var fuel_ranges = [ [ 0 , 12.5 , 'rgb(255,0,0)' ] ]; 
+var fuel_chart   = new EJSC.Chart( 
+            'fuel' , 
+            { 
+              show_titlebar: false , 
+              show_legend: false, 
+              show_x_axis: false , 
+              show_y_axis: false , 
+              show_messages: false 
+            } 
+           ); 
+var fuel_gauge    = new EJSC.AnalogGaugeSeries( 
+            new EJSC.ArrayDataHandler(fuel_data) , 
+            { 
+              start_degree    : 320 , 
+              range_degrees    : 80 , 
+              min          : 0 , 
+              max          : 100 , 
+              tickCount      : 3 , 
+              ranges        : fuel_ranges , 
+              anchor : { 
+                color        : 'rgb(30,30,40)' , 
+                opacity        : 100 , 
+                size        : 20 
+              } , 
+              needle: { 
+                color          : 'rgb(255,0,0)' , 
+                opacity          : 100 , 
+                borderColor        : 'rgb(255,0,0)' , 
+                borderOpacity      : 100 , 
+                borderWidth        : 1 , 
+                size          : 6 
+              } , 
+              range: { 
+                borderColor        : undefined, 
+                borderWidth        : 1 , 
+                offset          : 0 , 
+                opacity          : 100 , 
+                style          : 'doughnut' , 
+                thickness        : -15 
+              } , 
+              axis: { 
+                color          : 'rgb(255,255,255)' , 
+                innerBorderColor    : 'rgb(0,0,0)' , 
+                innerBorderOpacity    : 100 , 
+                innerBorderWidth    : 1 , 
+                innerBorderVisible    : false , 
+                opacity          : 0 , 
+                outerBorderColor    : 'rgb(255,255,255)' , 
+                outerBorderOpacity    : 100 , 
+                outerBorderWidth    : 1 , 
+                outerBorderVisible    : false , 
+                thickness        : 15 
+              } , 
+              tick: { 
+                className        : 'fuel_marker' , 
+                color          : 'rgb(255,255,255)' , 
+                offset          : 0 , 
+                opacity          : 100 , 
+                size          : 3 , 
+                thickness        : undefined 
+              } , 
+              minorTick: { 
+                color          : 'rgb(150,150,150)' , 
+                count          : 1 , 
+                offset          : 0 , 
+                opacity          : 100 , 
+                size          : 1 , 
+                thickness        : undefined 
+              } , 
+              label: { 
+                className        : 'fuel_label' , 
+                textAlign        : 'center' , 
+                position        : 'centerBottom' , 
+                lines          : 1 
+              } , 
+              lock: { 
+                color          : 'rgb(200,200,200)' , 
+                offset          : 5 , 
+                opacity          : 100 , 
+                size          : 4  , 
+                visible          : true 
+              } 
+            } 
+           ); 
+var FuelFormatter = function() { 
+  EJSC.Formatter.__extendTo(this); 
+}; 
+var __fuelFormatter = FuelFormatter.prototype; 
+__fuelFormatter.format = function(value) { 
+  if( value == 100 ) { return 'F'; } 
+  else if( value == 50 ) { return '1/2'; } 
+  else if( value == 0 ) { return 'E'; } 
+  else { return value; } 
+}; 
+fuel_chart.x_axis_formatter = new FuelFormatter(); 
+fuel_chart.addSeries(fuel_gauge); 
+ 
+var oil_data = [ [ 8 , '<img style="height:24px;width:24px;" src="../includes/oil.gif" />' ] ]; 
+var oil_ranges = [ [ 0 , 2 , 'rgb(255,0,0)' ] ]; 
+var oil_chart   = new EJSC.Chart( 
+            'oil' , 
+            { 
+              show_titlebar: false , 
+              show_legend: false, 
+              show_x_axis: false , 
+              show_y_axis: false , 
+              show_messages: false 
+            } 
+           ); 
+var oil_gauge    = new EJSC.AnalogGaugeSeries( 
+            new EJSC.ArrayDataHandler(oil_data) , 
+            { 
+              start_degree    : 320 , 
+              range_degrees    : 80 , 
+              min          : 0 , 
+              max          : 8 , 
+              tickCount      : 3 , 
+              ranges        : oil_ranges , 
+              anchor : { 
+                color        : 'rgb(30,30,40)' , 
+                opacity        : 100 , 
+                size        : 20 
+              } , 
+              needle: { 
+                color          : 'rgb(255,0,0)' , 
+                opacity          : 100 , 
+                borderColor        : 'rgb(255,0,0)' , 
+                borderOpacity      : 100 , 
+                borderWidth        : 1 , 
+                size          : 6 
+              } , 
+              range: { 
+                borderColor        : undefined, 
+                borderWidth        : 1 , 
+                offset          : 0 , 
+                opacity          : 100 , 
+                style          : 'doughnut' , 
+                thickness        : -15 
+              } , 
+              axis: { 
+                color          : 'rgb(255,255,255)' , 
+                innerBorderColor    : 'rgb(0,0,0)' , 
+                innerBorderOpacity    : 100 , 
+                innerBorderWidth    : 1 , 
+                innerBorderVisible    : false , 
+                opacity          : 0 , 
+                outerBorderColor    : 'rgb(255,255,255)' , 
+                outerBorderOpacity    : 100 , 
+                outerBorderWidth    : 1 , 
+                outerBorderVisible    : false , 
+                thickness        : 15 
+              } , 
+              tick: { 
+                className        : 'fuel_marker' , 
+                color          : 'rgb(255,255,255)' , 
+                offset          : 0 , 
+                opacity          : 100 , 
+                size          : 3 , 
+                thickness        : undefined 
+              } , 
+              minorTick: { 
+                color          : 'rgb(150,150,150)' , 
+                count          : 1 , 
+                offset          : 0 , 
+                opacity          : 100 , 
+                size          : 1 , 
+                thickness        : undefined 
+              } , 
+              label: { 
+                className        : 'fuel_label' , 
+                textAlign        : 'center' , 
+                position        : 'centerBottom' , 
+                lines          : 1 
+              } , 
+              lock: { 
+                color          : 'rgb(200,200,200)' , 
+                offset          : 5 , 
+                opacity          : 100 , 
+                size          : 4  , 
+                visible          : true 
+              } 
+            } 
+           ); 
+oil_chart.addSeries(oil_gauge); 
+ 
+var heat_data = [ [ 8 , '<img style="height:24px;width:24px;" src="../includes/heat.gif" /><br/>�F' ] ]; 
+var heat_ranges = [ [ 225 , 250 , 'rgb(255,0,0)' ] ]; 
+var heat_chart   = new EJSC.Chart( 
+            'heat' , 
+            { 
+              show_titlebar: false , 
+              show_legend: false, 
+              show_x_axis: false , 
+              show_y_axis: false , 
+              show_messages: false 
+            } 
+           ); 
+var heat_gauge    = new EJSC.AnalogGaugeSeries( 
+            new EJSC.ArrayDataHandler(heat_data) , 
+            { 
+              start_degree    : 320 , 
+              range_degrees    : 80 , 
+              min          : 100 , 
+              max          : 250 , 
+              tickCount      : 4 , 
+              ranges        : heat_ranges , 
+              anchor : { 
+                color        : 'rgb(30,30,40)' , 
+                opacity        : 100 , 
+                size        : 20 
+              } , 
+              needle: { 
+                color          : 'rgb(255,0,0)' , 
+                opacity          : 100 , 
+                borderColor        : 'rgb(255,0,0)' , 
+                borderOpacity      : 100 , 
+                borderWidth        : 1 , 
+                size          : 6 
+              } , 
+              range: { 
+                borderColor        : undefined, 
+                borderWidth        : 1 , 
+                offset          : 0 , 
+                opacity          : 100 , 
+                style          : 'doughnut' , 
+                thickness        : -15 
+              } , 
+              axis: { 
+                color          : 'rgb(255,255,255)' , 
+                innerBorderColor    : 'rgb(0,0,0)' , 
+                innerBorderOpacity    : 100 , 
+                innerBorderWidth    : 1 , 
+                innerBorderVisible    : false , 
+                opacity          : 0 , 
+                outerBorderColor    : 'rgb(255,255,255)' , 
+                outerBorderOpacity    : 100 , 
+                outerBorderWidth    : 1 , 
+                outerBorderVisible    : false , 
+                thickness        : 15 
+              } , 
+              tick: { 
+                className        : 'fuel_marker' , 
+                color          : 'rgb(255,255,255)' , 
+                offset          : 0 , 
+                opacity          : 100 , 
+                size          : 3 , 
+                thickness        : undefined 
+              } , 
+              minorTick: { 
+                color          : 'rgb(150,150,150)' , 
+                count          : 1 , 
+                offset          : 0 , 
+                opacity          : 100 , 
+                size          : 1 , 
+                thickness        : undefined 
+              } , 
+              label: { 
+                className        : 'fuel_label' , 
+                textAlign        : 'center' , 
+                position        : 'centerBottom' , 
+                lines          : 1 
+              } , 
+              lock: { 
+                color          : 'rgb(200,200,200)' , 
+                offset          : 5 , 
+                opacity          : 100 , 
+                size          : 4  , 
+                visible          : true 
+              } 
+            } 
+           ); 
+heat_chart.addSeries(heat_gauge); 
+ 
+var battery_data = [ [ 100 , '<img style="height:24px;width:24px;" src="../includes/battery.gif" />' ] ]; 
+var battery_ranges = [ [ 0 , 25 , 'rgb(255,0,0)' ] ]; 
+var battery_chart   = new EJSC.Chart( 
+            'battery' , 
+            { 
+              show_titlebar: false , 
+              show_legend: false, 
+              show_x_axis: false , 
+              show_y_axis: false , 
+              show_messages: false 
+            } 
+           ); 
+var battery_gauge    = new EJSC.AnalogGaugeSeries( 
+            new EJSC.ArrayDataHandler(battery_data) , 
+            { 
+              start_degree    : 320 , 
+              range_degrees    : 80 , 
+              min          : 0 , 
+              max          : 100 , 
+              tickCount      : 5 , 
+              ranges        : battery_ranges , 
+              anchor : { 
+                color        : 'rgb(30,30,40)' , 
+                opacity        : 100 , 
+                size        : 20 
+              } , 
+              needle: { 
+                color          : 'rgb(255,0,0)' , 
+                opacity          : 100 , 
+                borderColor        : 'rgb(255,0,0)' , 
+                borderOpacity      : 100 , 
+                borderWidth        : 1 , 
+                size          : 6 
+              } , 
+              range: { 
+                borderColor        : undefined, 
+                borderWidth        : 1 , 
+                offset          : 0 , 
+                opacity          : 100 , 
+                style          : 'doughnut' , 
+                thickness        : -15 
+              } , 
+              axis: { 
+                color          : 'rgb(255,255,255)' , 
+                innerBorderColor    : 'rgb(0,0,0)' , 
+                innerBorderOpacity    : 100 , 
+                innerBorderWidth    : 1 , 
+                innerBorderVisible    : false , 
+                opacity          : 0 , 
+                outerBorderColor    : 'rgb(255,255,255)' , 
+                outerBorderOpacity    : 100 , 
+                outerBorderWidth    : 1 , 
+                outerBorderVisible    : false , 
+                thickness        : 15 
+              } , 
+              tick: { 
+                className        : 'fuel_marker' , 
+                color          : 'rgb(255,255,255)' , 
+                offset          : 0 , 
+                opacity          : 100 , 
+                size          : 3 , 
+                thickness        : undefined 
+              } , 
+              minorTick: { 
+                color          : 'rgb(150,150,150)' , 
+                count          : 1 , 
+                offset          : 0 , 
+                opacity          : 100 , 
+                size          : 1 , 
+                thickness        : undefined 
+              } , 
+              label: { 
+                className        : 'fuel_label' , 
+                textAlign        : 'center' , 
+                position        : 'centerBottom' , 
+                lines          : 1 
+              } , 
+              lock: { 
+                color          : 'rgb(200,200,200)' , 
+                offset          : 5 , 
+                opacity          : 100 , 
+                size          : 4  , 
+                visible          : true 
+              } 
+            } 
+           ); 
+var BatteryFormatter = function() { 
+  EJSC.Formatter.__extendTo(this); 
+}; 
+var __batteryFormatter = BatteryFormatter.prototype; 
+__batteryFormatter.format = function(value) { 
+  if( value % 50 == 0 ) { return value; } 
+  else { return ''; } 
+}; 
+battery_chart.x_axis_formatter = new BatteryFormatter(); 
+battery_chart.addSeries(battery_gauge);
+</script>
+				<div class="breadcrumbs">Return to: <a href="../index.html" class="crumb">Examples</a> &raquo; <a href="../index.html#other" class="crumb">Other</a></div> 
+
+			</div>
+
+		</div>
+
+		<div id="footer">
+		
+			<span id="footer-left">
+				&copy; 2006-2007 <strong><a href="http://www.emprisecorporation.com/">Emprise Corporation</a></strong> | 
+				Design by: <strong><a href="http://www.styleshout.com/">styleshout</a></strong> | 
+				Valid: <a href="http://validator.w3.org/">XHTML</a> | 
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+
+			</span>		
+			
+			<span id="footer-right">
+				<a href="http://www.ejschart.com/">Home</a> 
+			</span>
+			
+		</div>	
+
+<!-- wrap ends here -->		
+</div>
+</body>
+
+</html>

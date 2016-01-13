@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?gsg_customizingyourchart.html"; }
+else { parent.quicksync('a1.4'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Customizing Your Chart</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="http://www.ejschart.com/includes/help.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<div class="topicHeader">
+     <div class="navigation">
+          <a href="gsg_overview.html">Top</a>&nbsp;
+          <a href="gsg_creatingyourfirstchart.html">Previous</a>&nbsp;
+               <a href="gsg_anatomy_titlebar.html">Next</a>
+     </div>
+     <div class="topic">
+          <p class="p_Heading1"><span class="f_Heading1">Customizing Your Chart</span></p>
+
+     </div>
+</div>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="line-height: 1.50;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">With Emprise JavaScript Charts, the customization options of your chart are endless.&nbsp; This includes visual appearance, which can be modified to integrate fully with any theme or design, as well as chart interactivity, which can range from including user capabilities such as auto zooming and custom hint captions to hidden-axis view only chart displays.&nbsp; Your chart can be customized on the chart and series level via the modification of the chart and series properties.</span></p>
+<p style="line-height: 1.50;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.50;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">The first customization options available to you are at the chart level.&nbsp; They can be specified when creating the chart or alternatively after the chart object has been established.&nbsp; The properties available for editing and their syntax can be found in the </span><span style="font-size: 16px; font-family: 'Times New Roman'; color: #0000ff;">Chart Properties</span><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;"> section of the help documentation.&nbsp; In addition, examples of their implementation with sample code and the resulting effect on chart display or interactivity are available on the in the /examples/ directory of the distribution package.&nbsp; There are also additional examples available online at <a href="http://www.ejschart.com/examples/" target="_blank" class="weblink">http://www.ejschart.com/examples/</a></span></p>
+<p style="line-height: 1.50;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.50;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">The following are a few quick examples of modifying commonly used properties both at and after chart creation:</span></p>
+<p style="line-height: 1.50;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline"><td style="width:13px"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">Modification of the x and y axis labels during chart creation:</span></td></tr></table></div><p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;">var chart = new EJSC.Chart(&quot;myChart&quot;, {x_axis_caption: &quot;Month&quot;,</span><br />
+<span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; y_axis_caption: &quot;Temperature&quot;});&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p style="line-height: 1.50; margin: 0px 0px 0px 24px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline"><td style="width:13px"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">Modification of the x and y axis labels after chart creation:</span></td></tr></table></div><p style="line-height: 1.50; margin: 0px 0px 0px 24px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;">var chart = new EJSC.Chart(&quot;myChart&quot;);</span></p>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; chart.setXAxisCaption(&quot;Month&quot;);</span><br />
+<span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; chart.setYAxisCaption(&quot;Temperature&quot;);</span></p>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.50;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">The properties of each series on a chart may also be customized.&nbsp;&nbsp; This is accomplished with the editing of properties in the same way as was done to customize chart properties; either at the time of series creation or following creation.&nbsp; The properties available for editing and their syntax can be found on the </span><span style="font-size: 16px; font-family: 'Times New Roman'; color: #0000ff;">Properties</span><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;"> page of each of the different series help sections.&nbsp; In addition, examples of their implementation with sample code and the resulting effect on chart display or interactivity are available on the in the /examples/ directory of the distribution package.&nbsp; There are also additional examples available online at <a href="http://www.ejschart.com/examples/" target="_blank" class="weblink">http://www.ejschart.com/examples/</a></span></p>
+<p style="line-height: 1.50;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.50;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">The following are a few quick examples of modifying commonly used properties both at and after chart creation:</span></p>
+<p style="line-height: 1.50;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline"><td style="width:13px"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">Modification of the series lineWidth property during creation:</span></td></tr></table></div><p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;">var myChartSeries = new EJSC.FunctionSeries(Math.sin, {lineWidth: 4});&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p style="line-height: 1.50; margin: 0px 0px 0px 24px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline"><td style="width:13px"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">Modification of the lineWidth property after creation:</span></td></tr></table></div><p style="line-height: 1.50; margin: 0px 0px 0px 24px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;">var myChartSeries = new EJSC.FunctionSeries(Math.sin);</span></p>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; myChartSeries.setLineWidth(4);</span><br />
+<span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.50;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">In order to fully understand the power of the properties available for customizing it is important to become familiar with the various components of the chart.&nbsp; The following diagram identify many of these components:</span></p>
+<p style="text-align: center; line-height: 1.50;"><span style="font-size: 16px; font-family: 'Times New Roman'; font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.50;"><span style="font-size: 16px; font-family: 'Times New Roman'; font-weight: bold; color: #000000;">Anatomy of a Chart</span></p>
+<p><img src="embim3.jpg" width="462" height="281" vspace="1" hspace="1" border="0" alt="" /></p>
+<p><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

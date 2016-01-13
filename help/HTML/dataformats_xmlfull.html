@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?dataformats_xmlfull.html"; }
+else { parent.quicksync('a4.1'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>XML - Full</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="http://www.ejschart.com/includes/help.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<div class="topicHeader">
+     <div class="navigation">
+          <a href="gsg_overview.html">Top</a>&nbsp;
+          <a href="dataformats.html">Previous</a>&nbsp;
+               <a href="dataformats_xmlshort.html">Next</a>
+     </div>
+     <div class="topic">
+          <p class="p_Heading1"><span class="f_Heading1">XML - Full</span></p>
+
+     </div>
+</div>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>The full xml format is the most verbose and the most human readable of the supported formats. &nbsp;This format is ideal for experimenting with chart configuration and charts with smaller datasets.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">General Usage:</span></p>
+<p>&nbsp;</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&lt;graph&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&lt;plot&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;point&nbsp;x=&quot;</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample" style="color: #000000;">&quot;&nbsp;y=&quot;</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample" style="color: #000000;">&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;point&nbsp;x=&quot;</span><span class="f_CodeExample" style="color: #000080;">2</span><span class="f_CodeExample" style="color: #000000;">&quot;&nbsp;y=&quot;</span><span class="f_CodeExample" style="color: #000080;">2</span><span class="f_CodeExample" style="color: #000000;">&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;point&nbsp;x=&quot;</span><span class="f_CodeExample" style="color: #000080;">3</span><span class="f_CodeExample" style="color: #000000;">&quot;&nbsp;y=&quot;</span><span class="f_CodeExample" style="color: #000080;">3</span><span class="f_CodeExample" style="color: #000000;">&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;point&nbsp;x=&quot;</span><span class="f_CodeExample" style="color: #000080;">4</span><span class="f_CodeExample" style="color: #000000;">&quot;&nbsp;y=&quot;</span><span class="f_CodeExample" style="color: #000080;">4</span><span class="f_CodeExample" style="color: #000000;">&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&lt;/plot&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&lt;/graph&gt;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-weight: bold;">Pie Series Data:</span></p>
+<p>&nbsp;</p>
+<p>The above example is used for the majority of currently supported data series types. &nbsp;The exception to this is the <a href="ejsc_pieseries.html">EJSC.PieSeries</a> which requires only an "x" attribute and adds an additional "label" to each point tag (the y attribute is not applicable to <a href="ejsc_pieseries.html">EJSC.PieSeries</a> and will be ignored if specified):</p>
+<p>&nbsp;</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&lt;graph&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&lt;plot&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;point&nbsp;x=&quot;</span><span class="f_CodeExample" style="color: #000080;">100</span><span class="f_CodeExample" style="color: #000000;">&quot;&nbsp;userdata=&quot;&quot;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">label</span><span class="f_CodeExample" style="color: #000000;">=&quot;blue&nbsp;widgets&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;point&nbsp;x=&quot;</span><span class="f_CodeExample" style="color: #000080;">200</span><span class="f_CodeExample" style="color: #000000;">&quot;&nbsp;userdata=&quot;&quot;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">label</span><span class="f_CodeExample" style="color: #000000;">=&quot;red&nbsp;widgets&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;point&nbsp;x=&quot;</span><span class="f_CodeExample" style="color: #000080;">50</span><span class="f_CodeExample" style="color: #000000;">&quot;&nbsp;userdata=&quot;&quot;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">label</span><span class="f_CodeExample" style="color: #000000;">=&quot;green&nbsp;widgets&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&lt;/plot&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&lt;/graph&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="font-weight: bold;">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="font-weight: bold;">Text&nbsp;Labels:</span></p>
+<p class="p_CodeExample"><span style="font-weight: bold;">&nbsp;</span></p>
+<p>At times, numeric labels and the auto scaling options in the chart are not necessary, not available or not desired for display data. &nbsp; A <a href="ejsc_barseries.html">EJSC.BarSeries</a> for instance, which is used to compare number of widgets sold by color. &nbsp;The chart supports providing text as the X value, rather than a number:</p>
+<p>&nbsp;</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&lt;graph&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&lt;plot&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;point&nbsp;x=&quot;Blue&quot;&nbsp;y=&quot;</span><span class="f_CodeExample" style="color: #000080;">100</span><span class="f_CodeExample" style="color: #000000;">&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;point&nbsp;x=&quot;Red&quot;&nbsp;y=&quot;</span><span class="f_CodeExample" style="color: #000080;">200</span><span class="f_CodeExample" style="color: #000000;">&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;point&nbsp;x=&quot;Green&quot;&nbsp;y=&quot;</span><span class="f_CodeExample" style="color: #000080;">50</span><span class="f_CodeExample" style="color: #000000;">&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&lt;/plot&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&lt;/graph&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="font-weight: bold;">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="font-weight: bold;">User-Defined&nbsp;Data:</span></p>
+<p class="p_CodeExample"><span style="font-weight: bold;">&nbsp;</span></p>
+<p>When displaying custom hints and implementing drill down style reports it is often necessary to have an additional piece of data associated with each data point such as a database id value. &nbsp;The full and short xml formats support the <span style="font-weight: bold;">userdata</span> property which is read in and assigned to the associated <a href="ejsc_point.html">EJSC.Point</a> descendant. &nbsp;The value specified is entirely up to the developer. &nbsp;It could be a set of integers representing a database primary key value, a url which points to drill-down data or even a javascript function. &nbsp;The <span style="font-weight: bold;">userdata </span>property of a point is available during point-related events in the chart such as <a href="ejsc_chart_events_ondblclickpoint.html">EJSC.Chart.onDblClickPoint</a>, <a href="ejsc_chart_events_onafterselectpoint.html">EJSC.Chart.onAfterSelectPoint</a>, etc.</p>
+<p>&nbsp;</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&lt;graph&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&lt;plot&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;point&nbsp;x=&quot;1&quot;&nbsp;y=&quot;</span><span class="f_CodeExample" style="color: #000080;">100</span><span class="f_CodeExample" style="color: #000000;">&quot;&nbsp;userdata=&quot;WHERE&nbsp;PointId=10432&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;point&nbsp;x=&quot;2&quot;&nbsp;y=&quot;</span><span class="f_CodeExample" style="color: #000080;">200</span><span class="f_CodeExample" style="color: #000000;">&quot;&nbsp;userdata=&quot;./drillDown2.xml&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;point&nbsp;x=&quot;3&quot;&nbsp;y=&quot;</span><span class="f_CodeExample" style="color: #000080;">50</span><span class="f_CodeExample" style="color: #000000;">&quot;&nbsp;userdata=&quot;alert('this&nbsp;is&nbsp;the&nbsp;userdata');&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&lt;/plot&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&lt;/graph&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

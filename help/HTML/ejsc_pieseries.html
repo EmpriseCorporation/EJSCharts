@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="EJSChart_popup_html.js"></script><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?ejsc_pieseries.html"; }
+else { parent.quicksync('a5.3.6'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>EJSC.PieSeries</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="http://www.ejschart.com/includes/help.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<div class="topicHeader">
+     <div class="navigation">
+          <a href="gsg_overview.html">Top</a>&nbsp;
+          <a href="ejsc_series_events_onbeforevisibilitychange.html">Previous</a>&nbsp;
+               <a href="ejsc_pieseries_properties_defaultcolors.html">Next</a>
+     </div>
+     <div class="topic">
+          <p class="p_Heading1"><span class="f_Heading1">EJSC.PieSeries</span></p>
+<p class="p_Heading1"> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Heading1"><span class="f_Heading1" style="font-size: 12px;"><a href="javascript:void(0);" onclick="return hmshowPopup(event, popid_2041742347X, true);" class="popuplink">Hierarchy</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="javascript:void(0);" onclick="return hmshowPopup(event, popid_1457305565X, true);" class="popuplink">Properties</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="javascript:void(0);" onclick="return hmshowPopup(event, popid_1909333626, true);" class="popuplink">Methods</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="javascript:void(0);" onclick="return hmshowPopup(event, popid_475428339X, true);" class="popuplink">Events</a></span></p>
+
+     </div>
+</div>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>PieSeries is rendered by drawing slices to form an ellipse.&nbsp; Each slice represents a percentage of the total of the sum of all point values in the dataset. </p>
+<p>&nbsp;</p>
+<p>The constructor expects an instantiated <a href="ejsc_datahandler.html">EJSC.DataHandler</a> descendant and an optional set of object properties.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Constructor</span></p>
+<p>&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11px; font-family: 'Courier New';">EJSC.PieSeries( <a href="ejsc_datahandler.html">EJSC.DataHandler</a> dataHandler [, object options] )</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Example</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">var</span> mySeries = <span style="font-weight: bold;">new</span> EJSC.PieSeries(</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">new</span> <a href="ejsc_arraydatahandler.html">EJSC.ArrayDataHandler</a>([[10,&quot;Label 1&quot;],[20,&quot;Label 2&quot;],[120,&quot;Label3&quot;]]),</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;{ title: &quot;New Pie Series&quot; }</p>
+<p>);</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Defining Properties and Events</span></p>
+<p>&nbsp;</p>
+<p>PieSeries properties may be set individually after the series has been created or in batch using the options parameter during instantiation.</p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 13px;"><span style="font-weight: bold;">Setting properties individually</span></p>
+<p style="margin: 0px 0px 0px 13px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 13px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11px; font-family: 'Courier New'; font-weight: bold;">var</span><span style="font-size: 11px; font-family: 'Courier New';"> mySeries = </span><span style="font-size: 11px; font-family: 'Courier New'; font-weight: bold;">new</span><span style="font-size: 11px; font-family: 'Courier New';"> EJSC.PieSeries(</span><span style="font-size: 11px; font-family: 'Courier New'; font-weight: bold;">new</span><span style="font-size: 11px; font-family: 'Courier New';"> EJSC.ArrayDataHandler([[10,&quot;Label 1&quot;],[20,&quot;Label 2&quot;],[120,&quot;Label 3&quot;]]));</span></p>
+<p style="margin: 0px 0px 0px 13px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11px; font-family: 'Courier New';">mySeries.title = &quot;New Pie Series&quot;;</span></p>
+<p style="margin: 0px 0px 0px 13px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 13px;"><span style="font-weight: bold;">Setting properties in batch</span></p>
+<p style="margin: 0px 0px 0px 13px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 13px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11px; font-family: 'Courier New'; font-weight: bold;">var</span><span style="font-size: 11px; font-family: 'Courier New';"> mySeries = </span><span style="font-size: 11px; font-family: 'Courier New'; font-weight: bold;">new</span><span style="font-size: 11px; font-family: 'Courier New';"> EJSC.PieSeries(</span></p>
+<p style="margin: 0px 0px 0px 13px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11px; font-family: 'Courier New';">ArrayDataHandler([[10,&quot;Label 1&quot;],[20,&quot;Label 2&quot;],[120,&quot;Label 3&quot;]]),</span></p>
+<p style="margin: 0px 0px 0px 13px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11px; font-family: 'Courier New';">{ title: &quot;New Pie Series&quot; }</span></p>
+<p style="margin: 0px 0px 0px 13px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11px; font-family: 'Courier New';">);</span></p>
+<p style="margin: 0px 0px 0px 13px;"><span style="font-size: 11px; font-family: 'Courier New';">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

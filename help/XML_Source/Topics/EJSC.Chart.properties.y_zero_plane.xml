@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="EJSC.Chart.properties.y_zero_plane" modified="2007-05-20T11:12:39.067Z" target="Main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <header>
+      <para styleclass="Heading1"><text styleclass="Heading1" translate="true">EJSC.Chart.y_zero_plane</text></para>
+      <para styleclass="Heading1"><text styleclass="Heading1" style="font-size:9pt;" translate="true">See Also</text></para>
+    </header>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Definition</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">object </text><text style="font-family:Arial; font-size:10pt; font-weight:bold; color:#0000ff;" translate="true">y_zero_plane</text><text styleclass="Normal" translate="true"> = {</text></para>
+    <para styleclass="Normal"><tab /><text styleclass="Normal" translate="true">color: &quot;rgb(0,0,0)&quot;,</text></para>
+    <para styleclass="Normal"><tab /><text styleclass="Normal" translate="true">show: false,</text></para>
+    <para styleclass="Normal"><tab /><text styleclass="Normal" translate="true">thickness: 1</text></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">}</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Description</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">Defines the properties of the zero plane line to be drawn at X=0. It is used to specify if the line should be shown as well as its color and thickness. </text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Example</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-style:italic;" translate="true">&gt;&gt; Display a 2 pixel thick dark green line on the y zero plane</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:8pt; font-weight:bold; color:#000000;" translate="true">var</text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true"> chart = &#160;</text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; font-weight:bold; color:#000000;" translate="true">new </text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true">EJSC.Chart(</text></para>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true"> &#160; &#160; &#160; &#160;</text><tab /><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000080;" translate="true">&quot;chart&quot;</text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true">,</text></para>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true"> &#160; &#160; &#160; &#160;</text><tab /><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true">{y_zero_plane: {show: </text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; font-weight:bold; color:#000000;" translate="true">true</text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true">, color:&apos;rgb(7,89,5)&apos;, thickness:2}}</text></para>
+    <para styleclass="Normal"><tab /><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true">);</text></para>
+  </body>
+</topic>

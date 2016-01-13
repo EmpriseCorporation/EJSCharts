@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Emprise JavaScript Charts - Advanced - Filled Bars, Ranges and Custom Markers</title>
+	<link rel="stylesheet" href="../includes/template.css" type="text/css" media="screen" />
+	<meta name="ejsc-v1-compatibility" content="true"/>
+	<script type="text/javascript" src="../../EJSChart.min.js"></script>
+	<script type="text/javascript" src="../includes/code.js"></script>
+	
+	<style type="text/css">
+		#markerLow, #markerHigh { position: absolute; height: 14px; text-align: right; font-weight: bold; }
+		#markerLow { border-bottom: 2px solid #ffff00; }
+		#markerHigh { border-bottom: 2px solid #ff0000; }
+		
+		.hint_marker { opacity: 1; filter: none; }
+		
+		.red { background-color: #ff0000; color: #fff; font-weight: bold; font-size: 12px; padding: 2px; }
+		.green { background-color: #00ff00; font-weight: bold; font-size: 12px; padding: 2px; }
+		.yellow { background-color: #ffff00; font-weight: bold; font-size: 12px; padding: 2px; }
+	</style>
+</head>
+
+<body>
+<div id="wrap">
+
+		<div id="header">
+		
+			<h1 id="logo-text"><a href="http://www.ejschart.com/"><span class="gray">Emprise JavaScript Charts</span></a></h1>			
+					
+			<div id="header-tabs">
+				<ul>
+					<li><a href="http://www.ejschart.com/index.php"><span>Home</span></a></li>
+					<li><a href="http://www.ejschart.com/pricing.php"><span>Pricing</span></a></li>
+					<li><a href="http://www.ejschart.com/forums/"><span>Forums</span></a></li>
+					<li><a href="http://www.ejschart.com/support.php"><span>Support</span></a></li>
+				</ul>
+
+			</div>				
+			
+		</div>
+	  
+	  <!-- content-wrap starts here -->
+	  <div id="content-wrap">
+	  
+	  		<div id="main">
+				<h1>Filled Bars, Ranges and Custom Markers</h1>
+
+				<div class="breadcrumbs">Return to: <a href="../index.html" class="crumb">Examples</a> &raquo; <a href="../index.html#advanced" class="crumb">Advanced Examples</a></div> 
+
+				<div class="onecolumn">
+					<div class="default">
+						<h2 class="result">Description</h2>
+						
+						<p class="result" style="height: 68px">
+							This chart displays two overlayed bar series.  The first is formatted to appear
+							as a max value and will be filled at each point by the second series.  Two DIV elements
+							have been added to mark the normal range of the chart and are positioned over the
+							chart when it is drawn.  Custom hints have been added to allow display of a single
+							hint per X axis point which displays only the 'data' value for each point.
+						</p>
+						
+						<div id="myChart1a" class="chart"></div>
+						
+	<div id="markerLow">Too Low</div>
+	<div id="markerHigh">Too High</div>
+						
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code1a"><span>Rendering Source Code...</span></ol>
+					</div>
+				</div>				
+<script type="text/javascript" id="script1a">
+	// Save references to the marks for easier access later
+	var mLow = document.getElementById("markerLow");
+	var mHigh = document.getElementById("markerHigh");
+
+	// doAfterDraw will be attached to the chart's onAfterDraw event and
+	// move the markers into the correct position
+	function doAfterDraw() {
+
+		// Determine the pixel coordinates of the left side of the chart at y value 15
+		var coordsLeft = chart.convertPointToPixel(chart.x_min, 15);
+		// Determine the pixel coordinates of the right side of the chart at y value 15
+		var coordsRight = chart.convertPointToPixel(chart.x_max, 15);
+		
+		// If top (i.e. y value of 15) is not in view, it will be returned as undefined
+		// if that's the case, hide the low marker
+		if (coordsLeft.top == undefined) { mLow.style.display = "none"; } 
+		else { mLow.style.display = "block"; }
+		
+		var left = coordsLeft.left;
+		var width = coordsRight.left - coordsLeft.left + 60;
+		
+		// Move the low marker into the correct position (accounting for its 14 pixel height)
+		if (coordsLeft.top != undefined) {
+			mLow.style.top = coordsLeft.top - 14 + "px";
+			mLow.style.left = left + "px";
+			mLow.style.width = width + "px";
+		}
+		
+		// Determine the pixel coordinates of y value 90
+		coordsLeft = chart.convertPointToPixel(chart.x_min, 90);
+
+		// If top (i.e. y value of 90) is not in view, it will be returned as undefined
+		// if that's the case, hide the high marker
+		if (coordsLeft.top == undefined) { mHigh.style.display = "none"; }
+		else { mHigh.style.display = "block"; }
+
+		// Move the high marker into the correct position
+		if (coordsLeft.top != undefined) {
+			mHigh.style.top = coordsLeft.top - 14 + "px";
+			mHigh.style.left = left + "px";
+			mHigh.style.width = width + "px";
+		}		
+	}
+	window.onload = doAfterDraw;
+
+	// doShowHint will be attached to the chart's onShowHint event and allow
+	// us to show all hints at the top of the container bar (even when the mouse
+	// is over or has clicked on a value bar) as well as customize the display
+	// to show colored values based on the bars
+	function doShowHint(point, series, chart, hint, sticky) {
+
+		// Get the current Y value of the related bar in the barValueSeries
+		var currentYValue = chart.findClosestPointInSeries(point.x, 0, barValuesSeries).y;
+				
+		var className;
+		if (currentYValue < 15) { className = "yellow"; }
+		else if (currentYValue < 90) { className = "green"; }
+		else { className = "red"; }
+
+		// Modify the hint window to display maximum value and current value
+		return '[x]: <strong class="' + className + '">' + currentYValue + '</strong>'; 
+		
+	} 
+
+	function doBeforeSelectPoint(point, series, chart, hint, sticky) {
+		// Find out if the point is in the container series or bar series
+		if (series == barValuesSeries) {
+			// hint is triggered from the value series, find the same bar in the 
+			// container series and select it instead
+			chart.selectPoint(chart.findClosestPointInSeries(point.x, point.y, barContainersSeries), (sticky != "hover"));
+			
+			// Cancel selection of this point
+			return false;
+		}
+	}
+
+	var chart = new EJSC.Chart("myChart1a", 
+		{ 
+			show_titlebar: false,
+			show_legend: false,
+			x_axis_caption: "", 
+			y_axis_caption: "Level",
+			allow_zoom: true,
+			
+			onAfterDraw: doAfterDraw,
+			onShowHint: doShowHint,
+			onBeforeSelectPoint: doBeforeSelectPoint,
+			
+			x_axis_extremes_ticks: true
+		}
+	);
+	
+	// Modify extremes for a little bit of padding on the top
+	chart.setYExtremes(0,105);
+
+	// Define colors for bar ranges
+	var barRanges = [
+		{ min: 0, max: 14, color: "rgb(255,255,0)", opacity: 80, lineOpacity: 80, lineWidth: 0 },	
+		{ min: 15, max: 90, color: "rgb(0,216,0)", opacity: 80, lineOpacity: 80, lineWidth: 0 },	
+		{ min: 90, max: 100, color: "rgb(255,0,0)", opacity: 80, lineOpacity: 80, lineWidth: 0 }
+	];	
+
+	var barValuesSeries = new EJSC.BarSeries(
+		new EJSC.ArrayDataHandler([
+			["Tank A",60],["Tank B",50],["Tank C",55],
+			["Tank D",95],["Tank E",56],["Tank F",10]
+		]),
+		{
+			// Turn off grouping so that the series overlay
+			groupedBars: false,
+			intervalOffset: 0.9,
+			ranges: barRanges
+		}
+	);
+
+	// barContainersSeries will define the empty bars which appear to be filled
+	// with the bars defined by barValuesSeries
+	var barContainersSeries = new EJSC.BarSeries(
+		new EJSC.ArrayDataHandler([
+			["Tank A",100],["Tank B",100],["Tank C",100],
+			["Tank D",100],["Tank E",100],["Tank F",100]
+		]),
+		{
+			// Style bars with thicker borders and no fill
+			lineWidth: 3,
+			color: "rgb(0,0,0)",
+			intervalOffset: 0.9,
+			opacity: 10
+		}
+	);
+	
+	chart.addSeries(barValuesSeries);
+	chart.addSeries(barContainersSeries);
+
+</script>
+
+
+				<div class="breadcrumbs">Return to: <a href="../index.html" class="crumb">Examples</a> &raquo; <a href="../index.html#advanced" class="crumb">Advanced Examples</a></div> 
+
+			</div>
+
+		</div>
+		
+		<div id="footer">
+		
+			<span id="footer-left">
+				&copy; 2006-2007 <strong><a href="http://www.emprisecorporation.com/">Emprise Corporation</a></strong> | 
+				Design by: <strong><a href="http://www.styleshout.com/">styleshout</a></strong> | 
+				Valid: <a href="http://validator.w3.org/">XHTML</a> | 
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+
+			</span>		
+			
+			<span id="footer-right">
+				<a href="http://www.ejschart.com/">Home</a> 
+			</span>
+			
+		</div>	
+
+<!-- wrap ends here -->		
+</div>
+</body>
+
+</html>

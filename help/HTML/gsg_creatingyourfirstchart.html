@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?gsg_creatingyourfirstchart.html"; }
+else { parent.quicksync('a1.3'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Creating Your First Chart</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="http://www.ejschart.com/includes/help.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<div class="topicHeader">
+     <div class="navigation">
+          <a href="gsg_overview.html">Top</a>&nbsp;
+          <a href="gsg_implementationinstructions.html">Previous</a>&nbsp;
+               <a href="gsg_customizingyourchart.html">Next</a>
+     </div>
+     <div class="topic">
+          <p class="p_Heading1"><span class="f_Heading1">Creating Your First Chart</span></p>
+
+     </div>
+</div>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="line-height: 1.50;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">Now that you have created and tested your first demonstration chart on your web server it is time to create your own chart.&nbsp; This demonstration will guide you through creating your first chart and introduce you to some of the many available features and methods of customization available to you in Emprise JavaScript Charts.&nbsp; If you have not yet completed the </span><span style="font-size: 16px; font-family: 'Times New Roman'; color: #0000ff;"><a href="gsg_implementationinstructions.html">Implementation Instructions</a></span><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;"> it is recommended that you do so before continuing with this section as they guide you through uploading the necessary files to your web server.</span></p>
+<p style="line-height: 1.50;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline"><td style="width:24px"><span style="font-size: 12pt; font-family: 'Times New Roman'; color: #000000;">1.</span></td><td><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">Open the webpage that you wish to place your first custom chart on.&nbsp; If you do not currently have one or wish to use a test page for this purpose one has been provided for you in the How To directory included with your download.&nbsp; This file is named myfirstchart.html and can be edited in your preferred html editor or even notepad.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline"><td style="width:24px"><span style="font-size: 12pt; font-family: 'Times New Roman'; color: #000000;">2.</span></td><td><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">Copy </span><span style="font-family: 'Courier New'; color: #000000;">&lt;script type=&quot;text/javascript&quot; src=&quot;/EJSChart/EJSChart.js&quot;&gt;&lt;/script&gt;</span><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;"> into the head section of your webpage.&nbsp; *This path can be modified as necessary to correctly point to EJSChart.js.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; line-height: 1.50; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table cellspacing="0" cellpadding="0" border="0" style="width: ; background-color: #dadada; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top;"><p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;!doctype html public &quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot;&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;html&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;head&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;title&gt;My Demo Chart&lt;/title&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;meta name=&quot;Author&quot; content=&quot;Emprise Corporation&quot;&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;meta name=&quot;Description&quot; content=&quot;Emprise JavaScript Charts :: Customization Example&quot;&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">&lt;script type=&quot;text/javascript&quot; src=&quot;/EJSChart/EJSChart.js&quot;&gt; &lt;/script&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;/head&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;body&gt;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;p&gt;This is a sample page that is used to copy and paste a demo chart into.&lt;/p&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;/body&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;/html&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="line-height: 1.50;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline"><td style="width:24px"><span style="font-size: 12pt; font-family: 'Times New Roman'; color: #000000;">3.</span></td><td><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">Create a div on your page where you would like the chart to be displayed by </span><span style="font-family: 'Courier New'; color: #000000;">pasting &lt;div id=&quot;myFirstChart&quot; style=”width:600px; height:400px;&quot;&gt;&lt;/div&gt; </span><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">where desired in the body of your webpage.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; line-height: 1.50; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table cellspacing="0" cellpadding="0" border="0" style="width: ; background-color: #dadada; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top;"><p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;!doctype html public &quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot;&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;html&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;head&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;title&gt;My Demo Chart&lt;/title&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;meta name=&quot;Author&quot; content=&quot;Emprise Corporation&quot;&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;meta name=&quot;Description&quot; content=&quot;Emprise JavaScript Charts :: Customization Example&quot;&gt;</span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;script type=&quot;text/javascript&quot; src=&quot;/EJSChart/EJSChart.js&quot;&gt; &lt;/script&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;/head&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;body&gt;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;p&gt;This is a sample page that is used to copy and paste a demo chart into.&lt;/p&gt;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">&lt;div id=&quot;myFirstChart&quot; style=&quot;width:600px; height:400px;&quot;&gt;&lt;/div&gt;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">&nbsp;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;/body&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;/html&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline"><td style="width:24px"><span style="font-size: 12pt; font-family: 'Times New Roman'; color: #000000;">4.</span></td><td><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">The next step is to create the chart object.&nbsp; This is done at the end of your html file, directly before the closing body tag; &lt;/body&gt;.&nbsp; To begin define the text as JavaScript with </span><span style="font-family: 'Courier New'; color: #000000;">&lt;script type=&quot;text/javascript&quot;&gt;</span><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;"> and create a chart object on the next line using var </span><span style="font-family: 'Courier New'; color: #000000;">chart = new EJSC.Chart(&quot;myFirstChart&quot;); </span><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;"> Be sure that the div id as identified within the body of your webpage matches the title you place within the parenthesis when creating your chart.&nbsp; In this example it is ‘myFirstChart’.&nbsp; Failure to create the appropriate div’s for the chart to be placed in will result in errors and prevent your chart from being displayed.</span></td></tr></table></div><p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">The properties of your chart including its visual appearance and interactivity are highly customizable by adjusting its properties.&nbsp; Instructions on how to accomplish this can be found on the <a href="gsg_customizingyourchart.html">Customizing Your Chart</a> page of this guide.</span></p>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">In this example code the chart has been customized to remove the legend and set a custom title by adding:</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span><br />
+<span style="font-family: 'Courier New'; color: #000000;">&lt;script type=&quot;text/javascript&quot;&gt;</span><br />
+<span style="font-family: 'Courier New'; color: #000000;">  var chart = new EJSC.Chart(</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &quot;myFirstChart&quot;, </span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; { </span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; show_legend: false,</span><br />
+<span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; title: &quot;My First Custom Chart&quot;</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; }</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;">  );</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.50; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table cellspacing="0" cellpadding="0" border="0" style="width: ; background-color: #dadada; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top;"><p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;!doctype html public &quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot;&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;html&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;head&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;title&gt;My Demo Chart&lt;/title&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;meta name=&quot;Author&quot; content=&quot;Emprise Corporation&quot;&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;meta name=&quot;Description&quot; content=&quot;Emprise JavaScript Charts :: Customization Example&quot;&gt;</span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;script type=&quot;text/javascript&quot; src=&quot;/EJSChart/EJSChart.js&quot;&gt; &lt;/script&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;/head&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;body&gt;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;p&gt;This is a sample page that is used to copy and paste a demo chart into.&lt;/p&gt;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;div id=&quot;myFirstChart&quot; style=&quot;width:600px; height:400px;&quot;&gt;&lt;/div&gt;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">&nbsp;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">&lt;script type=&quot;text/javascript&quot;&gt;</span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">var chart = new EJSC.Chart(</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">&quot;myFirstChart&quot;, </span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">{</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">show_legend: false,</span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">title: &quot;My First Custom Chart&quot;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">}</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">);</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;/body&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;/html&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline"><td style="width:24px"><span style="font-size: 12pt; font-family: 'Times New Roman'; color: #000000;">5.</span></td><td><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">Now that the chart has been created the series must be created.&nbsp; The series defines how your data will be displayed in the chart you are creating.&nbsp; The types of series that are available may vary by license; more details on this can be found on the LICENSE.txt file.</span></td></tr></table></div><p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">When creating the chart you can also choose which format you will be providing the data in.&nbsp; This is accomplished with the use of different Data Handlers.&nbsp; The formats currently supported by EJSChart are XML file, JavaScript Array, CSV file, and CSV string data.&nbsp; Details on the implementation of each of these data handlers as well as sample code can be found on their respective pages in the Developer Guide help file.</span></p>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">The properties of your series, including its visual appearance and interactivity, are customized by adjusting its properties.&nbsp; Instructions on how to accomplish this can be found on the </span><span style="font-size: 16px; font-family: 'Times New Roman'; color: #0000ff;"><a href="gsg_customizingyourchart.html">Customizing Your Chart</a></span><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;"> page.</span></p>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">In this example code a bar chart was created using the Bar Series, the color was set to green, and the bar border width was set to five pixels.&nbsp; The data to be graphed was specified using the EJSC.ArrayDataHandler.&nbsp; To accomplish this the following code was added:</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span><br />
+<span style="font-family: 'Courier New'; color: #000000;">var myChartSeries =&nbsp; new EJSC.BarSeries(</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new EJSC.ArrayDataHandler(</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;Month 1&quot;,1],</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;Month 2&quot;,2], </span><br />
+<span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;Month 3&quot;,3],</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;Month 4&quot;,4],</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;Month 5&quot;,5]</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; );</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; myChartSeries.color = 'rgb(50,210,50)';</span><br />
+<span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; myChartSeries.lineWidth = 5;</span><br />
+<span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.50; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table cellspacing="0" cellpadding="0" border="0" style="width: ; background-color: #dadada; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top;"><p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;!doctype html public &quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot;&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;html&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;head&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;title&gt;My Demo Chart&lt;/title&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;meta name=&quot;Author&quot; content=&quot;Emprise Corporation&quot;&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;meta name=&quot;Description&quot; content=&quot;Emprise JavaScript Charts :: Customization Example&quot;&gt;</span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;script type=&quot;text/javascript&quot; src=&quot;/EJSChart/EJSChart.js&quot;&gt; &lt;/script&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;/head&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;body&gt;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;p&gt;This is a sample page that is used to copy and paste a demo chart into.&lt;/p&gt;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;div id=&quot;myFirstChart&quot; style=&quot;width:600px; height:400px;&quot;&gt;&lt;/div&gt;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">&nbsp;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;script type=&quot;text/javascript&quot;&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; var chart = new EJSC.Chart(</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;myFirstChart&quot;, </span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show_legend: false,</span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; title: &quot;My First Custom Chart&quot;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; );</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">var myChartSeries =&nbsp; new EJSC.BarSeries(</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">new EJSC.ArrayDataHandler(</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">[</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">[&quot;Month 1&quot;,1],</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">[&quot;Month 2&quot;,2],</span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> </span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">[&quot;Month 3&quot;,3],</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">[&quot;Month 4&quot;,4],</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">[&quot;Month 5&quot;,5]</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">]</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">)</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">);</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">myChartSeries.color = 'rgb(50,210,50)';</span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">myChartSeries.lineWidth = 5;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;/body&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;/html&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline"><td style="width:24px"><span style="font-size: 12pt; font-family: 'Times New Roman'; color: #000000;">6.</span></td><td><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">Once created the series must then be added to the chart using the </span><span style="font-size: 16px; font-family: 'Times New Roman'; color: #0000ff;">addSeries </span><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">method in the chart class.</span></td></tr></table></div><p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.50; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table cellspacing="0" cellpadding="0" border="0" style="width: ; background-color: #dadada; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top;"><p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;!doctype html public &quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot;&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;html&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;head&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;title&gt;My Demo Chart&lt;/title&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;meta name=&quot;Author&quot; content=&quot;Emprise Corporation&quot;&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;meta name=&quot;Description&quot; content=&quot;Emprise JavaScript Charts :: Customization Example&quot;&gt;</span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;script type=&quot;text/javascript&quot; src=&quot;/EJSChart/EJSChart.js&quot;&gt; &lt;/script&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;/head&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;body&gt;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;p&gt;This is a sample page that is used to copy and paste a demo chart into.&lt;/p&gt;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;div id=&quot;myFirstChart&quot; style=&quot;width:600px; height:400px;&quot;&gt;&lt;/div&gt;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">&nbsp;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;script type=&quot;text/javascript&quot;&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; var chart = new EJSC.Chart(</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;myFirstChart&quot;, </span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show_legend: false,</span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; title: &quot;My First Custom Chart&quot;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; );</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; var myChartSeries =&nbsp; new EJSC.BarSeries(</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new EJSC.ArrayDataHandler(</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;Month 1&quot;,1],</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;Month 2&quot;,2], </span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;Month 3&quot;,3],</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;Month 4&quot;,4],</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;Month 5&quot;,5]</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; );</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myChartSeries.color = 'rgb(50,210,50)';</span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myChartSeries.lineWidth = 5;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">chart.addSeries(myChartSeries);</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">&nbsp;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;/body&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;/html&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline"><td style="width:24px"><span style="font-size: 12pt; font-family: 'Times New Roman'; color: #000000;">7.</span></td><td><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">Close the JavaScript by inserting </span><span style="font-family: 'Courier New'; color: #000000;">&lt;/script&gt;</span><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;"> at the end.</span></td></tr></table></div><p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.50; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table cellspacing="0" cellpadding="0" border="0" style="width: ; background-color: #dadada; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top;"><p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;!doctype html public &quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot;&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;html&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;head&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;title&gt;My Demo Chart&lt;/title&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;meta name=&quot;Author&quot; content=&quot;Emprise Corporation&quot;&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;meta name=&quot;Description&quot; content=&quot;Emprise JavaScript Charts :: Customization Example&quot;&gt;</span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;script type=&quot;text/javascript&quot; src=&quot;/EJSChart/EJSChart.js&quot;&gt; &lt;/script&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;/head&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;body&gt;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; &lt;p&gt;This is a sample page that is used to copy and paste a demo chart into.&lt;/p&gt;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;div id=&quot;myFirstChart&quot; style=&quot;width:600px; height:400px;&quot;&gt;&lt;/div&gt;</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">&nbsp;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;script type=&quot;text/javascript&quot;&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; var chart = new EJSC.Chart(</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;myFirstChart&quot;, </span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show_legend: false,</span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; title: &quot;My First Custom Chart&quot;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; );</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; var myChartSeries =&nbsp; new EJSC.BarSeries(</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new EJSC.ArrayDataHandler(</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;Month 1&quot;,1],</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;Month 2&quot;,2], </span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;Month 3&quot;,3],</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;Month 4&quot;,4],</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;Month 5&quot;,5]</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; );</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myChartSeries.color = 'rgb(50,210,50)';</span><br />
+<span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myChartSeries.lineWidth = 5;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; chart.addSeries(myChartSeries);</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; color: #000000; background-color: #ffff00;">&lt;/script&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">  &lt;/body&gt;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; color: #000000;">&lt;/html&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="line-height: 1.50; margin: 0px 0px 0px 48px;"><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline"><td style="width:24px"><span style="font-size: 12pt; font-family: 'Times New Roman'; color: #000000;">8.</span></td><td><span style="font-size: 16px; font-family: 'Times New Roman'; color: #000000;">That’s it! Upload the webpage to your web server and you’re done.</span></td></tr></table></div><p style="text-indent: -24px; line-height: 1.50; margin: 0px 0px 0px 48px;"><img src="embim2.jpg" width="459" height="355" vspace="1" hspace="1" border="0" alt="" /></p>
+
+</td></tr></table>
+
+</body>
+</html>

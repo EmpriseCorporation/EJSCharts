@@ -1,0 +1,658 @@
+:TITLE Emprise JavaScript Charts
+:BASE EJSChart.hlp
+1 Getting Started
+2 Overview=GSG_Overview@EJSChart.hlp
+2 Implementation Instructions=GSG_ImplementationInstructions@EJSChart.hlp
+2 Creating Your First Chart=GSG_CreatingYourFirstChart@EJSChart.hlp
+2 Customizing Your Chart
+3 Customizing Your Chart=GSG_CustomizingYourChart@EJSChart.hlp
+3 Titlebar=GSG_Anatomy_Titlebar@EJSChart.hlp
+3 Y Axis=GSG_Anatomy_YAxis@EJSChart.hlp
+3 X Axis=GSG_Anatomy_XAxis@EJSChart.hlp
+3 Hint=GSG_Anatomy_Hint@EJSChart.hlp
+3 Chart Body=GSG_Anatomy_ChartBody@EJSChart.hlp
+3 Legend=GSG_Anatomy_Legend@EJSChart.hlp
+1 Deployment=Deployment@EJSChart.hlp
+1 Changes
+2 Changes in version 1.3.1=Changes_in_version_1.3.1@EJSChart.hlp
+2 Changes in version 1.3=Changes_in_version_1.3@EJSChart.hlp
+2 Changes in version 1.2.1=Changes_in_version_1.2.1@EJSChart.hlp
+2 Changes in version 1.2=Changes_in_version_1.2@EJSChart.hlp
+2 Changes in version 1.1=Changes_in_version_1.1@EJSChart.hlp
+2 Changes in version 1.0.1=Changes_in_version_1.0.1@EJSChart.hlp
+2 Changes in version 1.0=Changes_in_version_1.0@EJSChart.hlp
+1 Data Formats
+2 Data Formats=DataFormats@EJSChart.hlp
+2 XML - Full=DataFormats_XMLFull@EJSChart.hlp
+2 XML - Short=DataFormats_XMLShort@EJSChart.hlp
+2 XML - Compact=DataFormats_XMLCompact@EJSChart.hlp
+1 API Reference
+2 EJSC
+3 EJSC=EJSCNamespace@EJSChart.hlp
+3 Properties
+4 DefaultImagePath=EJSC.properties.DefaultImagePath@EJSChart.hlp
+4 DefaultColors=EJSC.properties.DefaultColors@EJSChart.hlp
+4 DefaultBarColors=EJSC.properties.DefaultBarColors@EJSChart.hlp
+4 DefaultPieColors=EJSC.properties.DefaultPieColors@EJSChart.hlp
+2 EJSC.Chart
+3 EJSC.Chart=EJSC.Chart@EJSChart.hlp
+3 Properties
+4 allow_interactivity=EJSC.Chart.properies.allow_interactivity@EJSChart.hlp
+4 allow_mouse_wheel_zoom=EJSC.Chart.properties.allow_mouse_wheel_zoom@EJSChart.hlp
+4 allow_zoom=EJSC.Chart.properties.allow_zoom@EJSChart.hlp
+4 allow_hide_error=EJSC.Chart.properties.allow_hide_error@EJSChart.hlp
+4 auto_find_point_by_x=EJSC.Chart.properties.auto_find_point_by_x@EJSChart.hlp
+4 auto_zoom=EJSC.Chart.properties.auto_zoom@EJSChart.hlp
+4 force_static_points=EJSC.Chart.properties.force_static_points@EJSChart.hlp
+4 force_static_points_x=EJSC.Chart.properties.force_static_points_x@EJSChart.hlp
+4 force_static_points_y=EJSC.Chart.properties.force_static_points_y@EJSChart.hlp
+4 legendTitle=EJSC.Chart.properties.legendTitle@EJSChart.hlp
+4 proximity_snap=EJSC.Chart.properties.proximity_snap@EJSChart.hlp
+4 show_crosshairs=EJSC.Chart.properties.show_crosshairs@EJSChart.hlp
+4 show_grid=EJSC.Chart.properties.show_grid@EJSChart.hlp
+4 show_hints=EJSC.Chart.properties.show_hints@EJSChart.hlp
+4 show_legend=EJSC.Chart.properties.show_legend@EJSChart.hlp
+4 show_messages=EJSC.Chart.properties.show_messages@EJSChart.hlp
+4 show_mouse_position=EJSC.Chart.properties.show_mouse_position@EJSChart.hlp
+4 show_titlebar=EJSC.Chart.properties.show_titlebar@EJSChart.hlp
+4 show_x_axis=EJSC.Chart.properties.show_x_axis@EJSChart.hlp
+4 show_y_axis=EJSC.Chart.properties.show_y_axis@EJSChart.hlp
+4 title=EJSC.Chart.properties.title@EJSChart.hlp
+4 x_axis_caption=EJSC.Chart.properties.x_axis_caption@EJSChart.hlp
+4 x_axis_className=EJSC.Chart.properties.x_axis_className@EJSChart.hlp
+4 x_axis_extremes_ticks=EJSC.Chart.properties.x_axis_extremes_ticks@EJSChart.hlp
+4 x_axis_formatter=EJSC.Chart.properties.x_axis_formatter@EJSChart.hlp
+4 x_axis_max_tick_interval=EJSC.Chart.properties.x_axis_max_tick_interval@EJSChart.hlp
+4 x_axis_min_tick_interval=EJSC.Chart.properties.x_axis_min_tick_interval@EJSChart.hlp
+4 x_axis_minor_ticks=EJSC.Chart.properties.x_axis_minor_ticks@EJSChart.hlp
+4 x_axis_size=EJSC.Chart.properties.x_axis_size@EJSChart.hlp
+4 x_axis_stagger_ticks=EJSC.Chart.properties.x_axis_stagger_ticks@EJSChart.hlp
+4 x_axis_tick_className=EJSC.Chart.properties.x_axis_tick_className@EJSChart.hlp
+4 x_axis_tick_count=EJSC.Chart.properties.x_axis_tick_count@EJSChart.hlp
+4 x_cursor_position_caption=EJSC.Chart.properties.x_cursor_position_caption@EJSChart.hlp
+4 x_cursor_position_formatter=EJSC.Chart.properties.x_cursor_position_formatter@EJSChart.hlp
+4 x_max=EJSC.Chart.properties.x_max@EJSChart.hlp
+4 x_min=EJSC.Chart.properties.x_min@EJSChart.hlp
+4 x_value_hint_caption=EJSC.Chart.properties.x_value_hint_caption@EJSChart.hlp
+4 x_zero_plane=EJSC.Chart.properties.x_zero_plane@EJSChart.hlp
+4 y_axis_caption=EJSC.Chart.properties.y_axis_caption@EJSChart.hlp
+4 y_axis_className=EJSC.Chart.properties.y_axis_className@EJSChart.hlp
+4 y_axis_extremes_ticks=EJSC.Chart.properties.y_axis_extremes_ticks@EJSChart.hlp
+4 y_axis_formatter=EJSC.Chart.properties.y_axis_formatter@EJSChart.hlp
+4 y_axis_max_tick_interval=EJSC.Chart.properties.y_axis_max_tick_interval@EJSChart.hlp
+4 y_axis_min_tick_interval=EJSC.Chart.properties.y_axis_min_tick_interval@EJSChart.hlp
+4 y_axis_minor_ticks=EJSC.Chart.properties.y_axis_minor_ticks@EJSChart.hlp
+4 y_axis_size=EJSC.Chart.properties.y_axis_size@EJSChart.hlp
+4 y_axis_tick_className=EJSC.Chart.properties.y_axis_tick_className@EJSChart.hlp
+4 y_axis_tick_count=EJSC.Chart.properties.y_axis_tick_count@EJSChart.hlp
+4 y_cursor_position_caption=EJSC.Chart.properties.y_cursor_position_caption@EJSChart.hlp
+4 y_cursor_position_formatter=EJSC.Chart.properties.y_cursor_position_formatter@EJSChart.hlp
+4 y_max=EJSC.Chart.properties.y_max@EJSChart.hlp
+4 y_min=EJSC.Chart.properties.y_min@EJSChart.hlp
+4 y_value_hint_caption=EJSC.Chart.properties.y_value_hint_caption@EJSChart.hlp
+4 y_zero_plane=EJSC.Chart.properties.y_zero_plane@EJSChart.hlp
+3 Methods
+4 acquireSeries=EJSC.Chart.methods.acquireSeries@EJSChart.hlp
+4 addSeries=EJSC.Chart.methods.addSeries@EJSChart.hlp
+4 addXAxisBin=EJSC.Chart.methods.addXAxisBin@EJSChart.hlp
+4 addYAxisBin=EJSC.Chart.methods.addYAxisBin@EJSChart.hlp
+4 clearSelectedPoint=EJSC.Chart.methods.clearSelectedPoint@EJSChart.hlp
+4 convertPixelToPoint=EJSC.Chart.methods.convertPixelToPoint@EJSChart.hlp
+4 convertPointToPixel=EJSC.Chart.methods.convertPointToPixel@EJSChart.hlp
+4 exportSVG=EJSC.Chart.methods.exportSVG@EJSChart.hlp
+4 exportSVGLegend=EJSC.Chart.methods.exportSVGLegend@EJSChart.hlp
+4 findClosestPointInSeries=EJSC.Chart.methods.findClosestPointInSeries@EJSChart.hlp
+4 getMinMaxYInXRange=EJSC.Chart.methods.getMinMaxYInXRange@EJSChart.hlp
+4 getXExtremes=EJSC.Chart.methods.getXExtremes@EJSChart.hlp
+4 getYExtremes=EJSC.Chart.methods.getYExtremes@EJSChart.hlp
+4 getZoom=EJSC.Chart.methods.getZoom@EJSChart.hlp
+4 getZoomBoxCoordinates=EJSC.Chart.methods.getZoomBoxCoordinates@EJSChart.hlp
+4 hideGrid=EJSC.Chart.methods.hideGrid@EJSChart.hlp
+4 hideTitlebar=EJSC.Chart.methods.hideTitlebar@EJSChart.hlp
+4 hideXAxis=EJSC.Chart.methods.hideXAxis@EJSChart.hlp
+4 hideYAxis=EJSC.Chart.methods.hideYAxis@EJSChart.hlp
+4 redraw=EJSC.Chart.methods.redraw@EJSChart.hlp
+4 remove=EJSC.Chart.methods.remove@EJSChart.hlp
+4 removeSeries=EJSC.Chart.methods.removeSeries@EJSChart.hlp
+4 removeXAxisBin=EJSC.Chart.methods.removeXAxisBin@EJSChart.hlp
+4 removeYAxisBin=EJSC.Chart.methods.removeYAxisBin@EJSChart.hlp
+4 selectClosestPoint=EJSC.Chart.methods.selectClosestPoint@EJSChart.hlp
+4 selectPoint=EJSC.Chart.methods.selectPoint@EJSChart.hlp
+4 setCrosshairs=EJSC.Chart.methods.setCrosshairs@EJSChart.hlp
+4 setLegendTitle=EJSC.Chart.methods.setLegendTitle@EJSChart.hlp
+4 setTitle=EJSC.Chart.methods.setTitle@EJSChart.hlp
+4 setXAxisCaption=EJSC.Chart.methods.setXAxisCapion@EJSChart.hlp
+4 setXExtremes=EJSC.Chart.methods.setXExtremes@EJSChart.hlp
+4 setYAxisCaption=EJSC.Chart.methods.setYAxisCaption@EJSChart.hlp
+4 setYExtremes=EJSC.Chart.methods.setYExtremes@EJSChart.hlp
+4 setZoom=EJSC.Chart.methods.setZoom@EJSChart.hlp
+4 setZoomBoxCoordinates=EJSC.Chart.methods.setZoomBoxCoordinates@EJSChart.hlp
+4 showGrid=EJSC.Chart.methods.showGrid@EJSChart.hlp
+4 showTitlebar=EJSC.Chart.methods.showTitlebar@EJSChart.hlp
+4 showXAxis=EJSC.Chart.methods.showXAxis@EJSChart.hlp
+4 showYAxis=EJSC.Chart.methods.showYAxis@EJSChart.hlp
+3 Events
+4 onAfterDraw=EJSC.Chart.events.onAfterDraw@EJSChart.hlp
+4 onAfterMove=EJSC.Chart.events.onAfterMove@EJSChart.hlp
+4 onAfterSelectPoint=EJSC.Chart.events.onAfterSelectPoint@EJSChart.hlp
+4 onAfterShowCrosshairs=EJSC.Chart.events.onAfterShowCrosshairs@EJSChart.hlp
+4 onAfterUnselectPoint=EJSC.Chart.events.onAfterUnselectPoint@EJSChart.hlp
+4 onAfterZoom=EJSC.Chart.events.onAfterZoom@EJSChart.hlp
+4 onBeforeBeginZoom=EJSC.Chart.events.onBeforeBeginZoom@EJSChart.hlp
+4 onBeforeDblClick=EJSC.Chart.events.onBeforeDblClick@EJSChart.hlp
+4 onBeforeDraw=EJSC.Chart.events.onBeforeDraw@EJSChart.hlp
+4 onBeforeEndZoom=EJSC.Chart.events.onBeforeEndZoom@EJSChart.hlp
+4 onBeforeSelectPoint=EJSC.Chart.events.onBeforeSelectPoint@EJSChart.hlp
+4 onBeforeUnselectPoint=EJSC.Chart.events.onBeforeUnselectPoint@EJSChart.hlp
+4 onDblClickPoint=EJSC.Chart.events.onDblClickPoint@EJSChart.hlp
+4 onShowCrosshairs=EJSC.Chart.events.onShowCrosshairs@EJSChart.hlp
+4 onShowHint=EJSC.Chart.events.onShowHint@EJSChart.hlp
+4 onShowMessage=EJSC.Chart.events.onShowMessage@EJSChart.hlp
+4 onXAxisNeedsTicks=EJSC.Chart.events.onXAxisNeedsTicks@EJSChart.hlp
+4 onYAxisNeedsTicks=EJSC.Chart.events.onYAxisNeedsTicks@EJSChart.hlp
+2 Series Types
+3 EJSC.AreaSeries
+4 EJSC.AreaSeries=EJSC.AreaSeries@EJSChart.hlp
+4 Properties
+5 autosort (inherited)=EJSC.Series.properties.autosort@EJSChart.hlp
+5 closeLine=EJSC.AreaSeries.properties.closeLine@EJSChart.hlp
+5 color (inherited)=EJSC.Series.properties.color@EJSChart.hlp
+5 coloredLegend (inherited)=EJSC.Series.properties.coloredLegend@EJSChart.hlp
+5 delayLoad (inherited)=EJSC.Series.properties.delayLoad@EJSChart.hlp
+5 drawPoints (inherited)=EJSC.LineSeries.properties.drawPoints@EJSChart.hlp
+5 legendIsVisible (inherited)=EJSC.Series.properties.legendIsVisible@EJSChart.hlp
+5 lineOpacity (inherited)=EJSC.Series.properties.lineOpacity@EJSChart.hlp
+5 lineWidth (inherited)=EJSC.Series.properties.lineWidth@EJSChart.hlp
+5 opacity (inherited)=EJSC.Series.properties.opacity@EJSChart.hlp
+5 pointBorderColor (inherited)=EJSC.LineSeries.properties.pointBorderColor@EJSChart.hlp
+5 pointBorderSize (inherited)=EJSC.LineSeries.properties.pointBorderSize@EJSChart.hlp
+5 pointColor (inherited)=EJSC.LineSeries.properties.pointColor@EJSChart.hlp
+5 pointSize (inherited)=EJSC.LineSeries.properties.pointSize@EJSChart.hlp
+5 title (inherited)=EJSC.Series.properties.title@EJSChart.hlp
+5 visible (inherited)=EJSC.Series.properties.visible@EJSChart.hlp
+5 x_axis_formatter (inherited)=EJSC.Series.properties.x_axis_formatter@EJSChart.hlp
+5 y_axis_formatter (inherited)=EJSC.Series.properties.y_axis_formatter@EJSChart.hlp
+4 Methods
+5 getDataHandler (inherited)=EJSC.Series.methods.getDataHandler@EJSChart.hlp
+5 getVisibility (inherited)=EJSC.Series.methods.getVisibility@EJSChart.hlp
+5 hide (inherited)=EJSC.Series.methods.hide@EJSChart.hlp
+5 hideLegend (inherited)=EJSC.Series.methods.hideLegend@EJSChart.hlp
+5 reload (inherited)=EJSC.Series.methods.reload@EJSChart.hlp
+5 setColor (inherited)=EJSC.Series.methods.setColor@EJSChart.hlp
+5 setColoredLegend (inherited)=EJSC.Series.methods.setColoredLegend@EJSChart.hlp
+5 setDataHandler (inherited)=EJSC.Series.methods.setDataHandler@EJSChart.hlp
+5 setLineWidth (inherited)=EJSC.Series.methods.setLineWidth@EJSChart.hlp
+5 setOpacity (inherited)=EJSC.Series.methods.setOpacity@EJSChart.hlp
+5 setTitle (inherited)=EJSC.Series.methods.setTitle@EJSChart.hlp
+5 show (inherited)=EJSC.Series.methods.show@EJSChart.hlp
+5 showLegend (inherited)=EJSC.Series.methods.showLegend@EJSChart.hlp
+4 Events
+5 onAfterDataAvailable (inherited)=EJSC.Series.events.onAfterDataAvailable@EJSChart.hlp
+5 onAfterVisibilityChange (inherited)=EJSC.Series.events.onAfterVisibilityChange@EJSChart.hlp
+5 onBeforeVisibilityChange (inherited)=EJSC.Series.events.onBeforeVisibilityChange@EJSChart.hlp
+3 EJSC.AnalogGaugeSeries
+4 EJSC.AnalogGaugeSeries=EJSC.AnalogGaugeSeries@EJSChart.hlp
+4 Properties
+5 anchor=EJSC.AnalogGaugeSeries.properties.anchor@EJSChart.hlp
+5 axis=EJSC.AnalogGaugeSeries.properties.axis@EJSChart.hlp
+5 delayLoad (inherited)=EJSC.Series.properties.delayLoad@EJSChart.hlp
+5 fillColor=EJSC.AnalogGaugeSeries.properties.fillColor@EJSChart.hlp
+5 fillOpacity=EJSC.AnalogGaugeSeries.properties.fillOpacity@EJSChart.hlp
+5 height=EJSC.AnalogGaugeSeries.properties.height@EJSChart.hlp
+5 label=EJSC.AnalogGaugeSeries.properties.label@EJSChart.hlp
+5 legendIsVisible (inherited)=EJSC.Series.properties.legendIsVisible@EJSChart.hlp
+5 lock=EJSC.AnalogGaugeSeries.properties.lock@EJSChart.hlp
+5 marker_position=EJSC.AnalogGaugeSeries.properties.marker_position@EJSChart.hlp
+5 max=EJSC.AnalogGaugeSeries.properties.max@EJSChart.hlp
+5 min=EJSC.AnalogGaugeSeries.properties.min@EJSChart.hlp
+5 minorTick=EJSC.AnalogGaugeSeries.properties.minorTick@EJSChart.hlp
+5 needle=EJSC.AnalogGaugeSeries.properties.needle@EJSChart.hlp
+5 position=EJSC.AnalogGaugeSeries.properties.position@EJSChart.hlp
+5 range=EJSC.AnalogGaugeSeries.properties.range@EJSChart.hlp
+5 range_degrees=EJSC.AnalogGaugeSeries.properties.range_degrees@EJSChart.hlp
+5 ranges=EJSC.AnalogGaugeSeries.properties.ranges@EJSChart.hlp
+5 start_degree=EJSC.AnalogGaugeSeries.properties.start_degree@EJSChart.hlp
+5 tick=EJSC.AnalogGaugeSeries.properties.tick@EJSChart.hlp
+5 tickCount=EJSC.AnalogGaugeSeries.properties.tickCount@EJSChart.hlp
+5 title (inherited)=EJSC.Series.properties.title@EJSChart.hlp
+5 visible (inherited)=EJSC.Series.properties.visible@EJSChart.hlp
+5 width=EJSC.AnalogGaugeSeries.properties.width@EJSChart.hlp
+5 x_axis_formatter (inherited)=EJSC.Series.properties.x_axis_formatter@EJSChart.hlp
+4 Methods
+5 getDataHandler (inherited)=EJSC.Series.methods.getDataHandler@EJSChart.hlp
+5 getVisibility (inherited)=EJSC.Series.methods.getVisibility@EJSChart.hlp
+5 hide (inherited)=EJSC.Series.methods.hide@EJSChart.hlp
+5 hideLegend (inherited)=EJSC.Series.methods.hideLegend@EJSChart.hlp
+5 reload (inherited)=EJSC.Series.methods.reload@EJSChart.hlp
+5 setDataHandler (inherited)=EJSC.Series.methods.setDataHandler@EJSChart.hlp
+5 setTitle (inherited)=EJSC.Series.methods.setTitle@EJSChart.hlp
+5 show (inherited)=EJSC.Series.methods.show@EJSChart.hlp
+5 showLegend (inherited)=EJSC.Series.methods.showLegend@EJSChart.hlp
+4 Events
+5 onAfterDataAvailable (inherited)=EJSC.Series.events.onAfterDataAvailable@EJSChart.hlp
+5 onAfterVisibilityChange (inherited)=EJSC.Series.events.onAfterVisibilityChange@EJSChart.hlp
+5 onBeforeVisibilityChange (inherited)=EJSC.Series.events.onBeforeVisibilityChange@EJSChart.hlp
+3 EJSC.BarSeries
+4 EJSC.BarSeries=EJSC.BarSeries@EJSChart.hlp
+4 Properties
+5 autosort (inherited)=EJSC.Series.properties.autosort@EJSChart.hlp
+5 color (inherited)=EJSC.Series.properties.color@EJSChart.hlp
+5 coloredLegend (inherited)=EJSC.Series.properties.coloredLegend@EJSChart.hlp
+5 defaultColors=EJSC.BarSeries.properties.defaultColors@EJSChart.hlp
+5 delayLoad (inherited)=EJSC.Series.properties.delayLoad@EJSChart.hlp
+5 groupedBars=EJSC.BarSeries.properties.groupedBars@EJSChart.hlp
+5 intervalOffset=EJSC.BarSeries.properties.intervalOffset@EJSChart.hlp
+5 legendIsVisible (inherited)=EJSC.Series.properties.legendIsVisible@EJSChart.hlp
+5 lineOpacity (inherited)=EJSC.Series.properties.lineOpacity@EJSChart.hlp
+5 lineWidth (inherited)=EJSC.Series.properties.lineWidth@EJSChart.hlp
+5 opacity (inherited)=EJSC.Series.properties.opacity@EJSChart.hlp
+5 orientation=EJSC.BarSeries.properties.orientation@EJSChart.hlp
+5 ranges=EJSC.BarSeries.properties.ranges@EJSChart.hlp
+5 title (inherited)=EJSC.Series.properties.title@EJSChart.hlp
+5 treeLegend=EJSC.BarSeries.properties.treeLegend@EJSChart.hlp
+5 useColorArray=EJSC.BarSeries.properties.useColorArray@EJSChart.hlp
+5 visible (inherited)=EJSC.Series.properties.visible@EJSChart.hlp
+5 x_axis_formatter (inherited)=EJSC.Series.properties.x_axis_formatter@EJSChart.hlp
+5 y_axis_formatter (inherited)=EJSC.Series.properties.y_axis_formatter@EJSChart.hlp
+4 Methods
+5 addRange=EJSC.BarSeries.methods.addRange@EJSChart.hlp
+5 clearRanges=EJSC.BarSeries.methods.clearRanges@EJSChart.hlp
+5 deleteRange=EJSC.BarSeries.methods.deleteRange@EJSChart.hlp
+5 getDataHandler (inherited)=EJSC.Series.methods.getDataHandler@EJSChart.hlp
+5 getVisibility (inherited)=EJSC.Series.methods.getVisibility@EJSChart.hlp
+5 hide (inherited)=EJSC.Series.methods.hide@EJSChart.hlp
+5 hideLegend (inherited)=EJSC.Series.methods.hideLegend@EJSChart.hlp
+5 reload (inherited)=EJSC.Series.methods.reload@EJSChart.hlp
+5 setColor (inherited)=EJSC.Series.methods.setColor@EJSChart.hlp
+5 setColoredLegend (inherited)=EJSC.Series.methods.setColoredLegend@EJSChart.hlp
+5 setDataHandler (inherited)=EJSC.Series.methods.setDataHandler@EJSChart.hlp
+5 setDefaultColors=EJSC.BarSeries.methods.setDefaultColors@EJSChart.hlp
+5 setGroupedBars=EJSC.BarSeries.methods.setGroupedBars@EJSChart.hlp
+5 setIntervalOffset=EJSC.BarSeries.methods.setIntervalOffset@EJSChart.hlp
+5 setLineWidth (inherited)=EJSC.Series.methods.setLineWidth@EJSChart.hlp
+5 setOpacity (inherited)=EJSC.Series.methods.setOpacity@EJSChart.hlp
+5 setTitle (inherited)=EJSC.Series.methods.setTitle@EJSChart.hlp
+5 show (inherited)=EJSC.Series.methods.show@EJSChart.hlp
+5 showLegend (inherited)=EJSC.Series.methods.showLegend@EJSChart.hlp
+4 Events
+5 onAfterDataAvailable (inherited)=EJSC.Series.events.onAfterDataAvailable@EJSChart.hlp
+5 onAfterVisibilityChange (inherited)=EJSC.Series.events.onAfterVisibilityChange@EJSChart.hlp
+5 onBarNeedsColor=EJSC.BarSeries.events.onBarNeedsColor@EJSChart.hlp
+5 onBeforeVisibilityChange (inherited)=EJSC.Series.events.onBeforeVisibilityChange@EJSChart.hlp
+3 EJSC.FunctionSeries
+4 EJSC.FunctionSeries=EJSC.FunctionSeries@EJSChart.hlp
+4 Properties
+5 color (inherited)=EJSC.Series.properties.color@EJSChart.hlp
+5 coloredLegend (inherited)=EJSC.Series.properties.coloredLegend@EJSChart.hlp
+5 legendIsVisible (inherited)=EJSC.Series.properties.legendIsVisible@EJSChart.hlp
+5 lineOpacity (inherited)=EJSC.Series.properties.lineOpacity@EJSChart.hlp
+5 lineWidth (inherited)=EJSC.Series.properties.lineWidth@EJSChart.hlp
+5 title (inherited)=EJSC.Series.properties.title@EJSChart.hlp
+5 visible (inherited)=EJSC.Series.properties.visible@EJSChart.hlp
+5 x_axis_formatter (inherited)=EJSC.Series.properties.x_axis_formatter@EJSChart.hlp
+5 y_axis_formatter (inherited)=EJSC.Series.properties.y_axis_formatter@EJSChart.hlp
+4 Methods
+5 getVisibility (inherited)=EJSC.Series.methods.getVisibility@EJSChart.hlp
+5 hide (inherited)=EJSC.Series.methods.hide@EJSChart.hlp
+5 hideLegend (inherited)=EJSC.Series.methods.hideLegend@EJSChart.hlp
+5 reload (inherited)=EJSC.Series.methods.reload@EJSChart.hlp
+5 setColor (inherited)=EJSC.Series.methods.setColor@EJSChart.hlp
+5 setColoredLegend (inherited)=EJSC.Series.methods.setColoredLegend@EJSChart.hlp
+5 setLineWidth (inherited)=EJSC.Series.methods.setLineWidth@EJSChart.hlp
+5 setTitle (inherited)=EJSC.Series.methods.setTitle@EJSChart.hlp
+5 show (inherited)=EJSC.Series.methods.show@EJSChart.hlp
+5 showLegend (inherited)=EJSC.Series.methods.showLegend@EJSChart.hlp
+4 Events
+5 onAfterVisibilityChange (inherited)=EJSC.Series.events.onAfterVisibilityChange@EJSChart.hlp
+5 onBeforeVisibilityChange (inherited)=EJSC.Series.events.onBeforeVisibilityChange@EJSChart.hlp
+3 EJSC.LineSeries
+4 EJSC.LineSeries=EJSC.LineSeries@EJSChart.hlp
+4 Properties
+5 autosort (inherited)=EJSC.Series.properties.autosort@EJSChart.hlp
+5 color (inherited)=EJSC.Series.properties.color@EJSChart.hlp
+5 coloredLegend (inherited)=EJSC.Series.properties.coloredLegend@EJSChart.hlp
+5 drawPoints=EJSC.LineSeries.properties.drawPoints@EJSChart.hlp
+5 legendIsVisible (inherited)=EJSC.Series.properties.legendIsVisible@EJSChart.hlp
+5 lineOpacity (inherited)=EJSC.Series.properties.lineOpacity@EJSChart.hlp
+5 lineWidth (inherited)=EJSC.Series.properties.lineWidth@EJSChart.hlp
+5 pointBorderColor=EJSC.LineSeries.properties.pointBorderColor@EJSChart.hlp
+5 pointBorderSize=EJSC.LineSeries.properties.pointBorderSize@EJSChart.hlp
+5 pointColor=EJSC.LineSeries.properties.pointColor@EJSChart.hlp
+5 pointSize=EJSC.LineSeries.properties.pointSize@EJSChart.hlp
+5 title (inherited)=EJSC.Series.properties.title@EJSChart.hlp
+5 visible (inherited)=EJSC.Series.properties.visible@EJSChart.hlp
+5 x_axis_formatter (inherited)=EJSC.Series.properties.x_axis_formatter@EJSChart.hlp
+5 y_axis_formatter (inherited)=EJSC.Series.properties.y_axis_formatter@EJSChart.hlp
+4 Methods
+5 Methods=EJSC.LineSeries.Methods@EJSChart.hlp
+5 getDataHandler (inherited)=EJSC.Series.methods.getDataHandler@EJSChart.hlp
+5 getVisibility (inherited)=EJSC.Series.methods.getVisibility@EJSChart.hlp
+5 hide (inherited)=EJSC.Series.methods.hide@EJSChart.hlp
+5 hideLegend (inherited)=EJSC.Series.methods.hideLegend@EJSChart.hlp
+5 reload (inherited)=EJSC.Series.methods.reload@EJSChart.hlp
+5 setColor (inherited)=EJSC.Series.methods.setColor@EJSChart.hlp
+5 setColoredLegend (inherited)=EJSC.Series.methods.setColoredLegend@EJSChart.hlp
+5 setDataHandler (inherited)=EJSC.Series.methods.setDataHandler@EJSChart.hlp
+5 setLineWidth (inherited)=EJSC.Series.methods.setLineWidth@EJSChart.hlp
+5 setTitle (inherited)=EJSC.Series.methods.setTitle@EJSChart.hlp
+5 show (inherited)=EJSC.Series.methods.show@EJSChart.hlp
+5 showLegend (inherited)=EJSC.Series.methods.showLegend@EJSChart.hlp
+4 Events
+5 Events=EJSC.LineSeries.Events@EJSChart.hlp
+5 onAfterDataAvailable (inherited)=EJSC.Series.events.onAfterDataAvailable@EJSChart.hlp
+5 onAfterVisibilityChange (inherited)=EJSC.Series.events.onAfterVisibilityChange@EJSChart.hlp
+5 onBeforeVisibilityChange (inherited)=EJSC.Series.events.onBeforeVisibilityChange@EJSChart.hlp
+3 EJSC.PieSeries
+4 EJSC.PieSeries=EJSC.PieSeries@EJSChart.hlp
+4 Properties
+5 defaultColors=EJSC.PieSeries.properties.defaultColors@EJSChart.hlp
+5 delayLoad (inherited)=EJSC.Series.properties.delayLoad@EJSChart.hlp
+5 height=EJSC.PieSeries.properties.height@EJSChart.hlp
+5 legendIsVisible (inherited)=EJSC.Series.properties.legendIsVisible@EJSChart.hlp
+5 lineOpacity (inherited)=EJSC.Series.properties.lineOpacity@EJSChart.hlp
+5 lineWidth (inherited)=EJSC.Series.properties.lineWidth@EJSChart.hlp
+5 opacity (inherited)=EJSC.Series.properties.opacity@EJSChart.hlp
+5 position=EJSC.PieSeries.properties.position@EJSChart.hlp
+5 title (inherited)=EJSC.Series.properties.title@EJSChart.hlp
+5 total_value=EJSC.PieSeries.properties.total_value@EJSChart.hlp
+5 treeLegend=EJSC.PieSeries.properties.treeLegend@EJSChart.hlp
+5 visible (inherited)=EJSC.Series.properties.visible@EJSChart.hlp
+5 width=EJSC.PieSeries.properties.width@EJSChart.hlp
+5 x_axis_formatter (inherited)=EJSC.Series.properties.x_axis_formatter@EJSChart.hlp
+4 Methods
+5 findCenter=EJSC.PieSeries.methods.findCenter@EJSChart.hlp
+5 findCenterOfCurve=EJSC.PieSeries.methods.findCenterOfCurve@EJSChart.hlp
+5 getDataHandler (inherited)=EJSC.Series.methods.getDataHandler@EJSChart.hlp
+5 getPoints=EJSC.PieSeries.methods.getPoints@EJSChart.hlp
+5 getTotalValue=EJSC.PieSeries.methods.getTotalValue@EJSChart.hlp
+5 getVisibility (inherited)=EJSC.Series.methods.getVisibility@EJSChart.hlp
+5 hide (inherited)=EJSC.Series.methods.hide@EJSChart.hlp
+5 hideLegend (inherited)=EJSC.Series.methods.hideLegend@EJSChart.hlp
+5 reload (inherited)=EJSC.Series.methods.reload@EJSChart.hlp
+5 resetTotalValue=EJSC.PieSeries.methods.resetTotalValue@EJSChart.hlp
+5 setDataHandler (inherited)=EJSC.Series.methods.setDataHandler@EJSChart.hlp
+5 setDefaultColors=EJSC.PieSeries.methods.setDefaultColors@EJSChart.hlp
+5 setLineWidth (inherited)=EJSC.Series.methods.setLineWidth@EJSChart.hlp
+5 setOpacity (inherited)=EJSC.Series.methods.setOpacity@EJSChart.hlp
+5 setTitle (inherited)=EJSC.Series.methods.setTitle@EJSChart.hlp
+5 setTotalValue=EJSC.PieSeries.methods.setTotalValue@EJSChart.hlp
+5 show (inherited)=EJSC.Series.methods.show@EJSChart.hlp
+5 showLegend (inherited)=EJSC.Series.methods.showLegend@EJSChart.hlp
+4 Events
+5 onAfterDataAvailable (inherited)=EJSC.Series.events.onAfterDataAvailable@EJSChart.hlp
+5 onAfterVisibilityChange (inherited)=EJSC.Series.events.onAfterVisibilityChange@EJSChart.hlp
+5 onBeforeVisibilityChange (inherited)=EJSC.Series.events.onBeforeVisibilityChange@EJSChart.hlp
+5 onPieceNeedsColor=EJSC.PieSeries.events.onPieceNeedsColor@EJSChart.hlp
+3 EJSC.ScatterSeries
+4 EJSC.ScatterSeries=EJSC.ScatterSeries@EJSChart.hlp
+4 Properties
+5 autosort (inherited)=EJSC.Series.properties.autosort@EJSChart.hlp
+5 color (inherited)=EJSC.Series.properties.color@EJSChart.hlp
+5 coloredLegend (inherited)=EJSC.Series.properties.coloredLegend@EJSChart.hlp
+5 delayLoad (inherited)=EJSC.Series.properties.delayLoad@EJSChart.hlp
+5 legendIsVisible (inherited)=EJSC.Series.properties.legendIsVisible@EJSChart.hlp
+5 lineOpacity (inherited)=EJSC.Series.properties.lineOpacity@EJSChart.hlp
+5 lineWidth (inherited)=EJSC.Series.properties.lineWidth@EJSChart.hlp
+5 opacity (inherited)=EJSC.Series.properties.opacity@EJSChart.hlp
+5 pointSize=EJSC.ScatterSeries.properties.pointSize@EJSChart.hlp
+5 pointStyle=EJSC.ScatterSeries.properties.pointStyle@EJSChart.hlp
+5 title (inherited)=EJSC.Series.properties.title@EJSChart.hlp
+5 visible (inherited)=EJSC.Series.properties.visible@EJSChart.hlp
+5 x_axis_formatter (inherited)=EJSC.Series.properties.x_axis_formatter@EJSChart.hlp
+5 y_axis_formatter (inherited)=EJSC.Series.properties.y_axis_formatter@EJSChart.hlp
+4 Methods
+5 getDataHandler (inherited)=EJSC.Series.methods.getDataHandler@EJSChart.hlp
+5 getVisibility (inherited)=EJSC.Series.methods.getVisibility@EJSChart.hlp
+5 hide (inherited)=EJSC.Series.methods.hide@EJSChart.hlp
+5 hideLegend (inherited)=EJSC.Series.methods.hideLegend@EJSChart.hlp
+5 reload (inherited)=EJSC.Series.methods.reload@EJSChart.hlp
+5 setColor (inherited)=EJSC.Series.methods.setColor@EJSChart.hlp
+5 setColoredLegend (inherited)=EJSC.Series.methods.setColoredLegend@EJSChart.hlp
+5 setDataHandler (inherited)=EJSC.Series.methods.setDataHandler@EJSChart.hlp
+5 setLineWidth (inherited)=EJSC.Series.methods.setLineWidth@EJSChart.hlp
+5 setOpacity (inherited)=EJSC.Series.methods.setOpacity@EJSChart.hlp
+5 setPointStyle=EJSC.ScatterSeries.methods.setPointStyle@EJSChart.hlp
+5 setTitle (inherited)=EJSC.Series.methods.setTitle@EJSChart.hlp
+5 show (inherited)=EJSC.Series.methods.show@EJSChart.hlp
+5 showLegend (inherited)=EJSC.Series.methods.showLegend@EJSChart.hlp
+4 Events
+5 onAfterDataAvailable (inherited)=EJSC.Series.events.onAfterDataAvailable@EJSChart.hlp
+5 onAfterVisibilityChange (inherited)=EJSC.Series.events.onAfterVisibilityChange@EJSChart.hlp
+5 onBeforeVisibilityChange (inherited)=EJSC.Series.events.onBeforeVisibilityChange@EJSChart.hlp
+3 EJSC.TrendSeries
+4 EJSC.TrendSeries=EJSC.TrendSeries@EJSChart.hlp
+4 Properties
+5 color (inherited)=EJSC.Series.properties.color@EJSChart.hlp
+5 coloredLegend (inherited)=EJSC.Series.properties.coloredLegend@EJSChart.hlp
+5 legendIsVisible (inherited)=EJSC.Series.properties.legendIsVisible@EJSChart.hlp
+5 lineOpacity (inherited)=EJSC.Series.properties.lineOpacity@EJSChart.hlp
+5 lineWidth (inherited)=EJSC.Series.properties.lineWidth@EJSChart.hlp
+5 title (inherited)=EJSC.Series.properties.title@EJSChart.hlp
+5 visible (inherited)=EJSC.Series.properties.visible@EJSChart.hlp
+5 x_axis_formatter (inherited)=EJSC.Series.properties.x_axis_formatter@EJSChart.hlp
+5 y_axis_formatter (inherited)=EJSC.Series.properties.y_axis_formatter@EJSChart.hlp
+4 Methods
+5 getVisibility (inherited)=EJSC.Series.methods.getVisibility@EJSChart.hlp
+5 hide (inherited)=EJSC.Series.methods.hide@EJSChart.hlp
+5 hideLegend (inherited)=EJSC.Series.methods.hideLegend@EJSChart.hlp
+5 reload (inherited)=EJSC.Series.methods.reload@EJSChart.hlp
+5 setColor (inherited)=EJSC.Series.methods.setColor@EJSChart.hlp
+5 setColoredLegend (inherited)=EJSC.Series.methods.setColoredLegend@EJSChart.hlp
+5 setLineWidth (inherited)=EJSC.Series.methods.setLineWidth@EJSChart.hlp
+5 setTitle (inherited)=EJSC.Series.methods.setTitle@EJSChart.hlp
+5 show (inherited)=EJSC.Series.methods.show@EJSChart.hlp
+5 showLegend (inherited)=EJSC.Series.methods.showLegend@EJSChart.hlp
+4 Events
+5 onAfterVisibilityChange (inherited)=EJSC.Series.events.onAfterVisibilityChange@EJSChart.hlp
+5 onBeforeVisibilityChange (inherited)=EJSC.Series.events.onBeforeVisibilityChange@EJSChart.hlp
+2 Data Handlers
+3 EJSC.XMLDataHandler
+4 EJSC.XMLDataHandler=EJSC.XMLDataHandler@EJSChart.hlp
+4 Properties
+5 requestType (inherited)=EJSC.AjaxDataHandler.properties.requestType@EJSChart.hlp
+5 url (inherited)=EJSC.AjaxDataHandler.properties.url@EJSChart.hlp
+5 urlData (inherited)=EJSC.AjaxDataHandler.properties.urlData@EJSChart.hlp
+4 Methods
+5 getUrl (inherited)=EJSC.AjaxDataHandler.methods.getUrl@EJSChart.hlp
+5 loadData (inherited)=EJSC.DataHandler.methods.loadData@EJSChart.hlp
+5 setRequestType (inherited)=EJSC.AjaxDataHandler.methods.setRequestType@EJSChart.hlp
+5 setUrl (inherited)=EJSC.AjaxDataHandler.methods.setUrl@EJSChart.hlp
+5 setUrlData (inherited)=EJSC.AjaxDataHandler.methods.setUrlData@EJSChart.hlp
+5 setXMLData (inherited)=EJSC.AjaxDataHandler.methods.setXMLData@EJSChart.hlp
+4 Events
+5 onDataAvailable (inherited)=EJSC.DataHandler.events.onDataAvailable@EJSChart.hlp
+5 onNeedsData (inherited)=EJSC.AjaxDataHandler.events.onNeedsData@EJSChart.hlp
+3 EJSC.XMLStringDataHandler
+4 EJSC.XMLStringDataHandler=EJSC.XMLStringDataHandler@EJSChart.hlp
+4 Methods
+5 getXML=EJSC.XMLStringDataHandler.methods.getXML@EJSChart.hlp
+5 loadData (inherited)=EJSC.DataHandler.methods.loadData@EJSChart.hlp
+5 setXML=EJSC.XMLStringDataHandler.methods.setXML@EJSChart.hlp
+4 Events
+5 onDataAvailable (inherited)=EJSC.DataHandler.events.onDataAvailable@EJSChart.hlp
+3 EJSC.ArrayDataHandler
+4 EJSC.ArrayDataHandler=EJSC.ArrayDataHandler@EJSChart.hlp
+4 Methods
+5 getArray=EJSC.ArrayDataHandler.methods.getArray@EJSChart.hlp
+5 loadData (inherited)=EJSC.DataHandler.methods.loadData@EJSChart.hlp
+5 setArray=EJSC.ArrayDataHandler.methods.setArray@EJSChart.hlp
+4 Events
+5 onDataAvailable (inherited)=EJSC.DataHandler.events.onDataAvailable@EJSChart.hlp
+3 EJSC.CSVFileDataHandler
+4 EJSC.CSVFileDataHandler=EJSC.CSVFileDataHandler@EJSChart.hlp
+4 Properties
+5 requestType (inherited)=EJSC.AjaxDataHandler.properties.requestType@EJSChart.hlp
+5 url (inherited)=EJSC.AjaxDataHandler.properties.url@EJSChart.hlp
+5 urlData (inherited)=EJSC.AjaxDataHandler.properties.urlData@EJSChart.hlp
+4 Methods
+5 getUrl (inherited)=EJSC.AjaxDataHandler.methods.getUrl@EJSChart.hlp
+5 loadData (inherited)=EJSC.DataHandler.methods.loadData@EJSChart.hlp
+5 setRequestType (inherited)=EJSC.AjaxDataHandler.methods.setRequestType@EJSChart.hlp
+5 setUrl (inherited)=EJSC.AjaxDataHandler.methods.setUrl@EJSChart.hlp
+5 setUrlData (inherited)=EJSC.AjaxDataHandler.methods.setUrlData@EJSChart.hlp
+5 setXMLData (inherited)=EJSC.AjaxDataHandler.methods.setXMLData@EJSChart.hlp
+4 Events
+5 onDataAvailable (inherited)=EJSC.DataHandler.events.onDataAvailable@EJSChart.hlp
+5 onNeedsData (inherited)=EJSC.AjaxDataHandler.events.onNeedsData@EJSChart.hlp
+3 EJSC.CSVStringDataHandler
+4 EJSC.CSVStringDataHandler=EJSC.CSVStringDataHandler@EJSChart.hlp
+4 Methods
+5 getCSV=EJSC.CSVStringDataHandler.methods.getCSV@EJSChart.hlp
+5 loadData (inherited)=EJSC.DataHandler.methods.loadData@EJSChart.hlp
+5 setCSV=EJSC.CSVStringDataHandler.methods.setCSV@EJSChart.hlp
+4 Events
+5 onDataAvailable (inherited)=EJSC.DataHandler.events.onDataAvailable@EJSChart.hlp
+2 Label Formatters
+3 EJSC.NumberFormatter
+4 EJSC.NumberFormatter=EJSC.NumberFormatter@EJSChart.hlp
+4 Properties
+5 currency_align=EJSC.NumberFormatter.props.currency_align@EJSChart.hlp
+5 currency_position=EJSC.NumberFormatter.props.currency_position@EJSChart.hlp
+5 currency_symbol=EJSC.NumberFormatter.props.currency_symbol@EJSChart.hlp
+5 decimal_separator=EJSC.NumberFormatter.props.decimal_separator@EJSChart.hlp
+5 forced_decimals=EJSC.NumberFormatter.props.forced_decimals@EJSChart.hlp
+5 negative_symbol=EJSC.NumberFormatter.props.negative_symbol@EJSChart.hlp
+5 thousand_separator=EJSC.NumberFormatter.props.thousand_separator@EJSChart.hlp
+5 variable_decimals=EJSC.NumberFormatter.props.variable_decimals@EJSChart.hlp
+4 Methods
+5 format (inherited)=EJSC.Formatter.methods.format@EJSChart.hlp
+3 EJSC.DateFormatter
+4 EJSC.DateFormatter=EJSC.DateFormatter@EJSChart.hlp
+4 Properties
+5 format_string=EJSC.DateFormatter.properties.format_string@EJSChart.hlp
+5 timezoneOffset=EJSC.DateFormatter.properties.timezoneOffset@EJSChart.hlp
+5 useUTC=EJSC.DateFormatter.properties.useUTC@EJSChart.hlp
+4 Methods
+5 format (inherited)=EJSC.Formatter.methods.format@EJSChart.hlp
+2 Base Classes
+3 EJSC.Inheritable=EJSC.Inheritable@EJSChart.hlp
+3 EJSC.Series
+4 EJSC.Series=EJSC.Series@EJSChart.hlp
+4 Properties
+5 autosort=EJSC.Series.properties.autosort@EJSChart.hlp
+5 color=EJSC.Series.properties.color@EJSChart.hlp
+5 coloredLegend=EJSC.Series.properties.coloredLegend@EJSChart.hlp
+5 delayLoad=EJSC.Series.properties.delayLoad@EJSChart.hlp
+5 legendIsVisible=EJSC.Series.properties.legendIsVisible@EJSChart.hlp
+5 lineOpacity=EJSC.Series.properties.lineOpacity@EJSChart.hlp
+5 lineWidth=EJSC.Series.properties.lineWidth@EJSChart.hlp
+5 opacity=EJSC.Series.properties.opacity@EJSChart.hlp
+5 title=EJSC.Series.properties.title@EJSChart.hlp
+5 visible=EJSC.Series.properties.visible@EJSChart.hlp
+5 x_axis_formatter=EJSC.Series.properties.x_axis_formatter@EJSChart.hlp
+5 y_axis_formatter=EJSC.Series.properties.y_axis_formatter@EJSChart.hlp
+4 Methods
+5 getDataHandler=EJSC.Series.methods.getDataHandler@EJSChart.hlp
+5 getVisibility=EJSC.Series.methods.getVisibility@EJSChart.hlp
+5 hide=EJSC.Series.methods.hide@EJSChart.hlp
+5 hideLegend=EJSC.Series.methods.hideLegend@EJSChart.hlp
+5 reload=EJSC.Series.methods.reload@EJSChart.hlp
+5 setColor=EJSC.Series.methods.setColor@EJSChart.hlp
+5 setColoredLegend=EJSC.Series.methods.setColoredLegend@EJSChart.hlp
+5 setDataHandler=EJSC.Series.methods.setDataHandler@EJSChart.hlp
+5 setLineOpacity=EJSC.Series.methods.setLineOpacity@EJSChart.hlp
+5 setLineWidth=EJSC.Series.methods.setLineWidth@EJSChart.hlp
+5 setOpacity=EJSC.Series.methods.setOpacity@EJSChart.hlp
+5 setTitle=EJSC.Series.methods.setTitle@EJSChart.hlp
+5 show=EJSC.Series.methods.show@EJSChart.hlp
+5 showLegend=EJSC.Series.methods.showLegend@EJSChart.hlp
+4 Events
+5 onAfterDataAvailable=EJSC.Series.events.onAfterDataAvailable@EJSChart.hlp
+5 onAfterVisibilityChange=EJSC.Series.events.onAfterVisibilityChange@EJSChart.hlp
+5 onBeforeVisibilityChange=EJSC.Series.events.onBeforeVisibilityChange@EJSChart.hlp
+3 EJSC.GaugeSeries
+4 EJSC.GaugeSeries=EJSC.GaugeSeries@EJSChart.hlp
+4 Properties
+5 color (inherited)=EJSC.Series.properties.color@EJSChart.hlp
+5 coloredLegend (inherited)=EJSC.Series.properties.coloredLegend@EJSChart.hlp
+5 legendIsVisible (inherited)=EJSC.Series.properties.legendIsVisible@EJSChart.hlp
+5 lineOpacity (inherited)=EJSC.Series.properties.lineOpacity@EJSChart.hlp
+5 lineWidth (inherited)=EJSC.Series.properties.lineWidth@EJSChart.hlp
+5 opacity (inherited)=EJSC.Series.properties.opacity@EJSChart.hlp
+5 title (inherited)=EJSC.Series.properties.title@EJSChart.hlp
+5 visible (inherited)=EJSC.Series.properties.visible@EJSChart.hlp
+5 x_axis_formatter (inherited)=EJSC.Series.properties.x_axis_formatter@EJSChart.hlp
+4 Methods
+5 getDataHandler (inherited)=EJSC.Series.methods.getDataHandler@EJSChart.hlp
+5 getVisibility (inherited)=EJSC.Series.methods.getVisibility@EJSChart.hlp
+5 hide (inherited)=EJSC.Series.methods.hide@EJSChart.hlp
+5 hideLegend (inherited)=EJSC.Series.methods.hideLegend@EJSChart.hlp
+5 reload (inherited)=EJSC.Series.methods.reload@EJSChart.hlp
+5 setColor (inherited)=EJSC.Series.methods.setColor@EJSChart.hlp
+5 setColoredLegend (inherited)=EJSC.Series.methods.setColoredLegend@EJSChart.hlp
+5 setDataHandler (inherited)=EJSC.Series.methods.setDataHandler@EJSChart.hlp
+5 setLineOpacity (inherited)=EJSC.Series.methods.setLineOpacity@EJSChart.hlp
+5 setLineWidth (inherited)=EJSC.Series.methods.setLineWidth@EJSChart.hlp
+5 setOpacity (inherited)=EJSC.Series.methods.setOpacity@EJSChart.hlp
+5 setTitle (inherited)=EJSC.Series.methods.setTitle@EJSChart.hlp
+5 show (inherited)=EJSC.Series.methods.show@EJSChart.hlp
+5 showLegend (inherited)=EJSC.Series.methods.showLegend@EJSChart.hlp
+4 Events
+5 onAfterDataAvailable (inherited)=EJSC.Series.events.onAfterDataAvailable@EJSChart.hlp
+5 onAfterVisibilityChange (inherited)=EJSC.Series.events.onAfterVisibilityChange@EJSChart.hlp
+5 onBeforeVisibilityChange (inherited)=EJSC.Series.events.onBeforeVisibilityChange@EJSChart.hlp
+3 EJSC.Point
+4 EJSC.Point=EJSC.Point@EJSChart.hlp
+4 Properties
+5 label=EJSC.Point.properties.label@EJSChart.hlp
+5 userdata=EJSC.Point.properties.userdata@EJSChart.hlp
+5 x=EJSC.Point.properties.x@EJSChart.hlp
+5 y=EJSC.Point.properties.y@EJSChart.hlp
+3 EJSC.DataHandler
+4 EJSC.DataHandler=EJSC.DataHandler@EJSChart.hlp
+4 Methods
+5 loadData=EJSC.DataHandler.methods.loadData@EJSChart.hlp
+4 Events
+5 onDataAvailable=EJSC.DataHandler.events.onDataAvailable@EJSChart.hlp
+3 EJSC.AjaxDataHandler
+4 EJSC.AjaxDataHandler=EJSC.AjaxDataHandler@EJSChart.hlp
+4 Properties
+5 requestType=EJSC.AjaxDataHandler.properties.requestType@EJSChart.hlp
+5 url=EJSC.AjaxDataHandler.properties.url@EJSChart.hlp
+5 urlData=EJSC.AjaxDataHandler.properties.urlData@EJSChart.hlp
+4 Methods
+5 getUrl=EJSC.AjaxDataHandler.methods.getUrl@EJSChart.hlp
+5 loadData (inherited)=EJSC.DataHandler.methods.loadData@EJSChart.hlp
+5 setRequestType=EJSC.AjaxDataHandler.methods.setRequestType@EJSChart.hlp
+5 setUrl=EJSC.AjaxDataHandler.methods.setUrl@EJSChart.hlp
+5 setUrlData=EJSC.AjaxDataHandler.methods.setUrlData@EJSChart.hlp
+5 setXMLData=EJSC.AjaxDataHandler.methods.setXMLData@EJSChart.hlp
+4 Events
+5 onDataAvailable (inherited)=EJSC.DataHandler.events.onDataAvailable@EJSChart.hlp
+5 onNeedsData=EJSC.AjaxDataHandler.events.onNeedsData@EJSChart.hlp
+3 EJSC.Formatter
+4 EJSC.Formatter=EJSC.Formatter@EJSChart.hlp
+4 Properties
+5 format_string=EJSC.Formatter.properties.format_string@EJSChart.hlp
+4 Methods
+5 format=EJSC.Formatter.methods.format@EJSChart.hlp
+2 Other Classes
+3 EJSC.BarPoint
+4 EJSC.BarPoint=EJSC.BarPoint@EJSChart.hlp
+4 Properties
+5 userdata (inherited)=EJSC.Point.properties.userdata@EJSChart.hlp
+5 x (inherited)=EJSC.Point.properties.x@EJSChart.hlp
+5 y (inherited)=EJSC.Point.properties.y@EJSChart.hlp
+3 EJSC.GaugePoint
+4 EJSC.GaugePoint=EJSC.GaugePoint@EJSChart.hlp
+4 Properties
+5 label (inherited)=EJSC.Point.properties.label@EJSChart.hlp
+5 userdata (inherited)=EJSC.Point.properties.userdata@EJSChart.hlp
+5 x (inherited)=EJSC.Point.properties.x@EJSChart.hlp
+3 EJSC.PiePoint
+4 EJSC.PiePoint=EJSC.PiePoint@EJSChart.hlp
+4 Properties
+5 label (inherited)=EJSC.Point.properties.label@EJSChart.hlp
+5 userdata (inherited)=EJSC.Point.properties.userdata@EJSChart.hlp
+5 x (inherited)=EJSC.Point.properties.x@EJSChart.hlp
+3 EJSC.XYPoint
+4 EJSC.XYPoint=EJSC.XYPoint@EJSChart.hlp
+4 Properties
+5 label (inherited)=EJSC.Point.properties.label@EJSChart.hlp
+5 userdata (inherited)=EJSC.Point.properties.userdata@EJSChart.hlp
+5 x (inherited)=EJSC.Point.properties.x@EJSChart.hlp
+5 y (inherited)=EJSC.Point.properties.y@EJSChart.hlp
+1 Using Colors=Using_Colors@EJSChart.hlp
+2 Text Replacement Options=Text_Replacement_Options@EJSChart.hlp
+2 Exporting To SVG=Exporting_To_SVG@EJSChart.hlp
+1 Getting Support=Getting_Support@EJSChart.hlp

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?ejsc_ajaxdatahandler_events_onneedsdata.html"; }
+else { parent.quicksync('a5.4.1.3.2'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>onNeedsData (inherited)</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="http://www.ejschart.com/includes/help.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<div class="topicHeader">
+     <div class="navigation">
+          <a href="gsg_overview.html">Top</a>&nbsp;
+          <a href="ejsc_datahandler_events_ondataavailable.html">Previous</a>&nbsp;
+               <a href="ejsc_xmlstringdatahandler.html">Next</a>
+     </div>
+     <div class="topic">
+          <p class="p_Heading1"><span class="f_Heading1">EJSC.AjaxDataHandler.onNeedsData</span></p>
+<p class="p_Heading1"><span class="f_Heading1" style="font-size: 12px;">See Also</span></p>
+
+     </div>
+</div>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Definition</span></p>
+<p>&nbsp;</p>
+<p>boolean <span style="font-weight: bold; color: #0000ff;">onNeedsData</span>( <a href="ejsc_ajaxdatahandler.html">EJSC.AjaxDataHandler</a> dataHandler, <a href="ejsc_series.html">EJSC.Series</a> series, <a href="ejsc_chart.html">EJSC.Chart</a> chart )</p>
+<p>XMLHttpRequest <span style="font-weight: bold; color: #0000ff;">onNeedsData</span>( <a href="ejsc_ajaxdatahandler.html">EJSC.AjaxDataHandler</a> dataHandler, <a href="ejsc_series.html">EJSC.Series</a> series, <a href="ejsc_chart.html">EJSC.Chart</a> chart )</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Description</span></p>
+<p>&nbsp;</p>
+<p>This event allows for additional control over when and how data is retrieved by the data handler.&nbsp; If assigned, the event will be triggered whenever the its owner series has requested the data handler retrieve its data.&nbsp; The event passes a reference to the current data handler, its owner series and the owner chart.</p>
+<p>&nbsp;</p>
+<p>The result of this event is expected to be either a boolean value or an XMLHttpRequest object which has already been retrieved (responseXML is a valid, well-formed chart xml document).</p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">RESULT:</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline"><td style="width:13px"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">true: </span>The data handler will ignore other properties such as url and requestType and hold itself in a loading state and wait for its setXMLData method to be called and provided a valid XMLHttpRequest object.&nbsp; In this manner, a separate Ajax library may be used to retrieve data.</td></tr></table></div><p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline"><td style="width:13px"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">false: </span>The data handler will ignore other properties such as url and requestType and cancel its loading process.</td></tr></table></div><p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline"><td style="width:13px"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">XMLHttpRequest:</span> The data handler will ignore other properties such as url and requestType and immediately begin processing the data stored in responseXML.</td></tr></table></div>
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="EJSC.Chart.methods.addSeries" modified="2007-05-20T12:13:02.696Z" target="Main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <header>
+      <para styleclass="Heading1"><text styleclass="Heading1" translate="true">EJSC.Chart.addSeries</text></para>
+      <para styleclass="Heading1"><text styleclass="Heading1" style="font-size:10pt;" translate="true">See Also</text></para>
+    </header>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Definition</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.Series" styleclass="Normal" style="font-weight:normal;" translate="true">EJSC.Series</link><text styleclass="Normal" style="font-weight:normal;" translate="true">&#32;</text><text styleclass="Normal" style="font-weight:bold; color:#0000ff;" translate="true">addSeries</text><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">( </text><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.Series" styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">EJSC.Series</link><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true"> series )</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold; color:#000000;" translate="true">Description</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">Adds a new series to the chart and returns the newly added series (this is useful when creating series inline as shown in the example below). &#160;The series must descend from </text><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.Series" styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">EJSC.Series</link><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">.</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal" style="margin-left:24px;"><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">Types:</text></para>
+    <para styleclass="Normal" style="margin-left:24px;"><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.AreaSeries" styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">EJSC.AreaSeries</link></para>
+    <para styleclass="Normal" style="margin-left:24px;"><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.BarSeries" styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">EJSC.BarSeries</link></para>
+    <para styleclass="Normal" style="margin-left:24px;"><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.FunctionSeries" styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">EJSC.FunctionSeries</link></para>
+    <para styleclass="Normal" style="margin-left:24px;"><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.LineSeries" styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">EJSC.LineSeries</link></para>
+    <para styleclass="Normal" style="margin-left:24px;"><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.PieSeries" styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">EJSC.PieSeries</link></para>
+    <para styleclass="Normal" style="margin-left:24px;"><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.ScatterSeries" styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">EJSC.ScatterSeries</link></para>
+    <para styleclass="Normal" style="margin-left:24px;"><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.TrendSeries" styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">EJSC.TrendSeries</link></para>
+    <para styleclass="Normal" style="margin-left:24px;"></para>
+    <para styleclass="Normal" style="margin-left:0px;"><text styleclass="Normal" style="font-weight:bold; color:#000000;" translate="true">Example</text></para>
+    <para styleclass="Normal" style="margin-left:0px;"></para>
+    <para styleclass="Normal" style="margin-left:0px;"><text styleclass="Normal" style="font-weight:normal; font-style:italic; color:#000000;" translate="true">&gt;&gt; Add a line series to the chart.</text></para>
+    <para styleclass="Normal" style="margin-left:0px;"></para>
+    <para styleclass="Normal" style="margin-left:0px;"><text styleclass="Normal" style="font-weight:bold; color:#000000;" translate="true">var</text><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true"> myChart = </text><text styleclass="Normal" style="font-weight:bold; color:#000000;" translate="true">new</text><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true"> EJSC.Chart(&quot;chart&quot;);</text></para>
+    <para styleclass="Normal" style="margin-left:0px;"><text styleclass="Normal" style="font-weight:bold; color:#000000;" translate="true">var</text><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true"> mySeries = myChart.addSeries(new EJSC.LineSeries(...));</text></para>
+  </body>
+</topic>

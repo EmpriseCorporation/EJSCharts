@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="EJSC.Chart.events.onAfterZoom" modified="2007-05-20T11:20:55.205Z" target="Main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <header>
+      <para styleclass="Heading1"><text styleclass="Heading1" translate="true">EJSC.Chart.onAfterZoom</text></para>
+      <para styleclass="Heading1"><text styleclass="Heading1" style="font-size:10pt;" translate="true">See Also</text></para>
+    </header>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Definition</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">void </text><text style="font-family:Arial; font-size:10pt; font-weight:bold; color:#0000ff;" translate="true">onAfterZoom</text><text styleclass="Normal" translate="true">( </text><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.Chart" styleclass="Normal" translate="true">EJSC.Chart</link><text styleclass="Normal" translate="true"> chart )</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Description</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">Called after the chart has been zoomed. Sends the chart object which triggered the event.</text></para>
+  </body>
+</topic>

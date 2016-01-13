@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Emprise JavaScript Charts - EJSC.XMLDataHandler Example</title>
+	<link rel="stylesheet" href="../includes/template.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="../../EJSChart.min.js"></script>
+	<script type="text/javascript" src="../includes/code.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+
+		<div id="header">
+		
+			<h1 id="logo-text"><a href="http://www.ejschart.com/"><span class="gray">Emprise JavaScript Charts</span></a></h1>			
+					
+			<div id="header-tabs">
+				<ul>
+					<li><a href="http://www.ejschart.com/index.php"><span>Home</span></a></li>
+					<li><a href="http://www.ejschart.com/pricing.php"><span>Pricing</span></a></li>
+					<li><a href="http://www.ejschart.com/forums/"><span>Forums</span></a></li>
+					<li><a href="http://www.ejschart.com/support.php"><span>Support</span></a></li>
+				</ul>
+
+			</div>				
+			
+		</div>
+	  
+	  <!-- content-wrap starts here -->
+	  <div id="content-wrap">
+	  
+	  		<div id="main">
+				<h1>EJSC.XMLDataHandler Example</h1>
+
+				<div class="breadcrumbs">Return to: <a href="../index.html" class="crumb">Examples</a> &raquo; <a href="../index.html#xmlDataHandler" class="crumb">EJSC.XMLDataHandler</a></div> 
+
+				<div class="sidebyside">
+
+					<div class="default">
+						<h2 class="properties">Description</h2>
+						<p class="result" style="height: 60px;">
+							Example XMLDataHandler implementation using the "full" format
+							for displaying a simple EJSC.LineSeries chart.
+						</p>
+						<div id="myChart1a" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code1a"><span>Rendering Source Code...</span></ol>
+						<h2 class="code">XML File Contents</h2>
+						<ol class="code" id="data1a" title="../includes/data/fullData.xml"><span>Rendering Source Code...</span></ol>
+					</div>
+					
+					<div class="example">
+						<h2 class="result">Description</h2>
+						<p class="result" style="height: 60px;">
+							Example XMLDataHandler implementation using the "full" format
+							for displaying a simple EJSC.PieSeries chart.
+						</p>
+						<div id="myChart1b" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code1b"><span>Rendering Source Code...</span></ol>
+						<h2 class="code">XML File Contents</h2>
+						<ol class="code" id="data1b" title="../includes/data/fullDataPie.xml"><span>Rendering Source Code...</span></ol>
+					</div>
+
+<script type="text/javascript" id="script1a">
+	var chart = new EJSC.Chart("myChart1a", {
+		show_legend: false 
+	});
+	
+	chart.addSeries(new EJSC.LineSeries(
+		new EJSC.XMLDataHandler(
+			"../includes/data/fullData.xml"
+		)
+	));
+</script>
+
+<script type="text/javascript" id="script1b">
+	var chart = new EJSC.Chart("myChart1b", {
+		show_legend: false 
+	});
+	
+	chart.addSeries(new EJSC.PieSeries(
+		new EJSC.XMLDataHandler(
+			"../includes/data/fullDataPie.xml"
+		)
+	));
+</script>
+
+					<div class="clear"></div>
+				</div>
+						
+				<hr />
+				
+				<div class="sidebyside">
+
+					<div class="default">
+						<h2 class="properties">Description</h2>
+						<p class="result" style="height: 60px;">
+							Example XMLDataHandler implementation using the "short" format
+							for displaying a simple EJSC.LineSeries chart.
+						</p>
+						<div id="myChart2a" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code2a"><span>Rendering Source Code...</span></ol>
+						<h2 class="code">XML File Contents</h2>
+						<ol class="code" id="data2a" title="../includes/data/shortData.xml"><span>Rendering Source Code...</span></ol>
+					</div>
+					
+					<div class="example">
+						<h2 class="result">Description</h2>
+						<p class="result" style="height: 60px;">
+							Example XMLDataHandler implementation using the "compact" format
+							for displaying a simple EJSC.LineSeries chart.
+						</p>
+						<div id="myChart2b" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code2b"><span>Rendering Source Code...</span></ol>
+						<h2 class="code">XML File Contents</h2>
+						<ol class="code" id="data2b" title="../includes/data/compactData.xml"><span>Rendering Source Code...</span></ol>
+					</div>
+
+<script type="text/javascript" id="script2a">
+	var chart = new EJSC.Chart("myChart2a", {
+		show_legend: false 
+	});
+	
+	chart.addSeries(new EJSC.LineSeries(
+		new EJSC.XMLDataHandler(
+			"../includes/data/shortData.xml"
+		)
+	));
+</script>
+
+<script type="text/javascript" id="script2b">
+	var chart = new EJSC.Chart("myChart2b", {
+		show_legend: false 
+	});
+	
+	chart.addSeries(new EJSC.LineSeries(
+		new EJSC.XMLDataHandler(
+			"../includes/data/compactData.xml"
+		)
+	));
+</script>
+
+					<div class="clear"></div>
+				</div>				
+													
+				<div class="breadcrumbs">Return to: <a href="../index.html" class="crumb">Examples</a> &raquo; <a href="../index.html#xmlDataHandler" class="crumb">EJSC.XMLDataHandler</a></div> 
+
+			</div>
+
+		</div>
+		
+		<div id="footer">
+		
+			<span id="footer-left">
+				&copy; 2006-2007 <strong><a href="http://www.emprisecorporation.com/">Emprise Corporation</a></strong> | 
+				Design by: <strong><a href="http://www.styleshout.com/">styleshout</a></strong> | 
+				Valid: <a href="http://validator.w3.org/">XHTML</a> | 
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+
+			</span>		
+			
+			<span id="footer-right">
+				<a href="http://www.ejschart.com/">Home</a> 
+			</span>
+			
+		</div>	
+
+<!-- wrap ends here -->		
+</div>
+</body>
+
+</html>

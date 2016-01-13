@@ -1,0 +1,150 @@
+Version 2.3.1
+
+1. New Features
+
+    * N/A
+
+2. Bug Fixes
+
+    * Fixed IE canvas support check for IE10+
+
+Version 2.3
+
+1. New Features
+
+	* Added pointStyle property to LineSeries and AreaSeries
+	* Added even_shading and odd_shading properties to LinearAxis
+	* Added onUserEndZoom event to Chart
+	* Vertical Axis Captions (check cross-browser)
+	* Added legend_position, legend_height, and legend_width to Chart
+	* Added setAxis method to Chart
+	* New Series: ErrorSeries
+	* New Series: AlarmSeries
+	* New Series: OverUnderSeries
+	* New Series: StepSeries
+	* New Series: DonutSeries
+	* New Axis: DateAxis
+	
+2. Bug Fixes
+
+	* Fixed issues with displaying charts in IE9
+
+
+Version 2.2
+
+1. New Features
+
+	* Added a public method to return an array of series in the chart
+	* Added support for context menu
+	* Added onBeforeDrawSeries and onAfterDrawSeries events
+	* Added support for BarSeries points with NULL for Y data
+	* Added support for LineSeries and ScatterSeries points with NULL for Y data
+	* Added support for individual grid line and tick styles via the OnNeedsTicks event
+
+2. Bug Fixes
+
+	* Fixed issues with all series reloading data
+	* Fixed support for AnalogGaugeSeries to use x_axis_formatter to format it's ticks
+	* Fixed issues with charts not displaying in IE when inside a TABLE
+	* Fixed issues with the NumberFormatter not formatting text correctly
+	* Fixed issues with the LineSeries and AreaSeries not drawing correctly when zoomed in
+	* Fixed issues with multiple BarSeries not spacing themselves correctly when the base axis data is dates
+	* Fixed zooming issues with LogarithmicAxis
+	* Fixed zooming issues with LinearAxis
+	* Fixed issues in IE with hiding a chart with a container with a border
+	* Fixed issues with BarSeries ranges
+	* Fixed issues with removing BarSeries and PieSeries
+	* Fixed default hint string for PieSeries
+	* Fixed issues with point selection with BarSeries and FloatingBarSeries (using distance)
+	* Fixed issues with hint data for StackedBarSeries
+	* Fixed issues with VML sometimes not showing up in IE8 in STRICT mode
+	* Fixed issues with exporting SVG when no axes are being used
+	* Fixed issues with hint pointer z-index
+	* Fixed default hint texts for AreaSeries, ScatterSeries, PieSeries, and TrendSeries
+	* Fixed issues with unselecting point before hiding a series
+	* Fixed issue with stock series when open or close attributes were null
+
+
+Version 2.1
+
+1. New Features
+
+	* Added treeLegendRoot property to StackedBarSeries
+	* Added left and right as valid property values for PieSeries.position and AnalogGaugeSeries.position
+	* Added defaultColors, useColorArray and onBarNeedsColor to StackedBarSeries
+	* Added the ability for StackedBarSeries to share a single color array among all owned series
+	* Added support for IE8 RC1 (and most previous betas) in all modes
+	* Added chart.setShowLegend method
+	* Performance increases in IE when drawing multiple series and/or series with large numbers of points
+	* Added support for gaps in LineSeries (use a blank string as Y)
+	* Added getBarSizeInPoints to BarSeries and descendant classes
+
+2. Bug Fixes
+
+	* Corrected several IE related memory leaks
+	* Corrected memory leaks related to Ajax requests (affected all browsers)
+	* Corrected memory leaks when removing charts from a page repeatedly without refreshing
+	* Corrected parameter name for CSVStringDataHandler.setCSV
+	* Fixed AreaSeries draw when series contains more than 5000 points in IE
+	* Fixed incorrect parsing of numeric Y values in Stock Series
+	* Updated chart.onBeforeSelectPoint, onAfterSelectPoint, onShowHint to send the correct value for the HoverOrSelect parameter
+	* Corrected error when trying to get/set axis captions
+	* Corrected issues with certain data handlers corrupting data when Object.prototype has been modified
+	* Fixed issues with legend movement when the chart was inside a scrollable container
+	* Corrected Axis.pointToPixel so that it returns the proper value when given a string (bin)
+	* Corrected double loading of data when using JSONStringDataHandler
+	* Removed the ability for closeLine to affect drawing in LineSeries
+	* Corrected issues with AreaSeries drawing when closeLine was false in Safari
+	* Corrected AreaSeries drawing in IE when more than 5000 points exist
+	* Corrected issues with extremes calculations in StackedBarSeries
+
+
+Version 2.0.1
+
+1. New Features
+	* Added Series.getPadding, Series.setPadding methods
+	* Added Series.padding property
+	* Added Chart.legend_state (normal, minimized)
+	* Added Chart.legendMinimize, Chart.legendRestore, Chart.getLegendState methods
+	* Added ignoreBounds parameter to Axis.pointToPixel
+
+2. Bug Fixes
+	* BarSeries / FloatingBarSeries - Fixed dimension calculation which caused bars
+	  to be missed if the mouse was close to an axis
+	* BarSeries / FloatingBarSeries - Updated point location / distance to return
+	  exact matches when the mouse is within a bar
+	* Fixed issue with chart files when in a directory named ejschart_
+	* Corrected issue with axis.force_static_points and cursor position
+	* Corrected issue with legend icons causing non-secure warning in https session
+	* Added catch to all try/finally statements to account for IE bug
+	* Corrected adjustment to so that crosshairs position exactly under the cursor
+	* Renamed variable int to interval to correct Safari 2 parse issue
+	* Updated default series padding to account for axis assignment
+	* Corrected issue with horizontal bars not drawing when rendered 1 pixel wide
+
+3. Documentation Updates
+	* Added documentation for META tag options
+	* Added documentation for Series.findClosestByPoint and Series.findClosestByPixel
+
+
+Version 2.0
+
+1. New Features:
+	* Multiple X and Y Axes
+	* Logarithmic Axis
+	* JSON String and File Data Handlers
+	* Stacked Bar Series
+	* Floating Bar Series
+	* String Formatter for prefixing and appending to labels
+	* OpenHighLowClose Series
+	* Candlestick Series
+	* Filled Scatter Series Points in IE
+	* Much optimized rendering of axis labels and ticks
+	* Cleaner and smaller HTML generation of chart objects
+	* Faster chart rendering and much better support for many
+	  charts in a single page
+	* Removed the need for EJSChartIE.css and EJSChartIE6.css
+	* Better control over styling of major tick marks
+	* More styling options for grid lines and axis borders
+	* Easier customization of cursor position elements
+	* Background coloring with opacity of the chart area and axes

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?ejsc_chart_methods_addseries.htm"; }
+else { parent.quicksync('a2.2.2.2'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>addSeries</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span class="f_Heading1">EJSC.Chart.addSeries</span></p>
+<p class="p_Heading1"><span class="f_Heading1" style="font-size: 10pt;">See Also</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="welcometopic.htm">Top</a>&nbsp;
+     <a href="ejsc_chart_methods_acquireseries.htm">Previous</a>&nbsp;
+     <a href="ejsc_chart_methods_redraw.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Definition</span></p>
+<p>&nbsp;</p>
+<p><a href="ejsc_series.htm">EJSC.Series</a> <span style="font-weight: bold; color: #0000ff;">addSeries</span>( <a href="ejsc_series.htm">EJSC.Series</a> series )</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Description</span></p>
+<p>&nbsp;</p>
+<p>Adds a new series to the chart and returns the newly added series (this is useful when creating series inline as shown in the example below). &nbsp;The series must descend from <a href="ejsc_series.htm">EJSC.Series</a>.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Note:</span> If the series has not defined a title (i.e. Series.title = "") at the time addSeries is called, a default title of "Series &lt;index&gt;" will be assigned (where &lt;index&gt; is the current series index in internal series storage).</p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;">Types:</p>
+<p style="margin: 0px 0px 0px 24px;"><a href="ejsc_areaseries.htm">EJSC.AreaSeries</a></p>
+<p style="margin: 0px 0px 0px 24px;"><a href="ejsc_barseries.htm">EJSC.BarSeries</a></p>
+<p style="margin: 0px 0px 0px 24px;"><a href="ejsc_functionseries.htm">EJSC.FunctionSeries</a></p>
+<p style="margin: 0px 0px 0px 24px;"><a href="ejsc_lineseries.htm">EJSC.LineSeries</a></p>
+<p style="margin: 0px 0px 0px 24px;"><a href="ejsc_pieseries.htm">EJSC.PieSeries</a></p>
+<p style="margin: 0px 0px 0px 24px;"><a href="ejsc_scatterseries.htm">EJSC.ScatterSeries</a></p>
+<p style="margin: 0px 0px 0px 24px;"><a href="ejsc_trendseries.htm">EJSC.TrendSeries</a></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p><span style="font-weight: bold;">Example</span></p>
+<p>&nbsp;</p>
+<p><span style="font-style: italic;">&gt;&gt; Add a line series to the chart.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">var</span> myChart = <span style="font-weight: bold;">new</span> EJSC.Chart("chart");</p>
+<p><span style="font-weight: bold;">var</span> mySeries = myChart.addSeries(new EJSC.LineSeries(...));</p>
+<hr noshade="noshade" size="1" /><p>This help file was created with an unregistered evaluation copy of Help &amp; Manual. &#169; EC Software. All rights reserved. This message will not appear if you compile this help file with the registered version of Help &amp; Manual.</p>
+
+</td></tr></table>
+
+</body>
+</html>

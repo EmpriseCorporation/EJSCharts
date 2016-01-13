@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="EJSChart_popup_html.js"></script><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?ejsc_analoggaugeseries.html"; }
+else { parent.quicksync('a5.3.2'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>EJSC.AnalogGaugeSeries</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="http://www.ejschart.com/includes/help.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<div class="topicHeader">
+     <div class="navigation">
+          <a href="gsg_overview.html">Top</a>&nbsp;
+          <a href="ejsc_series_events_onbeforevisibilitychange.html">Previous</a>&nbsp;
+               <a href="ejsc_analoggaugeseries_properties_anchor.html">Next</a>
+     </div>
+     <div class="topic">
+          <p class="p_Heading1"><span class="f_Heading1">EJSC.AnalogGaugeSeries</span></p>
+<p class="p_Heading1"> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Heading1"><span class="f_Heading1" style="font-size: 12px;"><a href="javascript:void(0);" onclick="return hmshowPopup(event, popid_1308982631X, true);" class="popuplink">Hierarchy</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="javascript:void(0);" onclick="return hmshowPopup(event, popid_920573395X, true);" class="popuplink">Properties</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="javascript:void(0);" onclick="return hmshowPopup(event, popid_304459985X, true);" class="popuplink">Methods</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="javascript:void(0);" onclick="return hmshowPopup(event, popid_372034732, true);" class="popuplink">Events</a></span></p>
+
+     </div>
+</div>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>&nbsp;</p>
+<p>In order to use the AnalogGaugeSeries, the file EJSChart_Gauges.js must be included in the HTML page after the inclusion of the standard EJSChart.js file.</p>
+<p>&nbsp;</p>
+<p>&lt;head&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;&lt;script type=&quot;text/javascript&quot; src=&quot;/EJSChart/EJSChart.js&quot;&gt;&lt;/script&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;&lt;script type=&quot;text/javascript&quot; src=&quot;/EJSChart/EJSChart_Gauges.js&quot;&gt;&lt;/script&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The AnalogGaugeSeries is rendered as a circular (or semi-circular) gauge with a needle directed towards the current value stored in its <a href="ejsc_gaugepoint.html">EJSC.GaugePoint</a>.</p>
+<p>&nbsp;</p>
+<p>The constructor expects an instantiated <a href="ejsc_datahandler.html">EJSC.DataHandler</a> descendant and an optional set of object properties.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Constructor</span></p>
+<p>&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11px; font-family: 'Courier New';">EJSC.AnalogGaugeSeries( <a href="ejsc_datahandler.html">EJSC.DataHandler</a> dataHandler [, object options] )</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Example</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">var</span> myAnalogGaugeSeries = <span style="font-weight: bold;">new</span> EJSC.AnalogGaugeSeries(</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">new</span> <a href="ejsc_arraydatahandler.html">EJSC.ArrayDataHandler</a>([[50,&quot;Gauge Value&quot;]]),</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;{ title: &quot;New Analog Gauge Series&quot; }</p>
+<p>);</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Defining Properties and Events</span></p>
+<p>&nbsp;</p>
+<p>AnalogGaugeSeries properties may be set individually after the series has been created or in batch using the options parameter during instantiation.</p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 13px;"><span style="font-weight: bold;">Setting properties individually</span></p>
+<p style="margin: 0px 0px 0px 13px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 13px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11px; font-family: 'Courier New'; font-weight: bold;">var</span><span style="font-size: 11px; font-family: 'Courier New';"> mySeries = </span><span style="font-size: 11px; font-family: 'Courier New'; font-weight: bold;">new</span><span style="font-size: 11px; font-family: 'Courier New';"> EJSC.AnalogGaugeSeries(</span><span style="font-size: 11px; font-family: 'Courier New'; font-weight: bold;">new</span><span style="font-size: 11px; font-family: 'Courier New';"> EJSC.ArrayDataHandler([[50,&quot;Gauge Value&quot;]]));</span></p>
+<p style="margin: 0px 0px 0px 13px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11px; font-family: 'Courier New';">mySeries.title = &quot;New Analog Gauge Series&quot;;</span></p>
+<p style="margin: 0px 0px 0px 13px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11px; font-family: 'Courier New';">mySeries.min = 0;</span></p>
+<p style="margin: 0px 0px 0px 13px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11px; font-family: 'Courier New';">mySeries.max = 100;</span></p>
+<p style="margin: 0px 0px 0px 13px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 13px;"><span style="font-weight: bold;">Setting properties in batch</span></p>
+<p style="margin: 0px 0px 0px 13px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 13px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11px; font-family: 'Courier New'; font-weight: bold;">var</span><span style="font-size: 11px; font-family: 'Courier New';"> mySeries = </span><span style="font-size: 11px; font-family: 'Courier New'; font-weight: bold;">new</span><span style="font-size: 11px; font-family: 'Courier New';"> EJSC.AnalogGaugeSeries(</span></p>
+<p style="margin: 0px 0px 0px 13px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11px; font-family: 'Courier New'; font-weight: bold;">new</span><span style="font-size: 11px; font-family: 'Courier New';"> EJSC.ArrayDataHandler([[50,&quot;Gauge Value&quot;]]),</span></p>
+<p style="margin: 0px 0px 0px 13px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11px; font-family: 'Courier New';">{ title: &quot;New Analog Gauge Series&quot;, min: 0, max: 100 }</span></p>
+<p style="margin: 0px 0px 0px 13px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11px; font-family: 'Courier New';">);</span></p>
+<p style="margin: 0px 0px 0px 13px;"><span style="font-size: 11px; font-family: 'Courier New';">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

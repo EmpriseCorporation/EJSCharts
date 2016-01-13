@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?exporting_to_svg.html"; }
+else { parent.quicksync('a5.10'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Exporting To SVG</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="http://www.ejschart.com/includes/help.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<div class="topicHeader">
+     <div class="navigation">
+          <a href="gsg_overview.html">Top</a>&nbsp;
+          <a href="text_replacement_options.html">Previous</a>&nbsp;
+               <a href="getting_support.html">Next</a>
+     </div>
+     <div class="topic">
+          <p class="p_Heading1"><span class="f_Heading1">Exporting To SVG</span></p>
+
+     </div>
+</div>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 7px 0px 7px 0px;"><span style="font-size: 19px; font-weight: bold; color: #000000;">Including SVG Export Functionality</span></p>
+<p style="margin: 7px 0px 7px 0px;"><span style="color: #000000;">To add the SVG Export functionality to your current implementation, simply include the file immediately after the EJSChart.js</span></p>
+<p><span style="color: #000000;">&lt;head&gt;</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">&lt;script type=&quot;text/javascript&quot; src=&quot;/EJSChart/EJSChart.js&quot;&gt;&lt;/script&gt;</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">&lt;script type=&quot;text/javascript&quot; src=&quot;/EJSChart/EJSChart_SVGExport.js&quot;&gt;&lt;/script&gt;</span></p>
+<p><span style="color: #000000;">&lt;/head&gt;</span></p>
+<p style="margin: 7px 0px 7px 0px;"><span style="font-size: 19px; font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 7px 0px 7px 0px;"><span style="font-size: 19px; font-weight: bold; color: #000000;">Exporting SVG</span></p>
+<p style="margin: 7px 0px 7px 0px;"><span style="color: #000000;">Exporting SVG from your chart is as simple as making a single JavaScript call. The following example shows how to call the <a href="ejsc_chart_methods_exportsvg.html">exportSVG</a> method and obtain the resulting SVG. The default configuration will produce complete SVG including headers and sized to match the dimensions of source chart. If additional customization is needed, the options parameter allows for settings to be changed at the time of export.</span></p>
+<p><span style="color: #000000;">&lt;script type=&quot;text/javascript&quot;&gt;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">var chart = new EJSC.Chart(&quot;myChart&quot;, {});</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">var series = new EJSC.LineSeries(</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">new EJSC.ArrayDataHandler([[1,1],[2,2],[3,3],[4,2],[5,1]]),</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">{}</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">);</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">chart.addSeries(series);</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">function buttonClick() {</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">alert(chart.exportSVG());</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&lt;/script&gt;</span></p>
+<p><span style="color: #000000;">&lt;button onclick=&quot;buttonClick();&quot;&gt;Export SVG&lt;/button&gt;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

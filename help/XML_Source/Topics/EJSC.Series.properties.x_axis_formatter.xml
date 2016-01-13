@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="EJSC.Series.properties.x_axis_formatter" modified="2007-05-20T14:12:22.300Z" target="Main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <header>
+      <para styleclass="Heading1"><text styleclass="Heading1" translate="true">EJSC.Series.x_axis_formatter</text></para>
+      <para styleclass="Heading1"><text styleclass="Heading1" style="font-size:9pt;" translate="true">See Also</text></para>
+    </header>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Definition</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">string </text><text style="font-family:Arial; font-size:10pt; font-weight:bold; color:#0000ff;" translate="true">x_axis_formatter</text><text styleclass="Normal" translate="true"> = undefined</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Description</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">Defines the formatter that will be used to format hints for the X values before displaying them. If left undefined, the series will inherit the axis formatter of its parent chart.</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal" style="margin-left:24px;"><text styleclass="Normal" translate="true">Types:</text></para>
+    <para styleclass="Normal" style="margin-left:24px;"><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.DateFormatter" styleclass="Normal" translate="true">EJSC.DateFormatter</link></para>
+    <para styleclass="Normal" style="margin-left:24px;"><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.NumberFormatter" styleclass="Normal" translate="true">EJSC.NumberFormatter</link></para>
+  </body>
+</topic>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="EJSC.Chart.methods.setYExtreme" modified="2007-05-20T10:28:16.479Z" target="Main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <header>
+      <para styleclass="Heading1"><text styleclass="Heading1" translate="true">EJSC.Chart.addSeries</text></para>
+      <para styleclass="Heading1"><text styleclass="Heading1" style="font-size:10pt;" translate="true">See Also</text></para>
+    </header>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Definition</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:normal;" translate="true">void </text><text styleclass="Normal" style="font-weight:bold; color:#0000ff;" translate="true">setYExtremes</text><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">( float y_min, float y_max )</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold; color:#000000;" translate="true">Description</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">Updates the manual extremes for the y-axis. &#160;Use this method if the series data does not span the range to be displayed on the chart or to limit 100% zoom to a range smaller than the series data.</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold; color:#000000;" translate="true">Example</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:normal; font-style:italic; color:#000000;" translate="true">&gt;&gt; Series data only spans 10 to 80 percent but the range displayed should be 0 to 100</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold; color:#000000;" translate="true">var</text><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true"> myChart = </text><text styleclass="Normal" style="font-weight:bold; color:#000000;" translate="true">new</text><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true"> EJSC.Chart( &quot;chart&quot; );</text></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">myChart.setYExtremes( 0, 100 );</text></para>
+  </body>
+</topic>

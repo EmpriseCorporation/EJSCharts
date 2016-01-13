@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="EJSChart.xsl" ?>
+<helpproject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="helpproject.xsd">
+  <config>
+    <helpwindows>
+      <helpwindow name="Main" headercolor="#C0C0C0" textcolor="#FFFFFF" left="-1" top="-1" width="-1" height="-1">
+        <caption translate="true">Main Window Title</caption>
+        <window-options-hlp autosize="true" maximize="false" keepontop="false" posabsolute="false" buttons="0">
+        </window-options-hlp>
+        <window-options-chm navigation="true" search="true" favorite="true" saveregistry="true" buttons="12366" navigationwidth="200">
+          <user-button name="home" href=""></user-button>
+          <user-button name="jump1" href=""><caption translate="true"></caption></user-button>
+          <user-button name="jump2" href=""><caption translate="true"></caption></user-button>
+        </window-options-chm>
+      </helpwindow>
+    </helpwindows>
+    <styleclasses>
+      <styleclass name="Code Example" parentclass="" shortcut="0">
+        <style-set media="all">font-family:&apos;Courier New&apos;; font-size:8pt; white-space:nowrap; page-break-inside:avoid; </style-set>
+      </styleclass>
+      <styleclass name="Courier Fixed" parentclass="" shortcut="116">
+        <style-set media="all">font-family:&apos;Courier New&apos;; font-size:9pt; color:#000000; </style-set>
+      </styleclass>
+      <styleclass name="Normal" parentclass="" shortcut="115">
+        <style-set media="all">font-family:Arial; font-size:10pt; color:#000000; text-align:left; text-indent:0px; margin-right:0px; margin-left:0px; </style-set>
+      </styleclass>
+      <styleclass name="Comment" parentclass="Normal" shortcut="0">
+        <style-set media="all"></style-set>
+      </styleclass>
+      <styleclass name="Heading1" parentclass="Normal" shortcut="114">
+        <style-set media="all">font-family:Arial; font-size:12pt; font-weight:bold; color:#000000; text-align:left; text-indent:0px; margin-right:0px; margin-left:0px; </style-set>
+      </styleclass>
+      <styleclass name="Image Caption" parentclass="Normal" shortcut="0">
+        <style-set media="all">font-size:8pt; font-weight:bold; </style-set>
+      </styleclass>
+      <styleclass name="Notes" parentclass="Normal" shortcut="0">
+        <style-set media="all"></style-set>
+      </styleclass>
+    </styleclasses>
+    <config-group name="project">
+      <config-value name="title" translate="true">Title of this help project</config-value>
+      <config-value name="author" translate="true"></config-value>
+      <config-value name="summary" translate="true"></config-value>
+      <config-value name="copyright" translate="true">© &lt;%YEAR%&gt; ... Your company</config-value>
+      <config-value name="comment"></config-value>
+      <config-value name="versionmajor">1</config-value>
+      <config-value name="versionminor">0</config-value>
+      <config-value name="versionbuild">0</config-value>
+      <config-value name="guid"></config-value>
+      <config-value name="lcid" translate="true">en-us</config-value>
+      <config-value name="bidimode"></config-value>
+      <config-value name="charset" translate="true">DEFAULT_CHARSET</config-value>
+      <config-value name="deffont">font-family:&apos;MS Sans Serif&apos;; font-size:8pt; color:#000000; </config-value>
+      <config-value name="contents"></config-value>
+      <config-value name="unicodemode">0</config-value>
+      <config-value name="topicprefix"></config-value>
+      <config-value name="autohelpstart">0</config-value>
+      <config-value name="autohelpincrement">1</config-value>
+      <config-value name="autohelpanchor">0</config-value>
+      <config-group name="searchpath">
+        <config-value name="searchpath-entry">.\</config-value>
+        <config-value name="searchpath-entry">.\images\</config-value>
+      </config-group>
+      <config-group name="variables">
+      </config-group>
+      <config-group name="custombuilds">
+        <config-value name="demo">Demo Build</config-value>
+        <config-value name="user1">User defined 1</config-value>
+        <config-value name="user2">User defined 2</config-value>
+        <config-value name="user3">User defined 3</config-value>
+      </config-group>
+    </config-group>
+    <config-group name="hlp">
+      <config-value name="citation" translate="true"></config-value>
+      <config-value name="afootnotes">A</config-value>
+      <config-value name="bitmaps8bit">1</config-value>
+      <config-value name="fts">1</config-value>
+      <config-value name="anchorseparator">:</config-value>
+      <config-value name="cntoffset">0</config-value>
+      <config-value name="mergecompiletime">0</config-value>
+      <config-value name="hpj" translate="true"></config-value>
+    </config-group>
+    <config-group name="chm">
+      <config-value name="htmlpopup">1</config-value>
+      <config-value name="htmlpopuptextfile"></config-value>
+      <config-value name="htmlpopupfile">default_popup.hlp</config-value>
+      <config-value name="htmlpopupjavaoptions"></config-value>
+      <config-value name="mergecompiletime">0</config-value>
+      <config-value name="mastertoc"></config-value>
+      <config-value name="hhp" translate="true"></config-value>
+      <config-value name="usesecondarywindows">1</config-value>
+    </config-group>
+    <config-group name="hxs">
+      <config-value name="namespace"></config-value>
+      <config-value name="uniqueid"></config-value>
+      <config-value name="filetype">0</config-value>
+      <config-value name="fts">1</config-value>
+      <config-value name="akeywords">1</config-value>
+      <config-value name="htmlpopup">0</config-value>
+      <config-value name="htmlpopupjavaoptions"></config-value>
+    </config-group>
+    <config-group name="html">
+      <config-value name="navigationstyle">3</config-value>
+      <config-value name="frameeditor">0</config-value>
+      <config-value name="contentborder">0</config-value>
+      <config-value name="contentwidth">35</config-value>
+      <config-value name="headframeheight">100</config-value>
+      <config-value name="headframescroll">0</config-value>
+      <config-value name="frametemplate" translate="true"><![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
+  "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<title><%TITLE%></title>
+<meta http-equiv="Content-Type" content="text/html; charset=<%DOCCHARSET%>">
+<script type="text/javascript" src="<%NAVIGATION_SCRIPT%>"></script>
+<script type="text/javascript">
+<!--
+var defaulttopic="<%HREF_DEFAULT_PAGE%>";
+if (top.location.href.lastIndexOf("?") > 0) defaulttopic=top.location.href.substring(top.location.href.lastIndexOf("?")+1,top.location.href.length);
+document.write('<frameset rows="100,*" frameborder="0" framespacing="1">');
+document.write('<frame name="hmheader" marginwidth="0" marginheight="0" scrolling="No" noresize src="<%HREF_HEADFRAME_PAGE%>" title="Header">');
+document.write('<frameset cols="35%,*" frameborder="0" framespacing="1">');
+if (document.getElementById) {
+  document.write('<frame name="hmnavigation" src="<%HREF_CONTENT_PAGE_DYN%>" title="Navigation frame">'); }
+else {
+  document.write('<frame name="hmnavigation" src="<%HREF_CONTENT_PAGE_STATIC%>" title="Navigation frame">'); }
+document.write('<frame name="hmcontent" src="' + defaulttopic + '" title="Content frame">');
+document.write('</frameset>');
+document.write('</frameset>');
+//-->
+</script>
+</head>
+<noscript>
+  <frameset rows="100,*" frameborder="0" framespacing="1">
+  <frame name="hmheader" marginwidth="0" marginheight="0" scrolling="No" noresize src="<%HREF_HEADFRAME_PAGE%>" title="Header">
+  <frameset cols="35%,*" frameborder="0" framespacing="1">
+    <frame name="hmnavigation" src="<%HREF_CONTENT_PAGE_STATIC%>" title="Navigation frame">
+    <frame name="hmcontent" src="<%HREF_DEFAULT_PAGE%>" title="Content frame">
+    <noframes>
+      This page requires frames<br><a href="<%HREF_CONTENT_PAGE_STATIC%>">Click here to view the table of contents without frames</a>
+    </noframes>
+  </frameset>
+  </frameset>
+</noscript>
+</html>]]></config-value>
+      <config-value name="headframesrc"></config-value>
+      <config-value name="headframehtml" translate="true"><![CDATA[<%DOCTYPE%>
+<html>
+  <head>
+    <title><%TITLE%></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=<%DOCCHARSET%>">
+  </head>
+  </head>
+  <body>
+    <h1><%TITLE%></h1>
+    <p>Content of the top frame goes here...</p>
+  </body>
+</html>]]></config-value>
+      <config-value name="hasindex">1</config-value>
+      <config-value name="hassearch">1</config-value>
+      <config-value name="contentnumbers">0</config-value>
+      <config-value name="contentlazysync">0</config-value>
+      <config-value name="contentindent">20</config-value>
+      <config-value name="contentsingleclick">0</config-value>
+      <config-value name="contentautocollapse">0</config-value>
+      <config-value name="contentexpand">0</config-value>
+      <config-value name="defaulticons">1</config-value>
+      <config-value name="iconopenbook"></config-value>
+      <config-value name="iconclosedbook"></config-value>
+      <config-value name="icontopic"></config-value>
+      <config-value name="toceditor">0</config-value>
+      <config-value name="tocsimpletext1" translate="true"><![CDATA[<font face="Arial,Helvetica" size="4"><b><%TITLE%></b></font><br>
+<font face="Arial,Helvetica" size="2">
+<a href="<%HREF_INDEX_PAGE%>">Keyword Index</a>
+</font><br><br><br>]]></config-value>
+      <config-value name="tocsimpletext2" translate="true"><![CDATA[<hr><font face="Arial,Helvetica" size="1"><%COPYRIGHT%></font>]]></config-value>
+      <config-value name="tocsimplefont1">font-family:Arial,Helvetica; font-size:10pt; font-weight:normal; font-style:normal; text-decoration:none; </config-value>
+      <config-value name="tocsimplefont2">font-family:Arial,Helvetica; font-size:9pt; font-weight:normal; font-style:normal; text-decoration:none; </config-value>
+      <config-value name="tocsimplefont3">font-family:Arial,Helvetica; font-size:8pt; font-weight:normal; font-style:normal; text-decoration:none; </config-value>
+      <config-value name="tocsimplefont4">font-family:Arial,Helvetica; font-size:8pt; font-weight:normal; font-style:normal; text-decoration:none; </config-value>
+      <config-value name="tocsimplefont5">font-family:Arial,Helvetica; font-size:8pt; font-weight:normal; font-style:normal; text-decoration:none; </config-value>
+      <config-value name="tocsimplefont6">font-family:Arial,Helvetica; font-size:8pt; font-weight:normal; font-style:normal; text-decoration:none; </config-value>
+      <config-value name="contenttemplate" translate="true"></config-value>
+      <config-value name="indexeditor">0</config-value>
+      <config-value name="indexsimpletext1" translate="true"><![CDATA[<font face="Arial,Helvetica" size="4"><b>Keyword Index</b></font><br>
+<font face="Arial,Helvetica" size="2">
+<a href="<%HREF_CONTENT_PAGE%>">Table of Contents</a>
+</font><br><br>]]></config-value>
+      <config-value name="indexsections" translate="true">A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z</config-value>
+      <config-value name="indexsimplefont1">font-family:Arial,Helvetica; font-size:14pt; font-weight:normal; font-style:normal; text-decoration:none; </config-value>
+      <config-value name="indexsimplefont2">font-family:Arial,Helvetica; font-size:10pt; font-weight:normal; font-style:normal; text-decoration:none; </config-value>
+      <config-value name="indexsimplefont3">font-family:Arial,Helvetica; font-size:10pt; font-weight:normal; font-style:normal; text-decoration:none; </config-value>
+      <config-value name="indexsimplefont4">font-family:Arial,Helvetica; font-size:8pt; font-weight:normal; font-style:normal; text-decoration:none; </config-value>
+      <config-value name="indextemplate" translate="true"></config-value>
+      <config-value name="searcheditor">0</config-value>
+      <config-value name="searchsimpletext1" translate="true"></config-value>
+      <config-value name="searchtemplate" translate="true"></config-value>
+      <config-group name="searchconstants">
+      </config-group>
+      <config-value name="searchstoplist" translate="true"></config-value>
+      <config-value name="searchskipwordsmin">3</config-value>
+      <config-value name="searchjoinwordchars" translate="true">.-_&apos;</config-value>
+      <config-value name="searchhighlight">1</config-value>
+      <config-value name="searchallowdate">0</config-value>
+      <config-value name="searchaccentinsensitive">0</config-value>
+      <config-value name="searchsinglecase">0</config-value>
+      <config-value name="topiceditor">0</config-value>
+      <config-value name="topicsimpletext1" translate="true"></config-value>
+      <config-value name="topicsimpletext2" translate="true"></config-value>
+      <config-value name="topicsimplebuttons">1</config-value>
+      <config-group name="topicsimplebutton1">
+        <config-value name="caption" translate="true">Top</config-value>
+        <config-value name="image" translate="true"></config-value>
+      </config-group>
+      <config-group name="topicsimplebutton2">
+        <config-value name="caption" translate="true">Previous</config-value>
+        <config-value name="image" translate="true"></config-value>
+      </config-group>
+      <config-group name="topicsimplebutton3">
+        <config-value name="caption" translate="true">Next</config-value>
+        <config-value name="image" translate="true"></config-value>
+      </config-group>
+      <config-value name="htmlpopup">3</config-value>
+      <config-value name="htmlpopupjavaoptions"><![CDATA[BORDERWIDTH=1
+PADDING=6
+BGCOLOR=#FFFFFF
+BORDERCOLOR=#000000
+]]></config-value>
+      <config-value name="defaultext">.htm</config-value>
+      <config-value name="cssfile">default.css</config-value>
+      <config-value name="fontsizeencoding">0</config-value>
+      <config-value name="fontsizebase">100</config-value>
+      <config-value name="exportmarkersastext">1</config-value>
+      <config-value name="exportstylenames">1</config-value>
+      <config-value name="exportutf8">0</config-value>
+      <config-value name="exportxhtml">1</config-value>
+      <config-value name="imageconversion">4</config-value>
+      <config-value name="jpgquality">90</config-value>
+      <config-value name="imagehint">1</config-value>
+    </config-group>
+    <config-group name="pdf">
+      <config-value name="template">C:\Program Files\Helpman3\Templates\Standard_manual.mnl</config-value>
+      <config-value name="style">0</config-value>
+      <config-value name="createoutline">1</config-value>
+      <config-value name="createhotspots">1</config-value>
+      <config-value name="createthumbnails">0</config-value>
+      <config-value name="insertseealso">0</config-value>
+      <config-value name="linkcolor">#0000FF</config-value>
+      <config-value name="ignoreblank">1</config-value>
+      <config-value name="embedfilesext"></config-value>
+      <config-value name="compression">1</config-value>
+      <config-value name="jpegquality">0</config-value>
+      <config-value name="openmode">1</config-value>
+      <config-value name="zoommode">0</config-value>
+      <config-value name="ownerpassword"></config-value>
+      <config-value name="userpassword"></config-value>
+      <config-value name="userprint">1</config-value>
+      <config-value name="usercopy">1</config-value>
+      <config-value name="userchange">0</config-value>
+      <config-value name="encrypt128bit">0</config-value>
+      <config-value name="title" translate="true">&lt;%TITLE%&gt;</config-value>
+      <config-value name="subject" translate="true"></config-value>
+      <config-value name="author" translate="true"></config-value>
+      <config-value name="keywords" translate="true"></config-value>
+      <config-value name="embedfonts">1</config-value>
+      <config-group name="embedfontsexclude">
+        <config-value name="excludefont">Arial</config-value>
+        <config-value name="excludefont">Courier</config-value>
+        <config-value name="excludefont">Courier New</config-value>
+        <config-value name="excludefont">Times New Roman</config-value>
+      </config-group>
+    </config-group>
+    <config-group name="rtf">
+      <config-value name="papersize"></config-value>
+      <config-value name="pageorientation">Portrait</config-value>
+      <config-value name="topmargin">720</config-value>
+      <config-value name="bottommargin">720</config-value>
+      <config-value name="leftmargin">720</config-value>
+      <config-value name="rightmargin">720</config-value>
+      <config-value name="flipmargin">0</config-value>
+      <config-value name="papersize"></config-value>
+      <config-value name="headerfont">font-family:Arial; font-size:10pt; font-weight:normal; font-style:normal; text-decoration:none; color:#000000; </config-value>
+      <config-value name="headertext" translate="true"></config-value>
+      <config-value name="footerfont">font-family:Arial; font-size:10pt; font-weight:normal; font-style:normal; text-decoration:none; color:#000000; </config-value>
+      <config-value name="footertext" translate="true"></config-value>
+      <config-value name="pagenumfont">font-family:Arial; font-size:10pt; font-weight:normal; font-style:normal; text-decoration:none; color:#000000; </config-value>
+      <config-value name="pagenumtext" translate="true"></config-value>
+      <config-value name="chapterfont1">font-family:Arial; font-size:10pt; font-weight:normal; font-style:normal; text-decoration:none; color:#000000; </config-value>
+      <config-value name="chapternumbering1">None</config-value>
+      <config-value name="chapterbreak1">false</config-value>
+      <config-value name="chapterfont2">font-family:Arial; font-size:10pt; font-weight:normal; font-style:normal; text-decoration:none; color:#000000; </config-value>
+      <config-value name="chapternumbering2">None</config-value>
+      <config-value name="chapterbreak2">false</config-value>
+      <config-value name="chapterfont3">font-family:Arial; font-size:10pt; font-weight:normal; font-style:normal; text-decoration:none; color:#000000; </config-value>
+      <config-value name="chapternumbering3">None</config-value>
+      <config-value name="chapterbreak3">false</config-value>
+      <config-value name="chapterfont4">font-family:Arial; font-size:10pt; font-weight:normal; font-style:normal; text-decoration:none; color:#000000; </config-value>
+      <config-value name="chapternumbering4">None</config-value>
+      <config-value name="chapterbreak4">false</config-value>
+      <config-value name="chapterfont5">font-family:Arial; font-size:10pt; font-weight:normal; font-style:normal; text-decoration:none; color:#000000; </config-value>
+      <config-value name="chapternumbering5">None</config-value>
+      <config-value name="chapterbreak5">false</config-value>
+      <config-value name="chapterfont6">font-family:Arial; font-size:10pt; font-weight:normal; font-style:normal; text-decoration:none; color:#000000; </config-value>
+      <config-value name="chapternumbering6">None</config-value>
+      <config-value name="chapterbreak6">false</config-value>
+      <config-value name="imagemarker">0</config-value>
+      <config-value name="activehyperlinks">1</config-value>
+    </config-group>
+    <config-group name="ebook">
+      <config-value name="template"></config-value>
+      <config-value name="icon"></config-value>
+      <config-value name="splashbmp"></config-value>
+      <config-value name="left">-1</config-value>
+      <config-value name="top">-1</config-value>
+      <config-value name="width">-1</config-value>
+      <config-value name="height">-1</config-value>
+      <config-value name="maximized">0</config-value>
+      <config-value name="language" translate="true">English.lng</config-value>
+      <config-value name="showindex">1</config-value>
+      <config-value name="showsearch">1</config-value>
+      <config-value name="compressviewer">0</config-value>
+      <config-value name="saveregistry">0</config-value>
+      <config-value name="about" translate="true"></config-value>
+      <config-value name="splashwav"></config-value>
+      <config-value name="pagewav"></config-value>
+      <config-value name="password"></config-value>
+      <config-value name="serialnumber"></config-value>
+      <config-value name="enableselect">1</config-value>
+    </config-group>
+  </config>
+  <map id="table-of-contents">
+    <topicref id="392224127723953" type="topic" modified="2007-05-20T14:40:06.526Z" icon="0" build="ALL" status="new"><caption translate="true">Introduction</caption>
+      <topicref id="392222055807070" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new" href="Welcometopic"><caption translate="true">Getting Started</caption></topicref>
+      <topicref id="392224252368738" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new" href="DataFormats"><caption translate="true">Data Formats</caption></topicref>
+      <topicref id="392223648879180" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new" href="Customization"><caption translate="true">Customization</caption></topicref>
+      <topicref id="392222311023852" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new" href="ExamplesCodeSnippets"><caption translate="true">Examples &amp; Code Snippets</caption></topicref>
+      <topicref id="392223378439603" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new" href="AdditionalInformation"><caption translate="true">Additional Information</caption></topicref>
+      <topicref id="392222969564968" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review"><caption translate="true">Changes</caption>
+        <topicref id="392222944376011" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="Changesinversion0.6.0Beta"><caption translate="true">Changes in version 0.6.0 Beta</caption></topicref>
+        <topicref id="392225618042328" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="Changesinversion0.5.3Beta"><caption translate="true">Changes in version 0.5.3 Beta</caption></topicref>
+      </topicref>
+    </topicref>
+    <topicref id="392225934535814" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new"><caption translate="true">API Reference</caption>
+      <topicref id="392225952519674" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new" href="EJSCNamespace"><caption translate="true">EJSC</caption></topicref>
+      <topicref id="392222550503864" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart"><caption translate="true">EJSC.Chart</caption>
+        <topicref id="392225024004708" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review"><caption translate="true">Properties</caption>
+          <topicref id="392225441297128" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properies.allow_interactivity"><caption translate="true">allow_interactivity</caption></topicref>
+          <topicref id="392223363569218" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.allow_zoom"><caption translate="true">allow_zoom</caption></topicref>
+          <topicref id="392222917854107" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.auto_find_point_by_x"><caption translate="true">auto_find_point_by_x</caption></topicref>
+          <topicref id="392224946165519" type="topic" modified="2007-05-20T10:38:52.965Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.auto_zoom"><caption translate="true">auto_zoom</caption></topicref>
+          <topicref id="392224235713725" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.force_static_points"><caption translate="true">force_static_points</caption></topicref>
+          <topicref id="392222527259497" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.proximity_snap"><caption translate="true">proximity_snap</caption></topicref>
+          <topicref id="392225039160144" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.show_crosshairs"><caption translate="true">show_crosshairs</caption></topicref>
+          <topicref id="392222824502397" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.show_hints"><caption translate="true">show_hints</caption></topicref>
+          <topicref id="392225205948633" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.show_legend"><caption translate="true">show_legend</caption></topicref>
+          <topicref id="392225033824915" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.show_messages"><caption translate="true">show_messages</caption></topicref>
+          <topicref id="392224814729975" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.show_mouse_position"><caption translate="true">show_mouse_position</caption></topicref>
+          <topicref id="392225496127897" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.title"><caption translate="true">title</caption></topicref>
+          <topicref id="392222686479894" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.x_axis_caption"><caption translate="true">x_axis_caption</caption></topicref>
+          <topicref id="392224372445560" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.x_axis_extremes_ticks"><caption translate="true">x_axis_extremes_ticks</caption></topicref>
+          <topicref id="392223202870760" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.x_axis_formatter"><caption translate="true">x_axis_formatter</caption></topicref>
+          <topicref id="392222657274577" type="topic" modified="2007-05-20T09:32:59.254Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.x_cursor_position_text"><caption translate="true">x_cursor_position_text</caption></topicref>
+          <topicref id="392225815111127" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.x_max"><caption translate="true">x_max</caption></topicref>
+          <topicref id="392221729125250" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.x_min"><caption translate="true">x_min</caption></topicref>
+          <topicref id="392225141281556" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.x_value_hint_caption"><caption translate="true">x_value_hint_caption</caption></topicref>
+          <topicref id="392223261701515" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.x_zero_plane"><caption translate="true">x_zero_plane</caption></topicref>
+          <topicref id="39222614933581" type="topic" modified="2007-05-20T09:26:21.020Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.y_axis_caption"><caption translate="true">y_axis_caption</caption></topicref>
+          <topicref id="392223431293632" type="topic" modified="2007-05-20T09:27:40.092Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.y_axis_extremes_ticks"><caption translate="true">y_axis_extremes_ticks</caption></topicref>
+          <topicref id="392222428382900" type="topic" modified="2007-05-20T09:29:23.057Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.y_axis_formatter"><caption translate="true">y_axis_formatter</caption></topicref>
+          <topicref id="392225597053577" type="topic" modified="2007-05-20T09:33:04.591Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.y_cursor_position_text"><caption translate="true">y_cursor_position_text</caption></topicref>
+          <topicref id="392225799326253" type="topic" modified="2007-05-20T09:34:36.101Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.y_max"><caption translate="true">y_max</caption></topicref>
+          <topicref id="392222940557642" type="topic" modified="2007-05-20T09:34:15.955Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.y_min"><caption translate="true">y_min</caption></topicref>
+          <topicref id="392222143518471" type="topic" modified="2007-05-20T09:36:22.483Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.y_value_hint_caption"><caption translate="true">y_value_hint_caption</caption></topicref>
+          <topicref id="392224831827626" type="topic" modified="2007-05-20T09:37:17.320Z" icon="0" build="ALL" status="review" href="EJSC.Chart.properties.y_zero_plane"><caption translate="true">y_zero_plane</caption></topicref>
+        </topicref>
+        <topicref id="392225071391998" type="topic" modified="2007-05-20T09:51:25.552Z" icon="0" build="ALL" status="review"><caption translate="true">Methods</caption>
+          <topicref id="392226057677912" type="topic" modified="2007-05-20T12:11:14.986Z" icon="0" build="ALL" status="review" href="EJSC.Chart.methods.acquireSeries"><caption translate="true">acquireSeries</caption></topicref>
+          <topicref id="392224293112577" type="topic" modified="2007-05-20T09:54:15.417Z" icon="0" build="ALL" status="review" href="EJSC.Chart.methods.addSeries"><caption translate="true">addSeries</caption></topicref>
+          <topicref id="392224258721032" type="topic" modified="2007-05-20T09:54:20.473Z" icon="0" build="ALL" status="review" href="EJSC.Chart.methods.redraw"><caption translate="true">redraw</caption></topicref>
+          <topicref id="392226333460426" type="topic" modified="2007-05-20T12:10:30.206Z" icon="0" build="ALL" status="review" href="EJSC.Chart.methods.removeSeries"><caption translate="true">removeSeries</caption></topicref>
+          <topicref id="392224227060335" type="topic" modified="2007-05-20T12:11:20.715Z" icon="0" build="ALL" status="review" href="EJSC.Chart.methods.selectClosestPoint"><caption translate="true">selectClosestPoint</caption></topicref>
+          <topicref id="392224553120309" type="topic" modified="2007-05-20T09:54:24.858Z" icon="0" build="ALL" status="review" href="EJSC.Chart.methods.setTitle"><caption translate="true">setTitle</caption></topicref>
+          <topicref id="392222905727025" type="topic" modified="2007-05-20T09:54:29.399Z" icon="0" build="ALL" status="review" href="EJSC.Chart.methods.setXAxisCapion"><caption translate="true">setXAxisCaption</caption></topicref>
+          <topicref id="392222343761558" type="topic" modified="2007-05-20T09:54:33.457Z" icon="0" build="ALL" status="review" href="EJSC.Chart.methods.setXExtremes"><caption translate="true">setXExtremes</caption></topicref>
+          <topicref id="39220478323908" type="topic" modified="2007-05-20T09:54:37.249Z" icon="0" build="ALL" status="review" href="EJSC.Chart.methods.setYAxisCaption"><caption translate="true">setYAxisCaption</caption></topicref>
+          <topicref id="392224636131848" type="topic" modified="2007-05-20T09:54:41.634Z" icon="0" build="ALL" status="review" href="EJSC.Chart.methods.setYExtremes"><caption translate="true">setYExtremes</caption></topicref>
+          <topicref id="392225692834615" type="topic" modified="2007-05-20T11:43:46.533Z" icon="0" build="ALL" status="review" href="EJSC.Chart.methods.showCrosshairs"><caption translate="true">showCrosshairs</caption></topicref>
+        </topicref>
+        <topicref id="392225416104077" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review"><caption translate="true">Events</caption>
+          <topicref id="392222660480322" type="topic" modified="2007-05-20T10:52:55.101Z" icon="0" build="ALL" status="review" href="EJSC.Chart.events.onAfterDraw"><caption translate="true">onAfterDraw</caption></topicref>
+          <topicref id="39222169769472" type="topic" modified="2007-05-20T10:53:00.070Z" icon="0" build="ALL" status="review" href="EJSC.Chart.events.onAfterMove"><caption translate="true">onAfterMove</caption></topicref>
+          <topicref id="392225780569109" type="topic" modified="2007-05-20T10:53:04.546Z" icon="0" build="ALL" status="review" href="EJSC.Chart.events.onAfterSelectPoint"><caption translate="true">onAfterSelectPoint</caption></topicref>
+          <topicref id="392223529415731" type="topic" modified="2007-05-20T10:53:08.146Z" icon="0" build="ALL" status="review" href="EJSC.Chart.events.onAfterUnselectPoint"><caption translate="true">onAfterUnselectPoint</caption></topicref>
+          <topicref id="392224546277273" type="topic" modified="2007-05-20T10:53:16.038Z" icon="0" build="ALL" status="review" href="EJSC.Chart.events.onAfterZoom"><caption translate="true">onAfterZoom</caption></topicref>
+          <topicref id="392225722579576" type="topic" modified="2007-05-20T10:53:20.130Z" icon="0" build="ALL" status="review" href="EJSC.Chart.events.onBeforeDblClick"><caption translate="true">onBeforeDblClick</caption></topicref>
+          <topicref id="392225195324270" type="topic" modified="2007-05-20T10:53:24.268Z" icon="0" build="ALL" status="review" href="EJSC.Chart.events.onBeforeDraw"><caption translate="true">onBeforeDraw</caption></topicref>
+          <topicref id="392224096938564" type="topic" modified="2007-05-20T10:53:28.083Z" icon="0" build="ALL" status="review" href="EJSC.Chart.events.onBeforeSelectPoint"><caption translate="true">onBeforeSelectPoint</caption></topicref>
+          <topicref id="392222622281421" type="topic" modified="2007-05-20T10:53:31.514Z" icon="0" build="ALL" status="review" href="EJSC.Chart.events.onBeforeUnselectPoint"><caption translate="true">onBeforeUnselectPoint</caption></topicref>
+          <topicref id="392224347144316" type="topic" modified="2007-05-20T10:53:35.575Z" icon="0" build="ALL" status="review" href="EJSC.Chart.events.onDblClickPoint"><caption translate="true">onDblClickPoint</caption></topicref>
+          <topicref id="392224605694432" type="topic" modified="2007-05-20T10:53:39.667Z" icon="0" build="ALL" status="review" href="EJSC.Chart.events.onShowCrosshairs"><caption translate="true">onShowCrosshairs</caption></topicref>
+          <topicref id="392226566467248" type="topic" modified="2007-05-20T10:53:44.805Z" icon="0" build="ALL" status="review" href="EJSC.Chart.events.onShowHint"><caption translate="true">onShowHint</caption></topicref>
+          <topicref id="392226410432004" type="topic" modified="2007-05-20T10:53:48.621Z" icon="0" build="ALL" status="review" href="EJSC.Chart.events.onShowMessage"><caption translate="true">onShowMessage</caption></topicref>
+        </topicref>
+      </topicref>
+      <topicref id="392222069783756" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review"><caption translate="true">Chart Series</caption>
+        <topicref id="392225663960210" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.AreaSeries"><caption translate="true">EJSC.AreaSeries</caption>
+          <topicref id="392225215039261" type="topic" modified="2007-05-20T18:26:21.485Z" icon="0" build="ALL" status="review"><caption translate="true">Properties</caption>
+            <topicref id="392229545413087" type="topic" modified="2007-05-20T18:24:44.546Z" icon="0" build="ALL" status="review" href="EJSC.Series.properties.color"><caption translate="true">color (inherited)</caption></topicref>
+            <topicref id="392226672076510" type="topic" modified="2007-05-20T18:25:01.180Z" icon="0" build="ALL" status="review" href="EJSC.LineSeries.properties.lineWidth"><caption translate="true">lineWidth (inherited)</caption></topicref>
+            <topicref id="392228828176095" type="topic" modified="2007-05-20T18:25:13.701Z" icon="0" build="ALL" status="review" href="EJSC.Series.properties.title"><caption translate="true">title (inherited)</caption></topicref>
+            <topicref id="392229632678075" type="topic" modified="2007-05-20T18:25:24.862Z" icon="0" build="ALL" status="review" href="EJSC.Series.properties.visible"><caption translate="true">visible (inherited)</caption></topicref>
+            <topicref id="392227356341574" type="topic" modified="2007-05-20T18:25:45.082Z" icon="0" build="ALL" status="review" href="EJSC.Series.properties.x_axis_formatter"><caption translate="true">x_axis_formatter (inherited)</caption></topicref>
+            <topicref id="392229604650584" type="topic" modified="2007-05-20T18:26:11.571Z" icon="0" build="ALL" status="review" href="EJSC.Series.properties.y_axis_formatter"><caption translate="true">y_axis_formatter (inherited)</caption></topicref>
+          </topicref>
+          <topicref id="392225738144882" type="topic" modified="2007-05-20T18:28:01.097Z" icon="0" build="ALL" status="review"><caption translate="true">Methods</caption>
+            <topicref id="392229024661424" type="topic" modified="2007-05-20T18:26:43.459Z" icon="0" build="ALL" status="review" href="EJSC.Series.methods.getVisibility"><caption translate="true">getVisibility (inherited)</caption></topicref>
+            <topicref id="392229601905041" type="topic" modified="2007-05-20T18:26:56.186Z" icon="0" build="ALL" status="review" href="EJSC.Series.methods.hide"><caption translate="true">hide (inherited)</caption></topicref>
+            <topicref id="392226463113442" type="topic" modified="2007-05-20T18:27:09.784Z" icon="0" build="ALL" status="review" href="EJSC.Series.methods.reload"><caption translate="true">reload (inherited)</caption></topicref>
+            <topicref id="392228068696048" type="topic" modified="2007-05-20T18:27:21.734Z" icon="0" build="ALL" status="review" href="EJSC.Series.methods.setColor"><caption translate="true">setColor (inherited)</caption></topicref>
+            <topicref id="39223139618792" type="topic" modified="2007-05-20T18:27:36.497Z" icon="0" build="ALL" status="review" href="EJSC.Series.methods.setDataHandler"><caption translate="true">setDataHandler (inherited)</caption></topicref>
+            <topicref id="392229433519960" type="topic" modified="2007-05-20T18:27:49.955Z" icon="0" build="ALL" status="review" href="EJSC.Series.methods.show"><caption translate="true">show (inherited)</caption></topicref>
+          </topicref>
+          <topicref id="392224816658647" type="topic" modified="2007-05-20T18:29:05.962Z" icon="0" build="ALL" status="review"><caption translate="true">Events</caption>
+            <topicref id="392229413989287" type="topic" modified="2007-05-20T18:28:18.020Z" icon="0" build="ALL" status="review" href="EJSC.Series.events.onAfterDataAvailable"><caption translate="true">onAfterDataAvailable (inherited)</caption></topicref>
+            <topicref id="392228791673667" type="topic" modified="2007-05-20T18:28:34.167Z" icon="0" build="ALL" status="review" href="EJSC.Series.events.onAfterVisibilityChange"><caption translate="true">onAfterVisibilityChange (inherited)</caption></topicref>
+            <topicref id="392228143423410" type="topic" modified="2007-05-20T18:28:48.914Z" icon="0" build="ALL" status="review" href="EJSC.Series.events.onBeforeVisibilityChange"><caption translate="true">onBeforeVisibilityChange (inherited)</caption></topicref>
+          </topicref>
+        </topicref>
+        <topicref id="392224187629242" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new" href="EJSC.BarSeries"><caption translate="true">EJSC.BarSeries</caption></topicref>
+        <topicref id="392223300923179" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new" href="EJSC.FunctionSeries"><caption translate="true">EJSC.FunctionSeries</caption></topicref>
+        <topicref id="392223366956268" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.LineSeries"><caption translate="true">EJSC.LineSeries</caption>
+          <topicref id="392225923389495" type="topic" modified="2007-05-20T14:23:28.367Z" icon="0" build="ALL" status="review"><caption translate="true">Properties</caption>
+            <topicref id="392226448488008" type="topic" modified="2007-05-20T14:44:11.522Z" icon="0" build="ALL" status="review" href="EJSC.Series.properties.color"><caption translate="true">color (inherited)</caption></topicref>
+            <topicref id="392224169179525" type="topic" modified="2007-05-20T14:15:08.961Z" icon="0" build="ALL" status="review" href="EJSC.LineSeries.properties.lineWidth"><caption translate="true">lineWidth</caption></topicref>
+            <topicref id="392226221590780" type="topic" modified="2007-05-20T14:44:08.374Z" icon="0" build="ALL" status="review" href="EJSC.Series.properties.title"><caption translate="true">title (inherited)</caption></topicref>
+            <topicref id="392227937499901" type="topic" modified="2007-05-20T14:44:04.961Z" icon="0" build="ALL" status="review" href="EJSC.Series.properties.visible"><caption translate="true">visible (inherited)</caption></topicref>
+            <topicref id="392224941566761" type="topic" modified="2007-05-20T14:44:01.314Z" icon="0" build="ALL" status="review" href="EJSC.Series.properties.x_axis_formatter"><caption translate="true">x_axis_formatter (inherited)</caption></topicref>
+            <topicref id="392224934855203" type="topic" modified="2007-05-20T14:43:58.072Z" icon="0" build="ALL" status="review" href="EJSC.Series.properties.y_axis_formatter"><caption translate="true">y_axis_formatter (inherited)</caption></topicref>
+          </topicref>
+          <topicref id="392226976029353" type="topic" modified="2007-05-20T14:25:18.451Z" icon="0" build="ALL" status="review" href="EJSC.LineSeries.Methods"><caption translate="true">Methods</caption>
+            <topicref id="392228147690642" type="topic" modified="2007-05-20T14:43:54.658Z" icon="0" build="ALL" status="review" href="GetVisibility"><caption translate="true">getVisibility (inherited)</caption></topicref>
+            <topicref id="392224402428591" type="topic" modified="2007-05-20T14:43:51.074Z" icon="0" build="ALL" status="review" href="EJSC.Series.methods.hide"><caption translate="true">hide (inherited)</caption></topicref>
+            <topicref id="392228061903179" type="topic" modified="2007-05-20T14:43:46.429Z" icon="0" build="ALL" status="review" href="EJSC.Series.methods.reload"><caption translate="true">reload (inherited)</caption></topicref>
+            <topicref id="392225289225345" type="topic" modified="2007-05-20T14:43:42.205Z" icon="0" build="ALL" status="review" href="EJSC.Series.methods.setColor"><caption translate="true">setColor (inherited)</caption></topicref>
+            <topicref id="392225410546411" type="topic" modified="2007-05-20T14:43:38.200Z" icon="0" build="ALL" status="review" href="EJSC.Series.methods.setDataHandler"><caption translate="true">setDataHandler (inherited)</caption></topicref>
+            <topicref id="392226087885775" type="topic" modified="2007-05-20T14:43:34.615Z" icon="0" build="ALL" status="review" href="EJSC.Series.methods.show"><caption translate="true">show (inherited)</caption></topicref>
+          </topicref>
+          <topicref id="392225694557051" type="topic" modified="2007-05-20T14:27:15.159Z" icon="0" build="ALL" status="review" href="EJSC.LineSeries.Events"><caption translate="true">Events</caption>
+            <topicref id="392225205107301" type="topic" modified="2007-05-20T14:43:21.990Z" icon="0" build="ALL" status="review" href="EJSC.Series.events.onAfterDataAvailable"><caption translate="true">onAfterDataAvailable (inherited)</caption></topicref>
+            <topicref id="392225893250232" type="topic" modified="2007-05-20T14:43:24.983Z" icon="0" build="ALL" status="review" href="EJSC.Series.events.onAfterVisibilityChange"><caption translate="true">onAfterVisibilityChange (inherited)</caption></topicref>
+            <topicref id="392227882167888" type="topic" modified="2007-05-20T14:43:30.500Z" icon="0" build="ALL" status="review" href="EJSC.Series.events.onBeforeVisibilityChange"><caption translate="true">onBeforeVisibilityChange (inherited)</caption></topicref>
+          </topicref>
+        </topicref>
+        <topicref id="392223322182955" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new" href="EJSC.PieSeries"><caption translate="true">EJSC.PieSeries</caption></topicref>
+        <topicref id="392224074750474" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new" href="EJSC.ScatterSeries"><caption translate="true">EJSC.ScatterSeries</caption></topicref>
+        <topicref id="392224115225187" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new" href="EJSC.TrendSeries"><caption translate="true">EJSC.TrendSeries</caption></topicref>
+      </topicref>
+      <topicref id="392223347928860" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new"><caption translate="true">Data Handlers</caption>
+        <topicref id="392225992941765" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new" href="EJSC.XMLDataHandler"><caption translate="true">EJSC.XMLDataHandler</caption></topicref>
+        <topicref id="392224291473987" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new" href="EJSC.ArrayDataHandler"><caption translate="true">EJSC.ArrayDataHandler</caption></topicref>
+        <topicref id="392224359874649" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new" href="EJSC.CSVFileDataHandler"><caption translate="true">EJSC.CSVFileDataHandler</caption></topicref>
+        <topicref id="392224574435824" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new" href="EJSC.CSVStringDataHandler"><caption translate="true">EJSC.CSVStringDataHandler</caption></topicref>
+      </topicref>
+      <topicref id="392222464593247" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new"><caption translate="true">Label Formatters</caption>
+        <topicref id="392225830860174" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new" href="EJSC.NumberFormatter"><caption translate="true">EJSC.NumberFormatter</caption></topicref>
+        <topicref id="392222460290343" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new" href="EJSC.DateFormatter"><caption translate="true">EJSC.DateFormatter</caption></topicref>
+      </topicref>
+      <topicref id="392222891612215" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new"><caption translate="true">Interfaces</caption>
+        <topicref id="392223340739789" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="new" href="EJSC.Inheritable"><caption translate="true">EJSC.Inheritable</caption></topicref>
+        <topicref id="392222869066730" type="topic" modified="2007-05-20T09:16:43.526Z" icon="0" build="ALL" status="review" href="EJSC.Series"><caption translate="true">EJSC.Series</caption>
+          <topicref id="392225517489299" type="topic" modified="2007-05-20T14:24:47.825Z" icon="0" build="ALL" status="review"><caption translate="true">Properties</caption>
+            <topicref id="392225339652605" type="topic" modified="2007-05-20T13:42:58.230Z" icon="0" build="ALL" status="review" href="EJSC.Series.properties.color"><caption translate="true">color</caption></topicref>
+            <topicref id="392226841878901" type="topic" modified="2007-05-20T13:43:03.326Z" icon="0" build="ALL" status="review" href="EJSC.Series.properties.title"><caption translate="true">title</caption></topicref>
+            <topicref id="392226274300425" type="topic" modified="2007-05-20T14:33:13.497Z" icon="0" build="ALL" status="review" href="EJSC.Series.properties.visible"><caption translate="true">visible</caption></topicref>
+            <topicref id="392225345004291" type="topic" modified="2007-05-20T13:43:08.672Z" icon="0" build="ALL" status="review" href="EJSC.Series.properties.x_axis_formatter"><caption translate="true">x_axis_formatter</caption></topicref>
+            <topicref id="392224591261481" type="topic" modified="2007-05-20T13:43:12.740Z" icon="0" build="ALL" status="review" href="EJSC.Series.properties.y_axis_formatter"><caption translate="true">y_axis_formatter</caption></topicref>
+          </topicref>
+          <topicref id="392227723881031" type="topic" modified="2007-05-20T14:24:52.064Z" icon="0" build="ALL" status="review"><caption translate="true">Methods</caption>
+            <topicref id="392224729156943" type="topic" modified="2007-05-20T14:07:04.049Z" icon="0" build="ALL" status="review" href="EJSC.Series.methods.getVisibility"><caption translate="true">getVisibility</caption></topicref>
+            <topicref id="392226202641019" type="topic" modified="2007-05-20T14:06:59.794Z" icon="0" build="ALL" status="review" href="EJSC.Series.methods.hide"><caption translate="true">hide</caption></topicref>
+            <topicref id="392226581699628" type="topic" modified="2007-05-20T18:12:08.334Z" icon="0" build="ALL" status="review" href="EJSC.Series.methods.reload"><caption translate="true">reload</caption></topicref>
+            <topicref id="392224000578865" type="topic" modified="2007-05-20T14:07:11.546Z" icon="0" build="ALL" status="review" href="EJSC.Series.methods.setColor"><caption translate="true">setColor</caption></topicref>
+            <topicref id="392223833292829" type="topic" modified="2007-05-20T14:07:15.614Z" icon="0" build="ALL" status="review" href="EJSC.Series.methods.setDataHandler"><caption translate="true">setDataHandler</caption></topicref>
+            <topicref id="392225734195074" type="topic" modified="2007-05-20T14:06:54.214Z" icon="0" build="ALL" status="review" href="EJSC.Series.methods.show"><caption translate="true">show</caption></topicref>
+          </topicref>
+          <topicref id="392224104607699" type="topic" modified="2007-05-20T14:24:56.912Z" icon="0" build="ALL" status="review"><caption translate="true">Events</caption>
+            <topicref id="39224132037227" type="topic" modified="2007-05-20T14:07:33.366Z" icon="0" build="ALL" status="review" href="EJSC.Series.events.onAfterDataAvailable"><caption translate="true">onAfterDataAvailable</caption></topicref>
+            <topicref id="392224631008482" type="topic" modified="2007-05-20T14:07:24.732Z" icon="0" build="ALL" status="review" href="EJSC.Series.events.onAfterVisibilityChange"><caption translate="true">onAfterVisibilityChange</caption></topicref>
+            <topicref id="392225452961919" type="topic" modified="2007-05-20T14:07:20.025Z" icon="0" build="ALL" status="review" href="EJSC.Series.events.onBeforeVisibilityChange"><caption translate="true">onBeforeVisibilityChange</caption></topicref>
+          </topicref>
+        </topicref>
+        <topicref id="392223465085402" type="topic" modified="2007-05-20T09:16:43.542Z" icon="0" build="ALL" status="new" href="EJSC.Point"><caption translate="true">EJSC.Point</caption></topicref>
+        <topicref id="392222224846087" type="topic" modified="2007-05-20T09:16:43.542Z" icon="0" build="ALL" status="new" href="EJSC.DataHandler"><caption translate="true">EJSC.DataHandler</caption></topicref>
+        <topicref id="392225450848417" type="topic" modified="2007-05-20T09:16:43.542Z" icon="0" build="ALL" status="new" href="EJSC.Formatter"><caption translate="true">EJSC.Formatter</caption></topicref>
+      </topicref>
+    </topicref>
+  </map>
+  <map id="invisible-topics">
+    <topicref id="392225205919506" type="topic" modified="2007-05-20T09:16:43.542Z" icon="0" build="ALL" status="new" href="EJSC.Chart.Hierarchy"><caption translate="true">EJSC.Chart.Hierarchy</caption></topicref>
+    <topicref id="392222189054372" type="topic" modified="2007-05-20T09:16:43.542Z" icon="0" build="ALL" status="new" href="EJSC.Chart.Properties"><caption translate="true">EJSC.Chart.Properties</caption></topicref>
+    <topicref id="392223451889585" type="topic" modified="2007-05-20T09:16:43.542Z" icon="0" build="ALL" status="new" href="EJSC.Chart.Methods"><caption translate="true">EJSC.Chart.Methods</caption></topicref>
+    <topicref id="392226000403534" type="topic" modified="2007-05-20T09:16:43.542Z" icon="0" build="ALL" status="new" href="EJSC.Chart.Events"><caption translate="true">EJSC.Chart.Events</caption></topicref>
+    <topicref id="39221638447415" type="topic" modified="2007-05-20T12:45:41.409Z" icon="0" build="ALL" status="new" href="EJSC.AreaSeries.Hierarchy"><caption translate="true">EJSC.AreaSeries.Hierarchy</caption></topicref>
+    <topicref id="392226895190479" type="topic" modified="2007-05-20T12:45:52.459Z" icon="0" build="ALL" status="new" href="EJSC.AreaSeries.Properties"><caption translate="true">EJSC.AreaSeries.Properties</caption></topicref>
+    <topicref id="392225094401583" type="topic" modified="2007-05-20T12:45:58.896Z" icon="0" build="ALL" status="new" href="EJSC.AreaSeries.Methods"><caption translate="true">EJSC.AreaSeries.Methods</caption></topicref>
+    <topicref id="39223508112828" type="topic" modified="2007-05-20T12:46:05.084Z" icon="0" build="ALL" status="new" href="EJSC.AreaSeries.Events"><caption translate="true">EJSC.AreaSeries.Events</caption></topicref>
+    <topicref id="392226258154217" type="topic" modified="2007-05-20T18:16:00.610Z" icon="0" build="ALL" status="new" href="EJSC.Series.Hierarchy"><caption translate="true">EJSC.Series.Hierarchy</caption></topicref>
+    <topicref id="392227700788708" type="topic" modified="2007-05-20T18:16:08.145Z" icon="0" build="ALL" status="new" href="EJSC.Series.Properties"><caption translate="true">EJSC.Series.Properties</caption></topicref>
+    <topicref id="392225914253343" type="topic" modified="2007-05-20T18:16:13.314Z" icon="0" build="ALL" status="new" href="EJSC.Series.Methods"><caption translate="true">EJSC.Series.Methods</caption></topicref>
+    <topicref id="392225886254393" type="topic" modified="2007-05-20T18:16:18.421Z" icon="0" build="ALL" status="new" href="EJSC.Series.Events"><caption translate="true">EJSC.Series.Events</caption></topicref>
+    <topicref id="392229449170175" type="topic" modified="2007-05-20T18:22:18.757Z" icon="0" build="ALL" status="new" href="EJSC.LineSeries.Hierarchy"><caption translate="true">EJSC.LineSeries.Hierarchy</caption></topicref>
+    <topicref id="392225858231810" type="topic" modified="2007-05-20T18:22:25.559Z" icon="0" build="ALL" status="new" href="EJSC.LineSeries.Properties"><caption translate="true">EJSC.LineSeries.Properties</caption></topicref>
+    <topicref id="392226052109364" type="topic" modified="2007-05-20T18:22:31.650Z" icon="0" build="ALL" status="new" href="EJSC.LineSeries.Methods2"><caption translate="true">EJSC.LineSeries.Methods</caption></topicref>
+    <topicref id="392227321735268" type="topic" modified="2007-05-20T18:22:37.555Z" icon="0" build="ALL" status="new" href="EJSC.LineSeries.Events2"><caption translate="true">EJSC.LineSeries.Events</caption></topicref>
+  </map>
+  <topics xmlns:xi="http://www.w3.org/2001/XInclude">
+    <include href="./Topics/AdditionalInformation.xml" />
+    <include href="./Topics/Changesinversion0.5.3Beta.xml" />
+    <include href="./Topics/Changesinversion0.6.0Beta.xml" />
+    <include href="./Topics/Customization.xml" />
+    <include href="./Topics/DataFormats.xml" />
+    <include href="./Topics/EJSC.AreaSeries.xml" />
+    <include href="./Topics/EJSC.AreaSeries.Events.xml" />
+    <include href="./Topics/EJSC.AreaSeries.Hierarchy.xml" />
+    <include href="./Topics/EJSC.AreaSeries.Methods.xml" />
+    <include href="./Topics/EJSC.AreaSeries.Properties.xml" />
+    <include href="./Topics/EJSC.ArrayDataHandler.xml" />
+    <include href="./Topics/EJSC.BarSeries.xml" />
+    <include href="./Topics/EJSC.Chart.xml" />
+    <include href="./Topics/EJSC.Chart.Events.xml" />
+    <include href="./Topics/EJSC.Chart.events.onAfterDraw.xml" />
+    <include href="./Topics/EJSC.Chart.events.onAfterMove.xml" />
+    <include href="./Topics/EJSC.Chart.events.onAfterSelectPoint.xml" />
+    <include href="./Topics/EJSC.Chart.events.onAfterUnselectPoint.xml" />
+    <include href="./Topics/EJSC.Chart.events.onAfterZoom.xml" />
+    <include href="./Topics/EJSC.Chart.events.onBeforeDblClick.xml" />
+    <include href="./Topics/EJSC.Chart.events.onBeforeDraw.xml" />
+    <include href="./Topics/EJSC.Chart.events.onBeforeSelectPoint.xml" />
+    <include href="./Topics/EJSC.Chart.events.onBeforeUnselectPoint.xml" />
+    <include href="./Topics/EJSC.Chart.events.onDblClickPoint.xml" />
+    <include href="./Topics/EJSC.Chart.events.onShowCrosshairs.xml" />
+    <include href="./Topics/EJSC.Chart.events.onShowHint.xml" />
+    <include href="./Topics/EJSC.Chart.events.onShowMessage.xml" />
+    <include href="./Topics/EJSC.Chart.Hierarchy.xml" />
+    <include href="./Topics/EJSC.Chart.Methods.xml" />
+    <include href="./Topics/EJSC.Chart.methods.acquireSeries.xml" />
+    <include href="./Topics/EJSC.Chart.methods.addSeries.xml" />
+    <include href="./Topics/EJSC.Chart.methods.redraw.xml" />
+    <include href="./Topics/EJSC.Chart.methods.removeSeries.xml" />
+    <include href="./Topics/EJSC.Chart.methods.selectClosestPoint.xml" />
+    <include href="./Topics/EJSC.Chart.methods.setTitle.xml" />
+    <include href="./Topics/EJSC.Chart.methods.setXAxisCapion.xml" />
+    <include href="./Topics/EJSC.Chart.methods.setXExtremes.xml" />
+    <include href="./Topics/EJSC.Chart.methods.setYAxisCaption.xml" />
+    <include href="./Topics/EJSC.Chart.methods.setYExtremes.xml" />
+    <include href="./Topics/EJSC.Chart.methods.showCrosshairs.xml" />
+    <include href="./Topics/EJSC.Chart.Properies.allow_interactivity.xml" />
+    <include href="./Topics/EJSC.Chart.Properties.xml" />
+    <include href="./Topics/EJSC.Chart.properties.allow_zoom.xml" />
+    <include href="./Topics/EJSC.Chart.properties.auto_find_point_by_x.xml" />
+    <include href="./Topics/EJSC.Chart.properties.auto_zoom.xml" />
+    <include href="./Topics/EJSC.Chart.properties.force_static_points.xml" />
+    <include href="./Topics/EJSC.Chart.properties.proximity_snap.xml" />
+    <include href="./Topics/EJSC.Chart.properties.show_crosshairs.xml" />
+    <include href="./Topics/EJSC.Chart.properties.show_hints.xml" />
+    <include href="./Topics/EJSC.Chart.properties.show_legend.xml" />
+    <include href="./Topics/EJSC.Chart.properties.show_messages.xml" />
+    <include href="./Topics/EJSC.Chart.properties.show_mouse_position.xml" />
+    <include href="./Topics/EJSC.Chart.Properties.title.xml" />
+    <include href="./Topics/EJSC.Chart.properties.x_axis_caption.xml" />
+    <include href="./Topics/EJSC.Chart.properties.x_axis_extremes_ticks.xml" />
+    <include href="./Topics/EJSC.Chart.properties.x_axis_formatter.xml" />
+    <include href="./Topics/EJSC.Chart.properties.x_cursor_position_text.xml" />
+    <include href="./Topics/EJSC.Chart.properties.x_max.xml" />
+    <include href="./Topics/EJSC.Chart.properties.x_min.xml" />
+    <include href="./Topics/EJSC.Chart.properties.x_value_hint_caption.xml" />
+    <include href="./Topics/EJSC.Chart.properties.x_zero_plane.xml" />
+    <include href="./Topics/EJSC.Chart.properties.y_axis_caption.xml" />
+    <include href="./Topics/EJSC.Chart.properties.y_axis_extremes_ticks.xml" />
+    <include href="./Topics/EJSC.Chart.properties.y_axis_formatter.xml" />
+    <include href="./Topics/EJSC.Chart.properties.y_cursor_position_text.xml" />
+    <include href="./Topics/EJSC.Chart.properties.y_max.xml" />
+    <include href="./Topics/EJSC.Chart.properties.y_min.xml" />
+    <include href="./Topics/EJSC.Chart.properties.y_value_hint_caption.xml" />
+    <include href="./Topics/EJSC.Chart.properties.y_zero_plane.xml" />
+    <include href="./Topics/EJSC.CSVFileDataHandler.xml" />
+    <include href="./Topics/EJSC.CSVStringDataHandler.xml" />
+    <include href="./Topics/EJSC.DataHandler.xml" />
+    <include href="./Topics/EJSC.DateFormatter.xml" />
+    <include href="./Topics/EJSC.Formatter.xml" />
+    <include href="./Topics/EJSC.FunctionSeries.xml" />
+    <include href="./Topics/EJSC.Inheritable.xml" />
+    <include href="./Topics/EJSC.LineSeries.xml" />
+    <include href="./Topics/EJSC.LineSeries.Events.xml" />
+    <include href="./Topics/EJSC.LineSeries.Events2.xml" />
+    <include href="./Topics/EJSC.LineSeries.Hierarchy.xml" />
+    <include href="./Topics/EJSC.LineSeries.Methods.xml" />
+    <include href="./Topics/EJSC.LineSeries.Methods2.xml" />
+    <include href="./Topics/EJSC.LineSeries.Properties.xml" />
+    <include href="./Topics/EJSC.LineSeries.properties.lineWidth.xml" />
+    <include href="./Topics/EJSC.NumberFormatter.xml" />
+    <include href="./Topics/EJSC.PieSeries.xml" />
+    <include href="./Topics/EJSC.Point.xml" />
+    <include href="./Topics/EJSC.ScatterSeries.xml" />
+    <include href="./Topics/EJSC.Series.xml" />
+    <include href="./Topics/EJSC.Series.Events.xml" />
+    <include href="./Topics/EJSC.Series.events.onAfterDataAvailable.xml" />
+    <include href="./Topics/EJSC.Series.events.onAfterVisibilityChange.xml" />
+    <include href="./Topics/EJSC.Series.events.onBeforeVisibilityChange.xml" />
+    <include href="./Topics/EJSC.Series.Hierarchy.xml" />
+    <include href="./Topics/EJSC.Series.Methods.xml" />
+    <include href="./Topics/EJSC.Series.methods.getVisibility.xml" />
+    <include href="./Topics/EJSC.Series.methods.hide.xml" />
+    <include href="./Topics/EJSC.Series.methods.reload.xml" />
+    <include href="./Topics/EJSC.Series.methods.setColor.xml" />
+    <include href="./Topics/EJSC.Series.methods.setDataHandler.xml" />
+    <include href="./Topics/EJSC.Series.methods.show.xml" />
+    <include href="./Topics/EJSC.Series.Properties.xml" />
+    <include href="./Topics/EJSC.Series.properties.color.xml" />
+    <include href="./Topics/EJSC.Series.properties.title.xml" />
+    <include href="./Topics/EJSC.Series.properties.visible.xml" />
+    <include href="./Topics/EJSC.Series.properties.x_axis_formatter.xml" />
+    <include href="./Topics/EJSC.Series.properties.y_axis_formatter.xml" />
+    <include href="./Topics/EJSC.TrendSeries.xml" />
+    <include href="./Topics/EJSC.XMLDataHandler.xml" />
+    <include href="./Topics/EJSCNamespace.xml" />
+    <include href="./Topics/ExamplesCodeSnippets.xml" />
+    <include href="./Topics/GetVisibility.xml" />
+    <include href="./Topics/Welcometopic.xml" />
+  </topics>
+  <baggage>
+  </baggage>
+</helpproject>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Emprise JavaScript Charts - Background Image Example</title>
+	<link rel="stylesheet" href="../includes/template.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="../../EJSChart.min.js"></script>
+	<script type="text/javascript" src="../includes/code.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+
+		<div id="header">
+		
+			<h1 id="logo-text"><a href="http://www.ejschart.com/"><span class="gray">Emprise JavaScript Charts</span></a></h1>			
+					
+			<div id="header-tabs">
+				<ul>
+					<li><a href="http://www.ejschart.com/index.php"><span>Home</span></a></li>
+					<li><a href="http://www.ejschart.com/pricing.php"><span>Pricing</span></a></li>
+					<li><a href="http://www.ejschart.com/forums/"><span>Forums</span></a></li>
+					<li><a href="http://www.ejschart.com/support.php"><span>Support</span></a></li>
+				</ul>
+
+			</div>				
+			
+		</div>
+	  
+	  <!-- content-wrap starts here -->
+	  <div id="content-wrap">
+	  
+	  		<div id="main">
+				<h1>Background Image</h1>
+
+				<div class="breadcrumbs">Return to: <a href="../index.html" class="crumb">Examples</a> &raquo; <a href="../index.html#other" class="crumb">Other</a></div> 
+
+				<p>To help integrate your chart into an existing site layout or simply add a little more excitement,
+					images can easily be added as a background for your charts.</p>
+				<p>This is accomplished by specifying the image as the background of your chart's div.</p>
+				<p>For example:</p>
+				<ol class="code">
+					<li><span>&lt;div id="myChart"</span></li>
+					<li><span>    style="width: 582px; height: 448px; background-image: url(../includes/tropical.jpg);"&gt;&lt;/div&gt;</span></li>
+				</ol>
+	
+				<div id="myChart" style="width:582px; height:448px; background-image: url(../includes/tropical.jpg); margin: 0px auto; margin-bottom: 20px;"></div>
+
+				<script type="text/javascript">
+					var myChart = new EJSC.Chart("myChart", {
+					 	title: "Paid Vacation Earnings at Company X",
+					 	x_axis_caption:  "Years at Company X",
+					 	y_axis_caption:  "Vacation Hours",
+					 	x_value_hint_caption: "Years Worked: ",
+					 	y_value_hint_caption: "Vacation Hours: ",
+					 	show_mouse_position: false,
+						show_legend: false
+					});
+					
+					var myChartSeries = new EJSC.BarSeries(
+						new EJSC.ArrayDataHandler([[1,5],[2,10],[3,20],[4,35],[5,55],[6,80],[7,110],[8,145],[9,185],[10,225]]),
+						{title:"Years Worked vs. Vacation Hours", lineWidth: 3, color: "rgb(255,50,50)"});
+					
+					myChart.addSeries(myChartSeries);
+				</script>
+
+				<div class="breadcrumbs">Return to: <a href="../index.html" class="crumb">Examples</a> &raquo; <a href="../index.html#other" class="crumb">Other</a></div> 
+
+			</div>
+
+		</div>
+		
+		<div id="footer">
+		
+			<span id="footer-left">
+				&copy; 2006-2007 <strong><a href="http://www.emprisecorporation.com/">Emprise Corporation</a></strong> | 
+				Design by: <strong><a href="http://www.styleshout.com/">styleshout</a></strong> | 
+				Valid: <a href="http://validator.w3.org/">XHTML</a> | 
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+
+			</span>		
+			
+			<span id="footer-right">
+				<a href="http://www.ejschart.com/">Home</a> 
+			</span>
+			
+		</div>	
+
+<!-- wrap ends here -->		
+</div>
+</body>
+
+</html>

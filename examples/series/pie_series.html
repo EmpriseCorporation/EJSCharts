@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Emprise JavaScript Charts - EJSC.PieSeries Property Examples</title>
+	<link rel="stylesheet" href="../includes/template.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="../../EJSChart.min.js"></script>
+	<script type="text/javascript" src="../includes/code.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+
+		<div id="header">
+		
+			<h1 id="logo-text"><a href="http://www.ejschart.com/"><span class="gray">Emprise JavaScript Charts</span></a></h1>			
+					
+			<div id="header-tabs">
+				<ul>
+					<li><a href="http://www.ejschart.com/index.php"><span>Home</span></a></li>
+					<li><a href="http://www.ejschart.com/pricing.php"><span>Pricing</span></a></li>
+					<li><a href="http://www.ejschart.com/forums/"><span>Forums</span></a></li>
+					<li><a href="http://www.ejschart.com/support.php"><span>Support</span></a></li>
+				</ul>
+
+			</div>				
+			
+		</div>
+	  
+	  <!-- content-wrap starts here -->
+	  <div id="content-wrap">
+	  
+	  		<div id="main">
+				<h1>EJSC.PieSeries Property Examples</h1>
+
+				<div class="breadcrumbs">Return to: <a href="../index.html" class="crumb">Examples</a> &raquo; <a href="../index.html#pieSeries" class="crumb">EJSC.PieSeries</a></div> 
+
+				<div class="sidebyside">
+
+					<div class="default">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 60px">
+							<li>Standard EJSC.PieSeries Properties</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 45px;">
+							Default EJSC.PieSeries Settings
+						</p>
+						<div id="myChart1a" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code1a"><span>Rendering Source Code...</span></ol>
+					</div>
+					
+					<div class="example">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 60px">
+							<li>defaultColors</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 45px;">
+							This chart will have a new set of colors defined as the 
+							pool of colors to be used when creating the pie pieces.
+            			</p>
+						<div id="myChart1b" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code1b"><span>Rendering Source Code...</span></ol>
+					</div>
+
+<script type="text/javascript" id="script1a">
+	var chart = new EJSC.Chart("myChart1a", {
+		show_legend: false 
+	});
+	
+	chart.addSeries(new EJSC.PieSeries(
+		new EJSC.ArrayDataHandler([[3,"Widgets"],
+			[7,"Doodads"],[4,"Thingamagigs"],
+			[10,"Whatchamacallits"],[2,"Gizmos"],
+			[5,"Thingies"]])
+	));
+</script>
+
+<script type="text/javascript" id="script1b">
+	var chart = new EJSC.Chart("myChart1b", {
+		show_legend: false 
+	});
+	
+	chart.addSeries(new EJSC.PieSeries(
+		new EJSC.ArrayDataHandler([[3,"Widgets"],
+			[7,"Doodads"],[4,"Thingamagigs"],
+			[10,"Whatchamacallits"],[2,"Gizmos"],
+			[5,"Thingies"]]
+		),
+/*H*/		{
+/*H*/			defaultColors: [
+/*H*/					'rgb(255,140,0)',	//DarkOrange
+/*H*/ 					'rgb(178,34,34)',	//FireBrick
+/*H*/ 					'rgb(153,50,204)',	//DarkOrchid
+/*H*/ 					'rgb(255,255,0)',	//Yellow
+/*H*/ 					'rgb(112,219,147)',	//AquaMarine 
+/*H*/					'rgb(35,107,142)'	//SteelBlue
+/*H*/			]
+/*H*/		}
+	));
+</script>
+
+					<div class="clear"></div>
+				</div>
+						
+				<hr />
+
+				<div class="sidebyside">
+
+					<div class="default">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 60px">
+							<li>position</li>
+							<li>height</li>
+							<li>width</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 60px;">
+							Display four pie series in a single chart.
+						</p>
+						<div id="myChart2a" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code2a"><span>Rendering Source Code...</span></ol>
+					</div>
+					
+					<div class="example">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 60px">
+							<li>total_value</li>
+							<li>Custom hint property [total]</li>
+							<li>Custom hint property [percent]</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 60px;">
+							Display a pie series which does not fill the entire circle (total value is 
+							greater than the sum of all pieces) and shows hints with the piece percentage
+							of total value as well as its actual value and the pie series total value.
+            			</p>
+						<div id="myChart2b" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code2b"><span>Rendering Source Code...</span></ol>
+					</div>
+
+<script type="text/javascript" id="script2a">
+	var chart = new EJSC.Chart("myChart2a", {
+		show_legend: false 
+	});
+	
+	chart.addSeries(new EJSC.PieSeries(
+		new EJSC.ArrayDataHandler([[3,"Widgets"],
+			[7,"Doodads"],[4,"Thingamagigs"],
+			[10,"Whatchamacallits"],[2,"Gizmos"],
+			[5,"Thingies"]]),
+		{
+/*H*/			position: "topLeft",
+/*H*/			height: "60%",
+/*H*/			width: "60%"
+		}
+	));
+	chart.addSeries(new EJSC.PieSeries(
+		new EJSC.ArrayDataHandler([[4,"Widgets"],
+			[8,"Doodads"],[10,"Thingamagigs"],
+			[10,"Whatchamacallits"],[1,"Gizmos"],
+			[3,"Thingies"]]),
+		{
+/*H*/			position: "topRight",
+/*H*/			height: "25%",
+/*H*/			width: "25%"
+		}
+	));
+	chart.addSeries(new EJSC.PieSeries(
+		new EJSC.ArrayDataHandler([[5,"Widgets"],
+			[2,"Doodads"],[12,"Thingamagigs"],
+			[10,"Whatchamacallits"],[8,"Gizmos"],
+			[4,"Thingies"]]),
+		{
+/*H*/			position: "bottomLeft",
+/*H*/			height: "25%",
+/*H*/			width: "25%"
+		}
+	));
+	chart.addSeries(new EJSC.PieSeries(
+		new EJSC.ArrayDataHandler([[9,"Widgets"],
+			[1,"Doodads"],[0,"Thingamagigs"],
+			[10,"Whatchamacallits"],[7,"Gizmos"],
+			[3,"Thingies"]]),
+		{
+/*H*/			position: "bottomRight",
+/*H*/			height: "60%",
+/*H*/			width: "60%"
+		}
+	));
+</script>
+
+<script type="text/javascript" id="script2b">
+	var chart = new EJSC.Chart("myChart2b", {
+		show_legend: false,
+/*H*/		onShowHint: function(point, series, chart, hint, hoverOrSelect) {
+/*H*/			return "[series_title]<br/>[label]: [x] of [total] ([percent]%)";
+/*H*/		}
+	});
+	
+	chart.addSeries(new EJSC.PieSeries(
+		new EJSC.ArrayDataHandler([[3,"Widgets"],
+			[7,"Doodads"],[4,"Thingamagigs"],
+			[10,"Whatchamacallits"],[2,"Gizmos"],
+			[5,"Thingies"]]
+		),
+/*H*/		{
+/*H*/			total_value: 40
+/*H*/		}
+	));
+</script>
+
+					<div class="clear"></div>
+				</div>
+														
+				<hr />
+				
+				<h2>Defining Custom Pie Colors as necessary</h2> 			
+				<p>
+					It may be necessary to have additional control over which color each pie piece uses.  To
+					handle this situation, the EJSC.PieSeries has the onPieceNeedsColor event which if
+					assigned will fire every time a piece needs to determine its color.  Used in conjunction
+					piece label or the userdata attribute of the XML formats, it is possible to keep consistent 
+					colors associated with specific pie piece values (i.e. Widgets will always be blue, regardless
+					of the actual value of with Widgets piece for the given display)
+				</p>
+				<p>
+					The following code demonstrates this functionality by assigning colors based on the piece
+					label value:
+				</p>
+				<ol class="code" id="code3a"><span>Rendering Source Code...</span></ol>
+	
+				<div id="myChart3a" style="width:500px; height:500px; margin: 0px auto; margin-bottom: 20px;"></div>
+
+<script type="text/javascript" id="script3a">
+	function pieceNeedsColor(point, series, chart) {
+	
+		switch (point.label) {
+			case "Doodads": return 'rgb(255,140,0)'; //DarkOrange
+			case "Widgets": return 'rgb(178,34,34)'; //FireBrick
+			case "Thingamagigs": return 'rgb(153,50,204)'; //DarkOrchid
+			case "Whatchamacallits": return 'rgb(255,255,0)'; 	//Yellow
+			case "Gizmos": return 'rgb(112,219,147)'; //AquaMarine 
+			case "Thingies": return 'rgb(35,107,142)'; //SteelBlue
+		}
+	
+	}
+
+	var myChart = new EJSC.Chart("myChart3a", {
+	 	title: "Product Sales",
+	 	show_mouse_position: false,
+		show_legend: false
+	});
+					
+	var myChartSeries = new EJSC.PieSeries(
+		new EJSC.ArrayDataHandler([[3,"Widgets"],[7,"Doodads"],[4,"Thingamagigs"],
+			[10,"Whatchamacallits"],[2,"Gizmos"],[5,"Thingies"]]
+		),
+		{ onPieceNeedsColor: pieceNeedsColor }
+	);
+					
+	myChart.addSeries(myChartSeries);
+</script>
+													
+				<div class="breadcrumbs">Return to: <a href="../index.html" class="crumb">Examples</a> &raquo; <a href="../index.html#pieSeries" class="crumb">EJSC.PieSeries</a></div> 
+
+			</div>
+
+		</div>
+		
+		<div id="footer">
+		
+			<span id="footer-left">
+				&copy; 2006-2007 <strong><a href="http://www.emprisecorporation.com/">Emprise Corporation</a></strong> | 
+				Design by: <strong><a href="http://www.styleshout.com/">styleshout</a></strong> | 
+				Valid: <a href="http://validator.w3.org/">XHTML</a> | 
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+
+			</span>		
+			
+			<span id="footer-right">
+				<a href="http://www.ejschart.com/">Home</a> 
+			</span>
+			
+		</div>	
+
+<!-- wrap ends here -->		
+</div>
+</body>
+
+</html>

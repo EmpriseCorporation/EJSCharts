@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?ejsc_chart_methods_addxaxisbin.html"; }
+else { parent.quicksync('a5.2.2.3'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>addXAxisBin</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="http://www.ejschart.com/includes/help.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<div class="topicHeader">
+     <div class="navigation">
+          <a href="gsg_overview.html">Top</a>&nbsp;
+          <a href="ejsc_chart_methods_addseries.html">Previous</a>&nbsp;
+               <a href="ejsc_chart_methods_addyaxisbin.html">Next</a>
+     </div>
+     <div class="topic">
+          <p class="p_Heading1"><span class="f_Heading1">EJSC.Chart.addXAxisBin</span></p>
+<p class="p_Heading1"><span class="f_Heading1" style="font-size: 13px;">See Also</span></p>
+
+     </div>
+</div>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Definition</span></p>
+<p>&nbsp;</p>
+<p>void <span style="font-weight: bold; color: #0000ff;">addXAxisBin</span>( String label, boolean redraw )</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Description</span></p>
+<p>&nbsp;</p>
+<p>Adds a new static label to the X axis and sets the appropriate flags if necessary to force the chart to draw using static labels (as opposed to a dynamic range based on series data).</p>
+<p>&nbsp;</p>
+<p>This method is useful if there is a need to include bins which may not be part of any series added (i.e. chart labels should be "Apples", "Oranges", "Pears" but the series data only contains data pertaining to Apples and Pears).</p>
+<p>&nbsp;</p>
+<p>If redraw is false, drawing will not occur immediately but will not be entirely prevented. &nbsp;Certain actions such as adding an additional series with redraw = true, or chart dimensions changing may still trigger the chart to draw. &nbsp;The default, if redraw is omitted is <span style="font-weight: bold;">true</span>.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Note:</span></p>
+<p>&nbsp;</p>
+<p>Manually added bins may only be removed if there are no series currently utilizing them.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Example</span></p>
+<p>&nbsp;</p>
+<p><span style="font-style: italic;">&gt;&gt; Add bins in a specific order to ensure they appear the same each time the chart is loaded, regardless of the order in which they appear in the data.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">var</span> myChart = <span style="font-weight: bold;">new</span> EJSC.Chart("chart");</p>
+<p>myChart.addXAxisBin("Salesman 1");</p>
+<p>myChart.addXAxisBin("Salesman 2");</p>
+<p>myChart.addXAxisBin("Salesman 3");</p>
+<p><span style="font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-weight: bold;">var</span> mySeries = myChart.addSeries(</p>
+<p>  &nbsp; new EJSC.BarSeries(...)</p>
+<p>);</p>
+
+</td></tr></table>
+
+</body>
+</html>

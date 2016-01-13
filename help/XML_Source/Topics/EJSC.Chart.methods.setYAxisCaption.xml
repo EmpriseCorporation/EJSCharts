@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="EJSC.Chart.methods.setYAxisCaption" modified="2007-05-20T11:12:52.733Z" target="Main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <header>
+      <para styleclass="Heading1"><text styleclass="Heading1" translate="true">EJSC.Chart.setYAxisCaption</text></para>
+      <para styleclass="Heading1"><text styleclass="Heading1" style="font-size:10pt;" translate="true">See Also</text></para>
+    </header>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Definition</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:normal;" translate="true">void </text><text styleclass="Normal" style="font-weight:bold; color:#0000ff;" translate="true">setYAxisCaption</text><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">( string caption )</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold; color:#000000;" translate="true">Description</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">Updates the y-axis caption. &#160;This method must be used to change the caption once the chart has been rendered. &#160;To set a default caption on creation, see </text><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.Chart.properties.y_axis_caption" styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">EJSC.Chart.y_axis_caption</link><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">.</text></para>
+  </body>
+</topic>

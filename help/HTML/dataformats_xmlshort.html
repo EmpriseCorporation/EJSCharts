@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?dataformats_xmlshort.html"; }
+else { parent.quicksync('a4.2'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>XML - Short</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="http://www.ejschart.com/includes/help.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<div class="topicHeader">
+     <div class="navigation">
+          <a href="gsg_overview.html">Top</a>&nbsp;
+          <a href="dataformats_xmlfull.html">Previous</a>&nbsp;
+               <a href="dataformats_xmlcompact.html">Next</a>
+     </div>
+     <div class="topic">
+          <p class="p_Heading1"><span class="f_Heading1">XML - Short</span></p>
+
+     </div>
+</div>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>The short XML format provides the same functionality as the <a href="dataformats_xmlfull.html">full format</a> but with less transfer overhead (there is no reduction in the processing overhead of extracting the point data, see the Array and CSV formats for more concise options).</p>
+<p>&nbsp;</p>
+<p>The general format is as follows:</p>
+<p>&nbsp;</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&lt;G&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&lt;L&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;P&nbsp;x=&quot;&quot;&nbsp;y=&quot;&quot;&nbsp;userdata=&quot;&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&lt;/L&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&lt;/G&gt;</span></p>
+<p>&nbsp;</p>
+<p>The &lt;G&gt; tag relates to the &lt;graph&gt; tag in the full format, the &lt;L&gt; tag relates to the &lt;plot&gt; tag and &lt;P&gt; is equivalent to &lt;point&gt;.</p>
+<p>&nbsp;</p>
+<p>Support for pie charts is provided in the same manner as with the full format, i.e.</p>
+<p>&nbsp;</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&lt;P&nbsp;x=&quot;&quot;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">label</span><span class="f_CodeExample" style="color: #000000;">=&quot;&quot;&nbsp;/&gt;</span></p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

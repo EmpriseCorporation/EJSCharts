@@ -1,0 +1,606 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Emprise JavaScript Charts - EJSC.Chart Property Examples</title>
+	<link rel="stylesheet" href="../includes/template.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="../../EJSChart.min.js"></script>
+	<script type="text/javascript" src="../includes/code.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+
+		<div id="header">
+		
+			<h1 id="logo-text"><a href="http://www.ejschart.com/"><span class="gray">Emprise JavaScript Charts</span></a></h1>			
+					
+			<div id="header-tabs">
+				<ul>
+					<li><a href="http://www.ejschart.com/index.php"><span>Home</span></a></li>
+					<li><a href="http://www.ejschart.com/pricing.php"><span>Pricing</span></a></li>
+					<li><a href="http://www.ejschart.com/forums/"><span>Forums</span></a></li>
+					<li><a href="http://www.ejschart.com/support.php"><span>Support</span></a></li>
+				</ul>
+
+			</div>				
+			
+		</div>
+	  
+	  <!-- content-wrap starts here -->
+	  <div id="content-wrap">
+	  
+	  		<div id="main">
+				<h1>EJSC.Chart Property Examples</h1>
+
+				<div class="breadcrumbs">Return to: <a href="../index.html" class="crumb">Examples</a> &raquo; <a href="../index.html#chart" class="crumb">EJSC.Chart</a></div> 
+
+				<div class="sidebyside">
+
+					<div class="default">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 75px">
+							<li>Standard EJSC.Chart Properties</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 80px;">Default Chart Settings</p>
+						<div id="myChart1a" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code1a"><span>Rendering Source Code...</span></ol>
+					</div>
+					
+					<div class="example">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 75px">
+							<li>allow_interactivity</li>
+							<li>force_static_points_x</li>
+							<li>title</li>
+							<li>show_messages</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 80px;">
+							This chart will have not be interactive (ie zooming, moving, point selection,
+            				etc.) and auto axis scaling for the x axis will be disabled. In addition the 
+            				status messages (such as &quot;Drawing...&quot; when the chart is loading)
+            				will not be displayed and the title will display custom text.
+            			</p>
+						<div id="myChart1b" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code1b"><span>Rendering Source Code...</span></ol>
+					</div>
+
+<script type="text/javascript" id="script1a">
+	var chart = new EJSC.Chart("myChart1a", {
+	});
+	
+	chart.addSeries(new EJSC.AreaSeries(
+		new EJSC.ArrayDataHandler([
+			[.5,4.7],[2.1,3],[3.5,4.2],[4,2.3]
+		])
+	));
+</script>
+
+<script type="text/javascript" id="script1b">
+	var chart = new EJSC.Chart("myChart1b", {
+/*H*/		force_static_points_x: true,
+/*H*/		allow_interactivity: false,
+/*H*/		show_messages: false,
+/*H*/		title: "Sample Chart Title"
+	});
+			
+	chart.addSeries(new EJSC.AreaSeries(
+		new EJSC.ArrayDataHandler([
+			[.5,4.7],[2.1,3],[3.5,4.2],[4,2.3]
+		])
+	));
+</script>
+
+					<div class="clear"></div>
+				</div>
+
+				<hr />
+
+				<div class="sidebyside">
+
+					<div class="default">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 60px;">
+							<li>Standard EJSC.Chart Properties</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 50px;">Default Chart Settings</p>
+						<div id="myChart2a" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code2a"><span>Rendering Source Code...</span></ol>
+					</div>
+					
+					<div class="example">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 60px;">
+							<li>allow_zoom</li>
+							<li>proximity_snap</li>
+							<li>show_legend</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 50px;">
+							This chart will not allow zooming, and it will
+            				allow for a point to be selected anywhere within 15
+            				pixels of its location. In addition the legend has
+            				been removed.
+            			</p>
+						<div id="myChart2b" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code2b"><span>Rendering Source Code...</span></ol>
+					</div>
+
+<script type="text/javascript" id="script2a">
+	var chart = new EJSC.Chart("myChart2a", {
+	});
+	
+	chart.addSeries(new EJSC.LineSeries(
+		new EJSC.ArrayDataHandler([
+			[1,1],[2,2.5],[3,3.75],[4,2],[5,3]
+		])
+	)); 
+</script>
+
+<script type="text/javascript" id="script2b">
+	var chart = new EJSC.Chart("myChart2b", {
+/*H*/		allow_zoom: false,
+/*H*/		show_legend: false,
+/*H*/		proximity_snap: 15
+	});
+			
+	chart.addSeries(new EJSC.LineSeries(
+		new EJSC.ArrayDataHandler([
+			[1,1],[2,2.5],[3,3.75],[4,2],[5,3]
+		])
+	));
+</script>
+
+					<div class="clear"></div>
+				</div>
+				
+				<hr />
+
+				<div class="sidebyside">
+
+					<div class="default">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 75px;">
+							<li>Standard EJSC.Chart Properties</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 75px;">Default Chart Settings</p>
+						<div id="myChart3a" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code3a"><span>Rendering Source Code...</span></ol>
+					</div>
+					
+					<div class="example">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 75px;">
+							<li>auto_zoom</li>
+							<li>show_crosshairs</li>
+							<li>auto_find_point_by_x</li>
+							<li>show_mouse_position</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 75px;">
+							This chart will auto-select the zoom area based on
+            				the Y coordinates selected by the user, show an x
+            				axis crosshair, ignore the cursors y axis value when
+            				selecting a point, and will not display the current
+            				mouse position coordinates above the chart.
+            			</p>
+						<div id="myChart3b" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code3b"><span>Rendering Source Code...</span></ol>
+					</div>
+
+<script type="text/javascript" id="script3a">
+	var chart = new EJSC.Chart("myChart3a", {
+		show_legend: false
+	});
+			
+	chart.addSeries(new EJSC.LineSeries(
+		new EJSC.ArrayDataHandler([
+			[0,.7],[1,4],[2,5],[5,6],[5.2,2.33],
+			[6,8],[9,5],[9.2,4],[10,7.2]
+		])
+	)); 
+</script>
+
+<script type="text/javascript" id="script3b">
+	var chart = new EJSC.Chart("myChart3b", {
+		show_legend: false,
+/*H*/		auto_zoom: "y",
+/*H*/		show_crosshairs:{x:true,y:false},
+/*H*/		auto_find_point_by_x: true,
+/*H*/		show_mouse_position: false
+	});
+			
+	chart.addSeries(new EJSC.LineSeries(
+		new EJSC.ArrayDataHandler([
+			[0,.7],[1,4],[2,5],[5,6],[5.2,2.33],
+			[6,8],[9,5],[9.2,4],[10,7.2]
+		])
+	));
+</script>
+
+					<div class="clear"></div>
+				</div>
+				
+				<hr />
+
+				<div class="sidebyside">
+
+					<div class="default">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 90px;">
+							<li>Standard EJSC.Chart Properties</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 90px;">Default Chart Settings</p>
+						<div id="myChart4a" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code4a"><span>Rendering Source Code...</span></ol>
+					</div>
+					
+					<div class="example">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 90px;">
+							<li>x_axis_caption</li>
+							<li>x_axis_extremes_ticks</li>
+							<li>x_axis_formatter</li>
+							<li>x_cursor_position_caption</li>
+							<li>show_hints</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 90px;">
+							This chart will display a custom x axis caption,
+            				display tick marks at the x axis minimum and maximum
+				            points, format the x axis data as currency, and will
+            				specify custom text to be displayed before the cursor
+            				position. In addition it will not show hints when a
+            				point is hovered over or selected.
+            			</p>
+						<div id="myChart4b" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code4b"><span>Rendering Source Code...</span></ol>
+					</div>
+
+<script type="text/javascript" id="script4a">
+	var chart = new EJSC.Chart("myChart4a", {
+		show_legend: false
+	});
+			
+	chart.addSeries(new EJSC.LineSeries(
+		new EJSC.ArrayDataHandler([
+			[-1.0,1],[2,2],[3,3],[4,4],[5.5,5]
+		])
+	));
+</script>
+
+<script type="text/javascript" id="script4b">
+	var chart = new EJSC.Chart("myChart4b", {
+		show_legend: false,
+/*H*/		x_axis_caption: "X AXIS CAPTION TEXT",
+/*H*/		x_axis_extremes_ticks: true,
+/*H*/		show_hints: false,
+/*H*/��		x_axis_formatter: new EJSC.NumberFormatter(
+/*H*/			{ 
+/*H*/				currency_symbol: "$", 
+/*H*/				currency_position: "inner", 
+/*H*/				negative_symbol: "()", 
+/*H*/				variable_decimals: 2
+/*H*/			}
+/*H*/		),
+/*H*/		x_cursor_position_caption: "LABEL:"
+	});
+			
+	chart.addSeries(new EJSC.LineSeries(
+		new EJSC.ArrayDataHandler([
+			[-1.0,1],[2,2],[3,3],[4,4],[5.5,5]
+		])
+	));
+</script>
+
+					<div class="clear"></div>
+				</div>
+					
+				<hr />
+
+				<div class="sidebyside">
+
+					<div class="default">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 30px;">
+							<li>Standard EJSC.Chart Properties</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 45px;">Default Chart Settings</p>
+						<div id="myChart5a" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code5a"><span>Rendering Source Code...</span></ol>
+					</div>
+					
+					<div class="example">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 30px;">
+							<li>x_zero_plane</li>
+							<li>x_value_hint_caption</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 45px;">
+							This chart will display custom text for the x
+            				value label in the hint window, and a x zero plane
+            				that is dark green and 5 pixels thick.
+            			</p>
+						<div id="myChart5b" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code5b"><span>Rendering Source Code...</span></ol>
+					</div>
+
+<script type="text/javascript" id="script5a">
+	var chart = new EJSC.Chart("myChart5a", {
+		show_legend: false
+	});
+			
+	chart.addSeries(new EJSC.AreaSeries(
+		new EJSC.ArrayDataHandler([
+			[-1,-1],[1,1],[2,2.5],[3.5,3.75],[4,2],[5,3]
+		])
+	));
+</script>
+
+<script type="text/javascript" id="script5b">
+	var chart = new EJSC.Chart("myChart5b", {
+/*H*/		show_legend: false,
+/*H*/		x_value_hint_caption: "X HINT TEXT: ",
+/*H*/		x_zero_plane: {
+/*H*/			show:true, 
+/*H*/			color:'rgb(7,89,5)', 
+/*H*/			thickness:5
+/*H*/		}
+	});
+			
+	chart.addSeries(new EJSC.AreaSeries(
+		new EJSC.ArrayDataHandler([
+			[-1,-1],[1,1],[2,2.5],[3.5,3.75],[4,2],[5,3]
+		])
+	));
+</script>
+
+					<div class="clear"></div>
+				</div>
+						
+				<hr />
+
+				<div class="sidebyside">
+
+					<div class="default">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 60px;">
+							<li>Standard EJSC.Chart Properties</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 75px;">Default Chart Settings</p>
+						<div id="myChart6a" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code6a"><span>Rendering Source Code...</span></ol>
+					</div>
+					
+					<div class="example">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 60px;">
+							<li>y_axis_caption</li>
+							<li>y_axis_formatter</li>
+							<li>y_cursor_position_caption</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 75px;">
+							This chart will display a custom y axis caption,
+            				display tick marks at the y axis minimum and maximum
+            				points, format the y axis data as currency, and will
+            				specify custom text to be displayed before the cursor
+            				position.
+            			</p>
+						<div id="myChart6b" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code6b"><span>Rendering Source Code...</span></ol>
+					</div>
+
+<script type="text/javascript" id="script6a">
+	var chart = new EJSC.Chart("myChart6a", {
+		show_legend: false
+	});
+			
+	chart.addSeries(new EJSC.LineSeries(
+		new EJSC.ArrayDataHandler([
+			[-1,1],[2,2],[3,3],[4,4],[5.5,5]
+		])
+	));
+</script>
+
+<script type="text/javascript" id="script6b">
+	var chart = new EJSC.Chart("myChart6b", {
+		show_legend: false,
+/*H*/		y_axis_caption: "Y AXIS CAPTION TEXT",
+/*H*/		y_axis_formatter: new EJSC.NumberFormatter(
+/*H*/			{ 
+/*H*/				currency_symbol: "$", 
+/*H*/				currency_position: "inner", 
+/*H*/				negative_symbol: "()", 
+/*H*/				variable_decimals: 2
+/*H*/			}
+/*H*/		),
+/*H*/��		y_cursor_position_caption: "LABEL:"
+	});
+			
+	chart.addSeries(new EJSC.LineSeries(
+		new EJSC.ArrayDataHandler([
+			[-1,1],[2,2],[3,3],[4,4],[5.5,5]
+		])
+	));
+</script>
+
+					<div class="clear"></div>
+				</div>
+				
+				<hr />
+
+				<div class="sidebyside">
+
+					<div class="default">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 30px;">
+							<li>Standard EJSC.Chart Properties</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 45px;">Default Chart Settings</p>
+						<div id="myChart7a" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code7a"><span>Rendering Source Code...</span></ol>
+					</div>
+					
+					<div class="example">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 30px;">
+							<li>y_zero_plane</li>
+							<li>y_value_hint_caption</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 45px;">
+							This chart will display custom text for the y
+				            value label in the hint window, and a y zero plane
+            				that is firebrick red and 8 pixels thick.
+            			</p>
+						<div id="myChart7b" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code7b"><span>Rendering Source Code...</span></ol>
+					</div>
+
+<script type="text/javascript" id="script7a">
+	var chart = new EJSC.Chart("myChart7a", {
+		show_legend: false
+	});
+			
+	chart.addSeries(new EJSC.AreaSeries(
+		new EJSC.ArrayDataHandler([
+			[-1,-1],[1,1],[2,2.5],[3.5,3.75],[4,2],[5,3]
+		])
+	));
+</script>
+
+<script type="text/javascript" id="script7b">
+	var chart = new EJSC.Chart("myChart7b", {
+		show_legend: false,
+/*H*/		y_value_hint_caption: "Y HINT TEXT: ",
+/*H*/		y_zero_plane: {
+/*H*/			show:true, 
+/*H*/			color:'rgb(255,48,48)', 
+/*H*/			thickness:8
+/*H*/		}
+	});
+			
+	chart.addSeries(new EJSC.AreaSeries(
+		new EJSC.ArrayDataHandler([
+			[-1,-1],[1,1],[2,2.5],[3.5,3.75],[4,2],[5,3]
+		])
+	));
+</script>
+
+					<div class="clear"></div>
+				</div>
+				
+				<hr />
+
+				<div class="sidebyside">
+
+					<div class="default">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 45px;">
+							<li>Standard EJSC.Chart Properties</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 45px;">Default Chart Settings</p>
+						<div id="myChart8a" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code8a"><span>Rendering Source Code...</span></ol>
+					</div>
+					
+					<div class="example">
+						<h2 class="properties">Properties Demonstrated</h2>
+						<ul class="properties" style="height: 45px;">
+							<li>show_titlebar</li>
+							<li>show_x_axis</li>
+							<li>show_y_axis</li>
+						</ul>
+						<h2 class="result">Desired Result</h2>
+						<p class="result" style="height: 45px;">
+							This chart will not show its titlebar, x axis, 
+							or y axis. The chart will expand to fill the full 
+							size of the div
+            			</p>
+						<div id="myChart8b" class="chart"></div>
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code8b"><span>Rendering Source Code...</span></ol>
+					</div>
+
+<script type="text/javascript" id="script8a">
+	var chart = new EJSC.Chart("myChart8a", {
+		show_legend: false
+	}); 
+
+	chart.addSeries(new EJSC.AreaSeries( 
+		new EJSC.ArrayDataHandler([
+			[-1,-1],[1,1],[2,2],[3.5,3.75],[4,2],[5,3]
+		])
+	));
+</script>
+
+<script type="text/javascript" id="script8b">
+	var chart = new EJSC.Chart("myChart8b", {
+		show_legend: false,
+/*H*/		show_titlebar: false,
+/*H*/		show_x_axis: false,
+/*H*/		show_y_axis: false}
+	); 
+
+	chart.addSeries(new EJSC.AreaSeries( 
+		new EJSC.ArrayDataHandler([
+			[-1,-1],[1,1],[2,2],[3.5,3.75],[4,2],[5,3]
+		])
+	));
+</script>
+
+					<div class="clear"></div>
+				</div>
+					
+				<div class="breadcrumbs">Return to: <a href="../index.html" class="crumb">Examples</a> &raquo; <a href="../index.html#chart" class="crumb">EJSC.Chart</a></div> 
+
+			</div>
+
+		</div>
+		
+		<div id="footer">
+		
+			<span id="footer-left">
+				&copy; 2006-2007 <strong><a href="http://www.emprisecorporation.com/">Emprise Corporation</a></strong> | 
+				Design by: <strong><a href="http://www.styleshout.com/">styleshout</a></strong> | 
+				Valid: <a href="http://validator.w3.org/">XHTML</a> | 
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+
+			</span>		
+			
+			<span id="footer-right">
+				<a href="http://www.ejschart.com/">Home</a> 
+			</span>
+			
+		</div>	
+
+<!-- wrap ends here -->		
+</div>
+</body>
+
+</html>

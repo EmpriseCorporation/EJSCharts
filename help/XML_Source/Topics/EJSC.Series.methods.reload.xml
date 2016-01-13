@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="EJSC.Series.methods.reload" modified="2007-05-20T18:13:06.086Z" target="Main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <header>
+      <para styleclass="Heading1"><text styleclass="Heading1" translate="true">EJSC.Series.reload</text></para>
+      <para styleclass="Heading1"><text styleclass="Heading1" style="font-size:9pt;" translate="true">See Also</text></para>
+    </header>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Definition</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">void </text><text style="font-family:Arial; font-size:10pt; font-weight:bold; color:#0000ff;" translate="true">reload</text><text styleclass="Normal" translate="true">( )</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Description</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">Triggers a series reload if the functionality is defined in a child class. This may involve retrieving data again or simply recalculating. &#160;While the reload() method exists in the base Series class, implementation of the protected methods triggered by calling reload() is at the discretion of the child class.</text></para>
+  </body>
+</topic>

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="EJSChart_popup_html.js"></script><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?ejsc_trendseries.htm"; }
+else { parent.quicksync('a2.3.7'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>EJSC.TrendSeries</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<div class="topicHeader">
+     <div class="navigation">
+          <a href="welcometopic.htm">Top</a>&nbsp;
+          <a href="ejsc_series_events_onbeforevisibilitychange.htm">Previous</a>&nbsp;
+               <a href="ejsc_series_properties_color.htm">Next</a>
+     </div>
+     <div class="topic">
+          <p class="p_Heading1"><span class="f_Heading1">EJSC.TrendSeries</span></p>
+<p class="p_Heading1"> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Heading1"><span class="f_Heading1" style="font-size: 9pt;"><a href="javascript:void(0);" onclick="return hmshowPopup(event, popid_1233028812, true);" class="popuplink">Hierarchy</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="javascript:void(0);" onclick="return hmshowPopup(event, popid_1918900800, true);" class="popuplink">Properties</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="javascript:void(0);" onclick="return hmshowPopup(event, popid_2033110775X, true);" class="popuplink">Methods</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="javascript:void(0);" onclick="return hmshowPopup(event, popid_966644934X, true);" class="popuplink">Events</a></span></p>
+
+     </div>
+</div>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>&nbsp;</p>
+<p><span style="color: #000000;">The TrendSeries is rendered as a line based on the results of a function applied to the related series' data points.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The constructor expects a reference series, <span style="font-family: 'Courier New'; color: #000000;">a trendType </span>and an optional set of object properties. </p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">The trend series then </span><span style="font-family: 'Courier New'; color: #000000;">&#8220;</span><span style="font-family: 'Courier New'; color: #000000;">trends</span><span style="font-family: 'Courier New'; color: #000000;">&#8221;</span><span style="font-family: 'Courier New'; color: #000000;"> the data in that referenceSeries according to the trendType into a function, and plots the function in the visible area of the chart.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Constructor</span></p>
+<p>&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;EJSC.TrendSeries( <a href="ejsc_series.htm">EJSC.Series</a> referenceSeries, string trendType [, object options] )</p>
+<p>&nbsp;</p>
+<p>Valid options for trendType:</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;&quot;linear&quot;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Example</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">var</span> mySeries1 = <span style="font-weight: bold;">new</span> <a href="ejsc_scatterseries.htm">EJSC.ScatterSeries</a>(...);</p>
+<p><span style="font-weight: bold;">var</span> mySeries2 = <span style="font-weight: bold;">new</span> EJSC.TrendSeries(</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;mySeries1,</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;&quot;linear&quot;,</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;{ title: &quot;New Trend Series&quot; }</p>
+<p>);</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Defining Properties and Events</span></p>
+<p>&nbsp;</p>
+<p>TrendSeries properties may be set individually after the series has been created or in batch using the options parameter during instantiation.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Setting properties individually</span></p>
+<p>&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">var</span> mySeries = <span style="font-weight: bold;">new</span> EJSC.TrendSeries(myDataSeries);</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;mySeries.lineWidth = 2;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;mySeries.title = &quot;New Trend Series&quot;;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Setting properties in batch</span></p>
+<p>&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">var</span> mySeries = <span style="font-weight: bold;">new</span> EJSC.TrendSeries(</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;myDataSeries,</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{ lineWidth: 2, title: &quot;New Trend Series&quot; }</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;);</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

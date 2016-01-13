@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="EJSC.Chart.methods.removeSeries" modified="2007-05-20T12:13:13.503Z" target="Main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <header>
+      <para styleclass="Heading1"><text styleclass="Heading1" translate="true">EJSC.Chart.removeSeries</text></para>
+      <para styleclass="Heading1"><text styleclass="Heading1" style="font-size:10pt;" translate="true">See Also</text></para>
+    </header>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Definition</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:normal;" translate="true">void </text><text styleclass="Normal" style="font-weight:bold; color:#0000ff;" translate="true">removeSeries</text><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">( </text><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.Series" styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">EJSC.Series</link><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true"> series )</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold; color:#000000;" translate="true">Description</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true">Removes the specified series from the chart and triggers an immediate rescaling and redraw.</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><tab /><text styleclass="Normal" style="font-weight:bold; color:#000000;" translate="true">Note:</text><text styleclass="Normal" style="font-weight:normal; color:#000000;" translate="true"> Does not dispose of the series</text></para>
+  </body>
+</topic>

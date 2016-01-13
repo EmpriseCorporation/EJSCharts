@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="EJSC.Chart.events.onBeforeDblClick" modified="2007-05-20T11:24:40.608Z" target="Main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <header>
+      <para styleclass="Heading1"><text styleclass="Heading1" translate="true">EJSC.Chart.onBeforeDblClick</text></para>
+      <para styleclass="Heading1"><text styleclass="Heading1" style="font-size:10pt;" translate="true">See Also</text></para>
+    </header>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Definition</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">boolean </text><text style="font-family:Arial; font-size:10pt; font-weight:bold; color:#0000ff;" translate="true">onBeforeDblClick</text><text styleclass="Normal" translate="true">( </text><link displaytype="text" defaultstyle="true" type="topiclink" href="EJSC.Chart" styleclass="Normal" translate="true">EJSC.Chart</link><text styleclass="Normal" translate="true"> chart )</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Description</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">Called before the chart does any processing related to a double click. &#160;Return </text><text styleclass="Normal" style="font-weight:bold;" translate="true">false</text><text styleclass="Normal" style="font-weight:normal;" translate="true"> m</text><text styleclass="Normal" translate="true">ay be used to cancel all additional processing.</text></para>
+  </body>
+</topic>

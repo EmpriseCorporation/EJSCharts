@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../EJSChart_topics.xsl" ?>
+<topic id="EJSC.Chart.Properties.show_leg" modified="2007-05-19T23:08:21.526Z" target="Main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <body>
+    <header>
+      <para styleclass="Heading1"><text styleclass="Heading1" translate="true">EJSC.Chart.show_legend</text></para>
+      <para styleclass="Heading1"><text styleclass="Heading1" style="font-size:9pt;" translate="true">See Also</text></para>
+    </header>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Definition</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">boolean </text><text style="font-family:Arial; font-size:10pt; font-weight:bold; color:#0000ff;" translate="true">show_legend</text><text styleclass="Normal" translate="true"> = true</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Description</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" translate="true">Defines if the chart legend should be displayed.</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-weight:bold;" translate="true">Example</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Normal" style="font-style:italic;" translate="true">&gt;&gt; Turn off legend display</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:8pt; font-weight:bold; color:#000000;" translate="true">var</text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true"> chart = </text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; font-weight:bold; color:#000000;" translate="true">new</text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true"> EJSC.Chart(</text></para>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true"> &#160; &#160; &#160; &#160;</text><tab /><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000080;" translate="true">&quot;chart&quot;</text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true">,</text></para>
+    <para styleclass="Normal"><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true"> &#160; &#160; &#160; &#160;</text><tab /><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true">{show_legend: </text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; font-weight:bold; color:#000000;" translate="true">false</text><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true">}</text></para>
+    <para styleclass="Normal"><tab /><text style="font-family:&apos;Courier New&apos;; font-size:8pt; color:#000000;" translate="true">);</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+  </body>
+</topic>

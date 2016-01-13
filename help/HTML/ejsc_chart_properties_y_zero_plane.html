@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?ejsc_chart_properties_y_zero_plane.html"; }
+else { parent.quicksync('a5.2.1.50'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>y_zero_plane</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="http://www.ejschart.com/includes/help.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<div class="topicHeader">
+     <div class="navigation">
+          <a href="gsg_overview.html">Top</a>&nbsp;
+          <a href="ejsc_chart_properties_y_value_hint_caption.html">Previous</a>&nbsp;
+               <a href="ejsc_chart_methods_acquireseries.html">Next</a>
+     </div>
+     <div class="topic">
+          <p class="p_Heading1"><span class="f_Heading1">EJSC.Chart.y_zero_plane</span></p>
+<p class="p_Heading1"><span class="f_Heading1" style="font-size: 12px;">See Also: <a href="using_colors.html">Using Colors</a></span></p>
+
+     </div>
+</div>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Definition</span></p>
+<p>&nbsp;</p>
+<p>object <span style="font-weight: bold; color: #0000ff;">y_zero_plane</span> = {</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;color: &quot;rgb(0,0,0)&quot;,</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;show: false,</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;thickness: 1,</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;coordinate: 0</p>
+<p>}</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Description</span></p>
+<p>&nbsp;</p>
+<p>Defines the properties of the zero plane line to be drawn at Y=0 (or whatever the coordinate property is set to). It is used to specify if the line should be shown as well as its color and thickness. The coordinate property allows the base of <a href="ejsc_barseries.html">EJSC.BarSeries</a> and <a href="ejsc_areaseries.html">EJSC.AreaSeries</a> to be changed.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Example</span></p>
+<p>&nbsp;</p>
+<p><span style="font-style: italic;">&gt;&gt; Display a 2 pixel thick dark green line on the y zero plane</span></p>
+<p>&nbsp;</p>
+<p><img src="x_zero_plane.png" width="322" height="222" border="0" alt="x_zero_plane" /></p>
+<p><span class="f_ImageCaption">&nbsp;</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New'; font-weight: bold;">var</span><span style="font-size: 11px; font-family: 'Courier New';"> chart =&nbsp; </span><span style="font-size: 11px; font-family: 'Courier New'; font-weight: bold;">new </span><span style="font-size: 11px; font-family: 'Courier New';">EJSC.Chart(</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New';"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11px; font-family: 'Courier New'; color: #000080;">&quot;chart&quot;</span><span style="font-size: 11px; font-family: 'Courier New';">,</span></p>
+<p><span style="font-size: 11px; font-family: 'Courier New';"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;{y_zero_plane: {show: </span><span style="font-size: 11px; font-family: 'Courier New'; font-weight: bold;">true</span><span style="font-size: 11px; font-family: 'Courier New';">, color:'rgb(7,89,5)', thickness:2}}</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11px; font-family: 'Courier New';">);</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

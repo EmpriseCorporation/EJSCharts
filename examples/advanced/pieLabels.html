@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Emprise JavaScript Charts - Advanced - Pie Piece Labels</title>
+	<link rel="stylesheet" href="../includes/template.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="../../EJSChart.min.js"></script>
+	<script type="text/javascript" src="../includes/code.js"></script>
+	
+	<style type="text/css" media="screen,print">
+		.PiePieceLabel { position: absolute; background-color: #fff; border: 1px solid #999; padding: 2px; 
+			opacity: 0.8; filter: Alpha(opacity:80); }
+	</style>
+</head>
+
+<body>
+<div id="wrap">
+
+		<div id="header">
+		
+			<h1 id="logo-text"><a href="http://www.ejschart.com/"><span class="gray">Emprise JavaScript Charts</span></a></h1>			
+					
+			<div id="header-tabs">
+				<ul>
+					<li><a href="http://www.ejschart.com/index.php"><span>Home</span></a></li>
+					<li><a href="http://www.ejschart.com/pricing.php"><span>Pricing</span></a></li>
+					<li><a href="http://www.ejschart.com/forums/"><span>Forums</span></a></li>
+					<li><a href="http://www.ejschart.com/support.php"><span>Support</span></a></li>
+				</ul>
+
+			</div>				
+			
+		</div>
+	  
+	  <!-- content-wrap starts here -->
+	  <div id="content-wrap">
+	  
+	  		<div id="main">
+				<h1>Pie Piece Labels - Displaying hints for each piece</h1>
+
+				<div class="breadcrumbs">Return to: <a href="../index.html" class="crumb">Examples</a> &raquo; <a href="../index.html#advanced" class="crumb">Advanced Examples</a></div> 
+
+				<div class="onecolumn">
+					<div class="default">
+						<h2 class="result">Description</h2>
+						
+						<p class="result" style="height: 68px">
+							This chart contains a PieSeries with a label centered over each piece.
+						</p>
+						
+						<div id="myChart1a" class="chart"></div>
+						
+						<h2 class="code">Source Code</h2>
+						<ol class="code" id="code1a"><span>Rendering Source Code...</span></ol>
+					</div>
+				</div>				
+<script type="text/javascript" id="script1a">
+
+	//
+	// Define the CSS in the header:
+	// <style type="text/css" media="screen,print">
+	// 		.PiePieceLabel { position: absolute; background-color: #fff; border: 1px solid #999; padding: 2px; 
+	//		opacity: 0.8; filter: Alpha(opacity:80); }
+	// </style>
+	//
+	
+	// Define variables to store references to the chart and series
+	var myChart, mySeries = undefined;
+		
+	// After drawing is complete, create and/or reposition pie piece captions
+	function doAfterDraw(chart) {
+
+		// Verify series has been created
+		if (mySeries != undefined) {
+
+			var piePoints = mySeries.getPoints();
+				
+			// Loop through the list of pie series points
+			for (var i = 0; i < piePoints.length; i++) {
+
+				// We're saving the reference to the div object in the point, 
+				// so check if it already exists
+				if (piePoints[i].hintDiv == undefined) {
+					// Create the div
+					piePoints[i].hintDiv = document.createElement("DIV");
+					piePoints[i].hintDiv.className = "PiePieceLabel";
+					piePoints[i].hintDiv.innerHTML = "<strong>" + piePoints[i].label + "</strong><br/>" + piePoints[i].x + " of [total] [percent]" + mySeries.getTotalValue() + 
+						" (" + (piePoints[1].x / mySeries.getTotalValue() * 100) + "%)";
+					
+					document.getElementsByTagName("body")[0].appendChild(piePoints[i].hintDiv);
+				}
+					
+				// Find the center of the piece
+				var pointCoordinates = mySeries.findCenter(piePoints[i]);
+				
+				// Adjust the location of the div based on the piece center
+				piePoints[i].hintDiv.style.left = pointCoordinates.x - Math.floor(piePoints[i].hintDiv.offsetWidth / 2) + "px"; 
+				piePoints[i].hintDiv.style.top = pointCoordinates.y - Math.floor(piePoints[i].hintDiv.offsetHeight / 2) + "px"; 
+
+			}
+		}
+
+	};		
+
+	myChart = new EJSC.Chart("myChart1a",
+		{
+			show_legend: false,
+			allow_zoom: false,
+			show_mouse_position: false,
+			// Hide the standard hints
+			show_hints: false,
+			// Assign the onAfterDraw event
+			onAfterDraw: doAfterDraw
+		}
+	);
+		
+	mySeries = new EJSC.PieSeries(
+		new EJSC.ArrayDataHandler(
+			[[10, "Piece 1"],[20, "Piece 2"],[45, "Piece 3"],[25,"Piece 4"]]
+		)
+	);
+		
+	myChart.addSeries(mySeries);
+</script>
+
+				<div class="breadcrumbs">Return to: <a href="../index.html" class="crumb">Examples</a> &raquo; <a href="../index.html#advanced" class="crumb">Advanced Examples</a></div> 
+
+			</div>
+
+		</div>
+		
+		<div id="footer">
+		
+			<span id="footer-left">
+				&copy; 2006-2007 <strong><a href="http://www.emprisecorporation.com/">Emprise Corporation</a></strong> | 
+				Design by: <strong><a href="http://www.styleshout.com/">styleshout</a></strong> | 
+				Valid: <a href="http://validator.w3.org/">XHTML</a> | 
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+
+			</span>		
+			
+			<span id="footer-right">
+				<a href="http://www.ejschart.com/">Home</a> 
+			</span>
+			
+		</div>	
+
+<!-- wrap ends here -->		
+</div>
+</body>
+
+</html>

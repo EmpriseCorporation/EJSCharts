@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+if(top.frames.length==0) { top.location.href="index.html?ejsc_barseries_events_onbarneedscolor.html"; }
+else { parent.quicksync('a5.3.3.3.3'); }
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>onBarNeedsColor</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="http://www.ejschart.com/includes/help.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<div class="topicHeader">
+     <div class="navigation">
+          <a href="gsg_overview.html">Top</a>&nbsp;
+          <a href="ejsc_series_events_onaftervisibilitychange.html">Previous</a>&nbsp;
+               <a href="ejsc_series_events_onbeforevisibilitychange.html">Next</a>
+     </div>
+     <div class="topic">
+          <p class="p_Heading1"><span class="f_Heading1">EJSC.Series.onBarNeedsColor</span></p>
+<p class="p_Heading1"><span class="f_Heading1" style="font-size: 12px;">See Also: <a href="using_colors.html">Using Colors</a></span></p>
+
+     </div>
+</div>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Definition</span></p>
+<p>&nbsp;</p>
+<p>string <span style="font-weight: bold; color: #0000ff;">onBarNeedsColor</span>( <a href="ejsc_barpoint.html">EJSC.BarPoint</a> point, <a href="ejsc_series.html">EJSC.Series</a> series, <a href="ejsc_chart.html">EJSC.Chart</a> chart )</p>
+<p>object <span style="font-weight: bold; color: #0000ff;">onBarNeedsColor</span>( <a href="ejsc_barpoint.html">EJSC.BarPoint</a> point, <a href="ejsc_series.html">EJSC.Series</a> series, <a href="ejsc_chart.html">EJSC.Chart</a> chart )</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Description</span></p>
+<p>&nbsp;</p>
+<p>Fired when a bar needs a color.&nbsp; This event may return either a string (i.e. &quot;rgb(0,255,0)&quot;) or an object with additional styling properties.</p>
+<p>&nbsp;</p>
+<p>The object returned is expected to be formatted as:</p>
+<p>&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;{</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;color:  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;string,</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;opacity: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;integer,</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;lineOpacity: &nbsp; &nbsp; &nbsp; &nbsp;integer,</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;lineWidth: &nbsp; &nbsp; &nbsp; &nbsp;integer</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;}</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Example</span></p>
+<p>&nbsp;</p>
+<p><span style="font-style: italic;">&gt;&gt; Display bars with userdata of &quot;bold&quot; with thicker lines</span></p>
+<p>&nbsp;</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #000000;">var</span><span class="f_CodeExample" style="color: #000000;">&nbsp;chart&nbsp;=&nbsp;new&nbsp;EJSC.Chart(&quot;chart&quot;);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #000000;">var</span><span class="f_CodeExample" style="color: #000000;">&nbsp;bar&nbsp;=&nbsp;chart.addSeries(new&nbsp;EJSC.BarSeries(</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;data,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #000080;">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000080;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineOpacity:&nbsp;80,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000080;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineWidth:&nbsp;1,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000080;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onBarNeedsColor:&nbsp;function(point,&nbsp;series,&nbsp;chart)&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000080;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000080;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(point.userdata&nbsp;==&nbsp;&quot;bold&quot;)&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000080;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000080;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;&quot;rgb(0,0,0)&quot;,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000080;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;100,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000080;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineOpacity:&nbsp;100,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000080;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineWidth:&nbsp;100</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000080;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="f_CodeExample" style="color: #000000;">;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">else</span><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="color: #000080;">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000080;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&quot;rgb(128,128,128)&quot;;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000080;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">));</span></p>
+
+</td></tr></table>
+
+</body>
+</html>
